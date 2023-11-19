@@ -5,13 +5,13 @@
  * 2. uncomment and update BANNER_ID in ../../inlined-scripts/restorePreferences.ts
  * 3. update --vt-banner-height if necessary
  */
-
-let open = $ref(true)
+import { ref } from 'vue'
+let open = ref(true)
 /**
  * Call this if the banner is dismissible
  */
 function dismiss() {
-  open = false
+  open.value = false
   document.documentElement.classList.add('banner-dismissed')
   localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true')
 }

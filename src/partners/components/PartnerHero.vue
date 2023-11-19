@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { title = 'Socios de Vue' } = defineProps<{ title?: string }>()
+defineProps<{ title?: string }>()
 </script>
 
 <template>
   <div class="PartnerHero">
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">{{ title || 'Socios de Vue' }}</h1>
     <p class="lead">
       Los socios de Vue son agencias avaladas por el equipo de Vue que
       proveen servicios de consultoría y desarrollo de Vue de primera

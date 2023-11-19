@@ -573,28 +573,3 @@ export default {
 ```
 
 </div>
-
-<div class="composition-api">
-
-## Transformación de la Reactividad <sup class="vt-badge experimental" /> \*\* {#reactivity-transform}
-
-Tener que utilizar `.value` con las refs es un inconveniente impuesto por las restricciones del lenguaje JavaScript. Sin embargo, con las transformaciones en tiempo de compilación podemos mejorar la ergonomía añadiendo automáticamente `.value` en los lugares adecuados. Vue proporciona una transformación en tiempo de compilación que nos permite escribir el ejemplo anterior del "counter" de esta manera:
-
-```vue
-<script setup>
-let count = $ref(0)
-
-function increment() {
-  // no hay necesidad de .value
-  count++
-}
-</script>
-
-<template>
-  <button @click="increment">{{ count }}</button>
-</template>
-```
-
-Puedes obtener más información sobre [Transformación de la Reactividad](/guide/extras/reactivity-transform.html) en su sección dedicada. Ten en cuenta que actualmente es todavía experimental y puede cambiar antes de ser finalizado.
-
-</div>

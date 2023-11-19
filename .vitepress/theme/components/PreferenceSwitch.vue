@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { VTSwitch, VTIconChevronDown } from '@vue/theme'
 import { useRoute } from 'vitepress'
-import { inject, Ref } from 'vue'
+import { ref, computed, inject, Ref } from 'vue'
 import {
   preferCompositionKey,
   preferComposition,
@@ -10,15 +10,15 @@ import {
 } from './preferences'
 
 const route = useRoute()
-const show = $computed(() =>
+const show = computed(() =>
   /^\/(guide|tutorial|examples)\//.test(route.path)
 )
-const showSFC = $computed(() => !/^\/guide/.test(route.path))
+const showSFC = computed(() => !/^\/guide/.test(route.path))
 
-let isOpen = $ref(true)
+let isOpen = ref(true)
 
 const toggleOpen = () => {
-  isOpen = !isOpen
+  isOpen.value = !isOpen
 }
 
 const removeOutline = (e: Event) => {
