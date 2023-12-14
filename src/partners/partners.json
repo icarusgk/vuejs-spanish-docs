@@ -234,33 +234,6 @@
     "hiring": "jump24.co.uk/careers"
   },
   {
-    "name": "Epicmax",
-    "logo": "epicmax.svg",
-    "hero": "epicmax.png",
-    "intro": "Epicmax es un equipo de expertos en Vue.js con 6 años de experiencia en la construcción de interfaces Vue.js. Aportamos el conocimiento de Vue.js en el desarrollo front-end a través de industrias y geografías, sirviendo a empresas de diferentes tamaños. Tenemos más de 55 proyectos finalizados, 45 clientes en todo el mundo y 3 productos Open Source en nuestro portfolio.",
-    "description": [
-      "Epicmax es una empresa de desarrollo de software Vue.js con más de 55 proyectos completados con éxito en todo el mundo y 3 productos Open Source ampliamente aclamados.",
-      "Desde 2017, hemos ayudado a clientes internacionales en más de 15 industrias, tanto startups como empresas más grandes, a construir todo, desde comercio electrónico hasta productos de análisis en tiempo real, pasando por plataformas de medios sociales",
-      "Aportamos un profundo conocimiento de Vue.js necesario para ayudar a los clientes a resolver los problemas más complejos para su negocio: desde la construcción de aplicaciones Vue.js hasta la consultoría, la auditoría de código y la migración a Vue. Nos movemos rápido y nos integramos sin problemas en el equipo del cliente para lograr procesos ágiles y colaborativos",
-      "Epicmax se construye en torno al software de código abierto - es una parte de nuestra cultura y todo el mundo en el equipo es un contribuyente activo. Hemos creado y mantenemos las librerías Vuestic UI, Vuestic Admin y Epic Spinners que son completamente gratuitas para todos y están disponibles en GitHub."
-    ],
-    "proficiencies": [
-      "Vue",
-      "Nuxt",
-      "TypeScript",
-      "Tailwind",
-      "Vuetify",
-      "Quasar"
-    ],
-    "region": ["Europa"],
-    "website": {
-      "texto": "epicmax.co",
-      "url": "https://epicmax.co/"
-    },
-    "platinum": false,
-    "contact": "hello@epicmax.co"
-  },
-  {
     "name": "HeroDevs",
     "logo": "herodevs.png",
     "flipLogo": true,
@@ -273,12 +246,7 @@
       "¿Necesitas migrar? HeroDevs te puede ayudar con eso también. Contrata nuestro equipo de expertos para ayudarte a navegar los desafíos que vienen con migrar tu código.",
       "¿Quieres saber más? Encuéntranos en herodevs.com o envíanos una nota a hello@herodevs.com"
     ],
-    "proficiencies": [
-      "Vue",
-      "Angular",
-      "Migration",
-      "EOL support"
-    ],
+    "proficiencies": ["Vue", "Angular", "Migration", "EOL support"],
     "region": ["Norte América"],
     "website": {
       "text": "herodevs.com",
