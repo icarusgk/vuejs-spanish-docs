@@ -5,7 +5,7 @@
  * 2. uncomment and update BANNER_ID in ../../inlined-scripts/restorePreferences.ts
  * 3. update --vt-banner-height if necessary
  */
-import ref from 'vue'
+import { ref } from 'vue'
 import { VTIconPlus } from '@vue/theme'
 
 const open = ref(true)
