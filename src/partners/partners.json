@@ -102,25 +102,6 @@
     "platinum": true
   },
   {
-    "name": "DevSquad",
-    "logo": "devsquad.png",
-    "flipLogo": true,
-    "intro": "Puede pensar en DevSquad como los Navy SEALs del desarrollo de software. Los miembros de nuestro equipo tienen habilidades únicas y diversas, y esta funcionalidad cruzada nos permite completar con éxito cualquier misión.",
-    "description": [
-      "Todos nuestros clientes tienen su propio equipo dedicado. Incluso si necesita 30 desarrolladores, todos los que trabajan en su proyecto se dividen en pequeños equipos agiles de 2 a 6 personas. Al igual que los Navy SEALs, un pequeño equipo probado en batalla puede moverse más rápido y con más precisión que los equipos más grandes.",
-      "En lugar del código lleno de errores que puede haber recibido en el pasado, escribimos un software robusto y lo probamos a fondo. Pero en lugar de probarlo manualmente, escribimos código adicional para probar su código. Esto garantiza que los errores se detecten rápida y automáticamente antes de que sus empleados o clientes toquen el software. Y evita problemas mayores en el futuro cuando intente ampliar el uso o añadir nuevas funciones.",
-      "DevSquad le da las evidencias probadas y toda la experiencia que necesita para construir su software mejor, más rápido y correcto desde el principio."
-    ],
-    "region": ["Norte América"],
-    "proficiencies": ["Vue.js", "Laravel", "Node.js"],
-    "website": {
-      "text": "devsquad.com",
-      "url": "https://devsquad.com/vuejs-developers/"
-    },
-    "contact": "phil@devsquad.com",
-    "platinum": true
-  },
-  {
     "name": "Tighten",
     "logo": "tighten.svg",
     "flipLogo": true,

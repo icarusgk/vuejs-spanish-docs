@@ -1,1 +1,1 @@
-¡Di Hola Mundo con Vue!
+Un gráfico SVG

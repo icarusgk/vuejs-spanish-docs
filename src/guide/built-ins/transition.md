@@ -25,6 +25,7 @@ Ademas de estos dos componentes, también podemos aplicar animaciones en Vue usa
 - Renderizado condicional mediante `v-if`.
 - Visualización condicional mediante `v-show`.
 - Alternancia de componentes dinámicos a través del elemento especial `<component>`.
+- Cambiando el atributo especial `key`:
 
 Este es un ejemplo del uso más básico:
 

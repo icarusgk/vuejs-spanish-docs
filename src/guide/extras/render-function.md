@@ -39,8 +39,8 @@ h('div', { id: 'foo' })
 // Vue elige automáticamente la forma correcta de asignarlo
 h('div', { clase: 'barra', innerHTML: 'hola' })
 
-// se pueden añadir modificadores de props como .prop y .attr
-// con los prefijos '.' y '^' respectivamente
+// se pueden añadir modificadores de props como `.prop` y `.attr`
+// con los prefijos `.` y `^` respectivamente
 h('div', { '.name': 'some-name', '^width': '100' })
 
 // class y style tienen el mismo soporte de valor

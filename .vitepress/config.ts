@@ -587,7 +587,6 @@ export default defineConfigWithTheme<ThemeConfig>({
   description: 'Vue.js - El Framework Progresivo de JavaScript',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
-  scrollOffset: 'header',
 
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
@@ -623,6 +622,13 @@ export default defineConfigWithTheme<ThemeConfig>({
         'data-spa': 'auto',
         defer: ''
       }
+    ],
+    [
+      'script',
+      {
+        src: 'https://vueschool.io/banner.js?affiliate=vuejs&type=top',
+        async: 'true'
+      }
     ]
   ],
 
@@ -649,8 +655,18 @@ export default defineConfigWithTheme<ThemeConfig>({
         repo: 'https://github.com/vuejs-translations/docs-ja'
       },
       {
+        link: 'https://ua.vuejs.org',
+        text: 'Українська',
+        repo: 'https://github.com/vuejs-translations/docs-uk'
+      },
+      {
+        link: 'https://fr.vuejs.org',
+        text: 'Français',
+        repo: 'https://github.com/vuejs-translations/docs-fr'
+      },
+      {
         link: '/translations/',
-        text: 'Help Us Translate!',
+        text: '¡Ayúdanos a traducir!',
         isTranslationsDesc: true
       }
     ],
