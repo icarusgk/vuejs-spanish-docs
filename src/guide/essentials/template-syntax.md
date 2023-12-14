@@ -14,7 +14,7 @@ La forma más básica de vinculación de datos es la interpolación de texto uti
 <span>Mensaje: {{ msg }}</span>
 ```
 
-La etiqueta del mostacho se reemplazará con el valor de la propiedad `msg` de la instancia del componente correspondiente. También se actualizará cada vez que cambie la propiedad `msg`.
+La etiqueta del mostacho se reemplazará con el valor de la propiedad `msg` [de la instancia del componente correspondiente](/guide/essentials/reactivity-fundamentals.html#declaring-reactive-state). También se actualizará cada vez que cambie la propiedad `msg`.
 
 ## HTML Puro {#raw-html}
 

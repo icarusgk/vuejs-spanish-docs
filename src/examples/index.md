@@ -3,7 +3,7 @@ page: true
 title: Ejemplos
 aside: false
 footer: false
-returnToTop: false
+outline: false
 ---
 
 <script>

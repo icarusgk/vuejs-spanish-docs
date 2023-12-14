@@ -36,13 +36,13 @@ export default {
 
 ### `<template>` {#template}
 
-- Cada archivo `*.vue` puede contener como máximo un bloque `<template>` de nivel superior a la vez.
+- Cada archivo `*.vue` puede contener como máximo un bloque `<template>` de nivel superior.
 
 - El contenido se extraerá y se pasará a `@vue/compiler-dom`, se precompilará en funciones de renderizado de JavaScript, y se adjuntará al componente exportado como su opción `render`.
 
 ### `<script>` {#script}
 
-- Cada archivo `*.vue` puede contener como máximo un bloque `<script>` a la vez (excluyendo [`<script setup>`](/api/sfc-script-setup)).
+- Cada archivo `*.vue` puede contener como máximo un bloque `<script>` (excluyendo [`<script setup>`](/api/sfc-script-setup)).
 
 - El script se ejecuta como un Módulo ES.
 
@@ -50,7 +50,7 @@ export default {
 
 ### `<script setup>` {#script-setup}
 
-- Cada archivo `*.vue` puede contener como máximo un bloque `<script setup>` a la vez (excluyendo el `<script>` normal).
+- Cada archivo `*.vue` puede contener como máximo un bloque `<script setup>` (excluyendo el `<script>` normal).
 
 - El script se procesa previamente y se usa como la función `setup()` del componente, lo que significa que se ejecutará **para cada instancia del componente**. Los enlaces de nivel superior en `<script setup>` se exponen automáticamente a la plantilla. Para obtener más detalles, [consulta la documentación dedicada en `<script setup>`](/api/sfc-script-setup).
 
@@ -68,7 +68,7 @@ Se pueden incluir bloques personalizados adicionales en un archivo `*.vue` para 
 - [vite-plugin-vue-gql: `<gql>`](https://github.com/wheatjs/vite-plugin-vue-gql)
 - [vue-i18n: `<i18n>`](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block)
 
-El manejo de los bloques personalizados dependerá de las herramientas: si deseas crear tus propias integraciones de bloques personalizados, consulta [la sección de herramientas correspondiente](/guide/scaling-up/tooling#sfc-custom-block-integration) para obtener más detalles.
+El manejo de los bloques personalizados dependerá de las herramientas: si deseas crear tus propias integraciones de bloques personalizados, consulta [la sección de herramientas de integraciones de bloques personalizados](/guide/scaling-up/tooling#sfc-custom-block-integrations) para obtener más detalles.
 
 ## Inferencia Automática de Nombres {#automatic-name-inference}
 
@@ -109,7 +109,7 @@ Ten en cuenta que la integración con varios preprocesadores puede diferir segú
 - [Vue CLI](https://cli.vuejs.org/guide/css.html#pre-processors)
 - [webpack + vue-loader](https://vue-loader.vuejs.org/guide/pre-processors.html#using-pre-processors)
 
-## Importaciones Src {#src-imports}
+## Importaciones `src` {#src-imports}
 
 Si prefieres dividir tus componentes `*.vue` en varios archivos, puedes utilizar el atributo `src` para importar un archivo externo para un bloque de lenguaje:
 

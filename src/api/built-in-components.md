@@ -102,6 +102,14 @@ Proporciona efectos de transición animados a un **solo** elemento o componente.
   </Transition>
   ```
 
+  Forzar una transición cambiando el atributo `key`:
+
+  ```vue-html
+  <Transition>
+   <div :key="text">{{ text }}</div>
+  </Transition>
+  ```
+
   Componente dinámico, con modo de transición + animación al inicio:
 
   ```vue-html
@@ -126,7 +134,7 @@ Proporciona efectos de transición para **múltiples** elementos o componentes e
 
 - **Props**
 
-  `<TransitionGroup>` acepta las mismas props que  `<Transition>` excepto `mode`, más dos props adicionales:
+  `<TransitionGroup>` acepta las mismas props que `<Transition>` excepto `mode`, más dos props adicionales:
 
   ```ts
   interface TransitionGroupProps extends Omit<TransitionProps, 'mode'> {
@@ -175,7 +183,7 @@ Almacena los componentes que alternan dinámicamente en su interior.
   ```ts
   interface KeepAliveProps {
     /**
-     * Si se especifica, solo los componentes cuyos nombres 
+     * Si se especifica, solo los componentes cuyos nombres
      * coinciden con `include` serán almacenados.
      */
     include?: MatchPattern
