@@ -2,7 +2,6 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "type": "module",
   "scripts": {
     "dev": "vitepress",
     "build": "vitepress build",

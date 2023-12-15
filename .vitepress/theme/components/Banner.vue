@@ -51,7 +51,7 @@ html:not(.banner-dismissed) {
   height: var(--vt-banner-height);
   line-height: var(--vt-banner-height);
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #fff;
   background-color: var(--vt-c-green);
