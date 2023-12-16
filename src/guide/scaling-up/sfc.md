@@ -92,7 +92,7 @@ export default {
 
 Las etiquetas `<style>` dentro de los SFC se inyectan normalmente como etiquetas `<style>` nativas durante el desarrollo para soportar las actualizaciones en caliente. Para producción pueden ser extraídas y fusionadas en un único archivo CSS.
 
-Puedes jugar con los SFCs y explorar cómo se compilan en el [Vue SFC Playground](https://sfc.vuejs.org/).
+Puedes jugar con los SFCs y explorar cómo se compilan en el [Vue SFC Playground](https://play.vuejs.org/).
 
 En los proyectos reales, solemos integrar el compilador de SFC con una herramienta de compilación como [Vite](https://vitejs.dev/) o [Vue CLI](http://cli.vuejs.org/) (que se basa en [webpack](https://webpack.js.org/)), y Vue proporciona herramientas oficiales de andamiaje para que puedas empezar a utilizar las SFC lo más rápido posible. Consulta más detalles en la sección [Herramientas](/guide/scaling-up/tooling).
 

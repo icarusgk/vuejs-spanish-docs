@@ -4,7 +4,7 @@
 
 No necesitas instalar nada en tu máquina para probar los SFC de Vue: hay una zona de prácticas en línea que te permite hacerlo directamente en el navegador:
 
-- [Zona de práctica de SFC de Vue](https://sfc.vuejs.org)
+- [Zona de práctica de SFC de Vue](https://play.vuejs.org)
   - Siempre se despliega desde el último commit
   - Diseñada para inspeccionar los resultados de la compilación de los componentes
 - [Vue + Vite en StackBlitz](https://vite.new/vue)

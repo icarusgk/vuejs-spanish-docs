@@ -33,7 +33,7 @@ const nav: ThemeConfig['nav'] = [
   },
   {
     text: 'Zona de Práctica',
-    link: 'https://sfc.vuejs.org'
+    link: 'https://play.vuejs.org'
   },
   {
     text: 'Ecosistema',
