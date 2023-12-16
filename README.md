@@ -2,7 +2,7 @@
 
 ## Contribuyendo
 
-Este sitio está construido con [VitePress](https://github.com/vuejs/vitepress) y depende de [@vue/theme](https://github.com/vuejs/vue-theme). El contenido del sitio está escrito en formato Markdown ubicado en `src`. Para ediciones sencillas, puedes editar directamente el archivo en GitHub y generar una Pull Request.
+Este sitio está construido con [VitePress](https://github.com/vuejs/vitepress) y depende de [@vue/theme](https://github.com/vuejs/vue-theme). El contenido del sitio está escrito en formato Markdown ubicado en `src`. Para ediciones sencillas, puedes editar directamente el archivo en GitHub y generar una solicitud de cambios.
 
 Para el desarrollo local, se prefiere [pnpm](https://pnpm.io/) como gestor de paquetes:
 
