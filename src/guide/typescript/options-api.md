@@ -200,7 +200,7 @@ export default defineComponent({
 </template>
 ```
 
-Sin anotación de tipo, el argumento `event` tendrá implícitamente un tipo `any`. Esto también dará lugar a un error de TS si se utiliza `"strict": true` o `"noImplicitAny": true` en `tsconfig.json`. Por lo tanto, se recomienda indicar explícitamente el argumento de los manejadores de eventos. Además, es posible que tengas que asignar explícitamente propiedades a `event`:
+Sin anotación de tipo, el argumento `event` tendrá implícitamente un tipo `any`. Esto también dará lugar a un error de TS si se utiliza `"strict": true` o `"noImplicitAny": true` en `tsconfig.json`. Por lo tanto, se recomienda indicar explícitamente el argumento de los manejadores de eventos. Además, es posible que tengas que usar aserciones de tipo al acceder las propiedades de `event`:
 
 ```ts
 import { defineComponent } from 'vue'

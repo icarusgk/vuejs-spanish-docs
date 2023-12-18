@@ -59,7 +59,7 @@ Siempre se debe llamar al método `.mount()` después de que se hayan realizado 
 
 ### Plantilla del Componente Root del DOM {#in-dom-root-component-template}
 
-Cuando usamos Vue sin un paso de compilación, podemos escribir la plantilla de nuestro componente root directamente dentro del contenedor de montaje:
+La plantilla para el componente root es usualmente parte del componente mismo, pero también es posible proveer la plantilla de forma separada escribiendola directamente dentro del contenedor de montaje:
 
 ```html
 <div id="app">
@@ -82,6 +82,8 @@ app.mount('#app')
 ```
 
 Vue utilizará automáticamente el `innerHTML` del contenedor como plantilla si el componente root no tiene ya una opción `template`.
+
+Las plantillas del componente root del DOM son a menudo usadas en aplicaciones que están [usando Vue sin un paso de compilación](/guide/quick-start.md#using-vue-from-cdn). También pueden ser usadas en conjunto con frameworks del lado del servidor, donde la plantilla root puede ser generada dinámicamente por el servidor.
 
 ## Configuraciones de la Aplicación {#app-configurations}
 
