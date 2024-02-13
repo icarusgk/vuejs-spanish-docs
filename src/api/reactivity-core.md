@@ -39,7 +39,7 @@ Toma un valor interno y devuelve un objeto ref reactivo y mutable, que tiene una
   console.log(count.value) // 1
   ```
 
-- **Véase también:**
+- **Véase también**
   - [Guía - Variables Reactivas con `ref()`](/guide/essentials/reactivity-fundamentals#reactive-variables-with-ref)
   - [Guía - Escritura de `ref()`](/guide/typescript/composition-api#typing-ref)
 
@@ -108,7 +108,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   })
   ```
 
-- **Véase también:**
+- **Véase también**
   - [Guía - Propiedades Computadas](/guide/essentials/computed)
   - [Guía - Depuración Computada](/guide/extras/reactivity-in-depth#computed-debugging)
   - [Guía - Escritura de `computed()`](/guide/typescript/composition-api#typing-computed)
@@ -186,7 +186,7 @@ Devuelve un proxy reactivo del objeto.
   console.log(obj.count === count.value) // true
   ```
 
-- **Véase también:**
+- **Véase también**
   - [Guía - Fundamentos de Reactividad](/guide/essentials/reactivity-fundamentals)
   - [Guía - Escritura de `reactive()`](/guide/typescript/composition-api#typing-reactive)
 
@@ -308,7 +308,7 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   })
   ```
 
-- **Véase también**:
+- **Véase también**
   - [Guía - Watchers](/guide/essentials/watchers#watcheffect)
   - [Guía - Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging)
 
@@ -480,7 +480,7 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
   })
   ```
 
-- **Véase también**:
+- **Véase también**
 
   - [Guía - Watchers](/guide/essentials/watchers)
   - [Guía - Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging)

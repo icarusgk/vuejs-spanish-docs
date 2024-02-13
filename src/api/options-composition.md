@@ -12,7 +12,7 @@ Proporcionar valores que puedan ser inyectados por los componentes descendientes
   }
   ```
 
-- **Detalles:**
+- **Detalles**
 
   `provide` y [`inject`](#inject) se utilizan conjuntamente para permitir que un componente ancestral sirva como inyector de dependencias para todos sus descendientes, independientemente de la profundidad de la jerarquía de componentes, siempre que estén en la misma cadena padre.
 
@@ -52,7 +52,7 @@ Proporcionar valores que puedan ser inyectados por los componentes descendientes
 
   Tenga en cuenta que en el ejemplo anterior, el `msg` proporcionado NO será reactivo. Consulte [Trabajando con Reactividad](/guide/components/provide-inject#working-with-reactivity) para más detalles.
 
-- **Ver también:** [Provide / Inject](/guide/components/provide-inject)
+- **Ver también** [Provide / Inject](/guide/components/provide-inject)
 
 ## inject {#inject}
 
@@ -167,7 +167,7 @@ Declara propiedades para inyectar en el componente actual localizándolas desde 
   }
   ```
 
-- **Ver también:** [Provide / Inject](/guide/components/provide-inject)
+- **Ver también** [Provide / Inject](/guide/components/provide-inject)
 
 ## mixins {#mixins}
 
@@ -181,7 +181,7 @@ Una matriz de objetos de opción que se mezclan en el componente actual.
   }
   ```
 
-- **Detalles:**
+- **Detalles**
 
   La opción `mixins` acepta un array de objetos mixin. Estos objetos mixin pueden contener opciones de instancia como los objetos de instancia normales, y se fusionarán con las opciones eventuales utilizando la lógica de fusión de opciones determinada. Por ejemplo, si tu mixin contiene un método llamado `created` y el propio componente también tiene uno, ambas funciones serán llamadas.
 
@@ -191,7 +191,7 @@ Una matriz de objetos de opción que se mezclan en el componente actual.
   En Vue 2, los mixins eran el mecanismo principal para crear fragmentos reutilizables de lógica de componentes. Aunque los mixins siguen siendo compatibles en Vue 3, [los composables mediante la Composition API](/guide/reusability/composables) son ahora el enfoque preferido para la reutilización de código entre componentes.
   :::
 
-- **Ejemplo:**
+- **Ejemplo**
 
   ```js
   const mixin = {
@@ -223,7 +223,7 @@ Un componente de "clase base" para extender.
   }
   ```
 
-- **Detalles:**
+- **Detalles**
 
   Permite que un componente extienda a otro, heredando sus opciones de componentes.
 
@@ -233,7 +233,7 @@ Un componente de "clase base" para extender.
 
   Al igual que con `mixins`, cualquier opción (excepto `setup()`) se fusionará utilizando la estrategia de fusión correspondiente.
 
-- **Ejemplo:**
+- **Ejemplo**
 
   ```js
   const CompA = { ... }

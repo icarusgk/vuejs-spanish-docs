@@ -35,7 +35,7 @@ El atributo especial `key` es usado primeramente por el algoritmo de DOM virtual
 
   Cuando `text` cambia, el elemento `<span>` será reemplazado en lugar de ser parchado, de modo que se activará la transición.
 
-- **Ver también:** [Guía - Renderizado de Listas - Manteniendo el estado con `key`](/guide/essentials/list#maintaining-state-with-key)
+- **Ver también** [Guía - Renderizado de Listas - Manteniendo el estado con `key`](/guide/essentials/list#maintaining-state-with-key)
 
 ## ref {#ref}
 
@@ -47,7 +47,7 @@ Evoca a una [ref de la plantilla](/guide/essentials/template-refs).
 
   `ref` es usado para registrar una referencia a un elemento o a un componente hijo.
 
-  En la Options API, la referencia será registrada bajo el objeto  `this.$refs` del componente0:
+  En la Options API, la referencia será registrada bajo el objeto `this.$refs` del componente0:
 
   ```vue-html
   <!-- almacenado como this.$refs.p -->
@@ -80,7 +80,7 @@ Evoca a una [ref de la plantilla](/guide/essentials/template-refs).
 
   `this.$refs` es un objeto no reactivo, por lo que no debes intentar usarlo en la plantilla para hacer data-binding.
 
-- **Ver también:** [Refs de la Plantilla](/guide/essentials/template-refs)
+- **Ver también** [Refs de la Plantilla](/guide/essentials/template-refs)
 
 ## is {#is}
 
@@ -100,7 +100,7 @@ Usado para vincular [componentes dinámicos](/guide/essentials/component-basics#
   </table>
   ```
 
-- **Ver también:**
+- **Ver también**
 
   - [Elementos Especiales Integrados - `<component>`](/api/built-in-special-elements#component)
   - [Componentes Dinámicos](/guide/essentials/component-basics#dynamic-components)

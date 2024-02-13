@@ -43,7 +43,7 @@
 
   La mayoría de las otras API de SSR en esta página también aceptan opcionalmente un objeto de contexto. Se puede acceder al objeto de contexto en el código del componente a través del ayudante [useSSRContext](#usessrcontext).
 
-- **Véase también:** [Guía - Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)
+- **Véase también** [Guía - Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)
 
 ## renderToNodeStream() {#rendertonodestream}
 

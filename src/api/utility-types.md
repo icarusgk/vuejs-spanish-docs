@@ -30,7 +30,7 @@ Se usa para anotar una prop con tipos más avanzados cuando se usan declaracione
   }
   ```
 
-- **Véase también:** [Guía - Escritura de las Props de Componentes](/guide/typescript/options-api#typing-component-props)
+- **Véase también** [Guía - Escritura de las Props de Componentes](/guide/typescript/options-api#typing-component-props)
 
 ## MaybeRef\<T> {#mayberef}
 
@@ -80,6 +80,7 @@ Para extraer props públicas, es decir, props que el padre puede pasar, utiliza 
 Extrae tipos de props de un objeto de opciones de props en tiempo de ejecución. Los tipos extraídos son de cara pública, es decir, las props que el padre tiene permitido pasar.
 
 - **Ejemplo**
+
   ```ts
   const propsOptions = {
     foo: String,
@@ -124,7 +125,7 @@ Se utiliza para aumentar el tipo de instancia del componente para admitir propie
   Los aumentos deben colocarse en un archivo de módulo `.ts` o `.d.ts`. Consulta [Ubicación del Aumento de Tipo](/guide/typescript/options-api#augmenting-global-properties) para obtener más detalles.
   :::
 
-- **Véase también:** [Guía - Aumento de las Propiedades Globales](/guide/typescript/options-api#augmenting-global-properties)
+- **Véase también** [Guía - Aumento de las Propiedades Globales](/guide/typescript/options-api#augmenting-global-properties)
 
 ## ComponentCustomOptions {#componentcustomoptions}
 
@@ -146,7 +147,7 @@ Se utiliza para aumentar el tipo de opciones del componente para admitir opcione
   Los aumentos deben colocarse en un archivo de módulo `.ts` o `.d.ts`. Consulta [Ubicación del Aumento de Tipo](/guide/typescript/options-api#augmenting-global-properties) para obtener más detalles.
   :::
 
-- **Véase también:** [Guía - Aumento de las Opciones Personalizadas](/guide/typescript/options-api#augmenting-custom-options)
+- **Véase también** [Guía - Aumento de las Opciones Personalizadas](/guide/typescript/options-api#augmenting-custom-options)
 
 ## ComponentCustomProps {#componentcustomprops}
 

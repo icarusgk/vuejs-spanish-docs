@@ -89,7 +89,7 @@ Las opciones resueltas del componente utilizadas para instanciar la instancia ac
   })
   ```
 
-- **Ver también:** [`app.config.optionMergeStrategies`](/api/application#app-config-optionmergestrategies)
+- **Ver también** [`app.config.optionMergeStrategies`](/api/application#app-config-optionmergestrategies)
 
 ## $parent {#parent}
 
@@ -137,7 +137,7 @@ Un objeto representando los [slots](/guide/components/slots) pasados desde el co
 
   Si el slot es un [slot con ámbito](/guide/components/slots#scoped-slots), los argumentos pasados a la función del slot están disponibles para el slot como sus props.
 
-- **Ver también:** [Funciones de Renderizado - Renderizado de Slots](/guide/extras/render-function#rendering-slots)
+- **Ver también** [Funciones de Renderizado - Renderizado de Slots](/guide/extras/render-function#rendering-slots)
 
 ## $refs {#refs}
 
@@ -151,7 +151,7 @@ Un objeto de elementos del DOM e instancias de componentes, registrados a travé
   }
   ```
 
-- **Ver también:**
+- **Ver también**
 
   - [Refs de la Plantilla](/guide/essentials/template-refs)
   - [Atributos Especiales - ref](./built-in-special-attributes.md#ref)
@@ -174,7 +174,7 @@ Un objeto que contiene el resto de los atributos del componente.
 
   Por defecto, todo lo que hay en `$attrs` se heredará automáticamente en el elemento raíz del componente si sólo hay un único elemento raíz. Este comportamiento se desactiva si el componente tiene varios nodos raíz, y puede desactivarse explícitamente con la opción [`inheritAttrs`](./options-misc#inheritattrs).
 
-- **Ver también:**
+- **Ver también**
 
   - [Atributos Fallthrough](/guide/components/attrs)
 
@@ -257,7 +257,7 @@ API para crear watchers.
   unwatch()
   ```
 
-- **Ver también:**
+- **Ver también**
   - [Options - `watch`](/api/options-state#watch)
   - [Guía - Watchers](/guide/essentials/watchers)
 
@@ -286,7 +286,7 @@ Activa un evento personalizado en la instancia actual. Cualquier arguemnto adici
   }
   ```
 
-- **Ver también:**
+- **Ver también**
 
   - [Componentes - Eventos](/guide/components/events)
   - [`emits` option](./options-state#emits)
@@ -315,7 +315,9 @@ Versión vinculada a la instancia del componente del global [`nextTick()`](./gen
 
   ```ts
   interface ComponentPublicInstance {
-    $nextTick(callback?: (this: ComponentPublicInstance) => void): Promise<void>
+    $nextTick(
+      callback?: (this: ComponentPublicInstance) => void
+    ): Promise<void>
   }
   ```
 
@@ -323,4 +325,4 @@ Versión vinculada a la instancia del componente del global [`nextTick()`](./gen
 
   La única diferencia con la versión global de `nextTick()` es que el callback pasado a `this.$nextTick()` tendrá su contexto de `this` vinculado con la instancia actual del componente.
 
-- **Ver también:** [`nextTick()`](./general#nexttick)
+- **Ver también** [`nextTick()`](./general#nexttick)

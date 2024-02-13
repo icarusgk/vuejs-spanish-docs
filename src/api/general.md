@@ -93,7 +93,7 @@ Una utilidad para esperar la próxima actualización del DOM.
 
   </div>
 
-- **Ver también:** [`this.$nextTick()`](/api/component-instance#nexttick)
+- **Ver también** [`this.$nextTick()`](/api/component-instance#nexttick)
 
 ## defineComponent() {#definecomponent}
 
@@ -192,7 +192,7 @@ Un ayudante de tipo para definir un componente Vue con inferencia de tipo.
 
   Tenga en cuenta que esto no es necesario si está utilizando Vite, porque Rollup (el bundler de producción subyacente utilizado por Vite) es lo suficientemente inteligente como para determinar que `defineComponent()` está de hecho libre de efectos secundarios sin necesidad de anotaciones manuales.
 
-- **Ver también:** [Guía - Usando Vue con TypeScript](/guide/typescript/overview#general-usage-notes)
+- **Ver también** [Guía - Usando Vue con TypeScript](/guide/typescript/overview#general-usage-notes)
 
 ## defineAsyncComponent() {#defineasynccomponent}
 
@@ -223,7 +223,7 @@ Define un componente asíncrono que se carga dinámicamente sólo cuando se rend
   }
   ```
 
-- **Ver también:** [Guía - Componentes Asíncronos](/guide/components/async)
+- **Ver también** [Guía - Componentes Asíncronos](/guide/components/async)
 
 ## defineCustomElement() {#definecustomelement}
 
@@ -262,7 +262,7 @@ Este método acepta el mismo argumento que [`defineComponent`](#definecomponent)
   customElements.define('my-vue-element', MyVueElement)
   ```
 
-- **Ver también:**
+- **Ver también**
 
   - [Guía - Construyendo Elementos Personalizados con Vue](/guide/extras/web-components#building-custom-elements-with-vue)
 

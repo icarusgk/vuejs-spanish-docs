@@ -134,7 +134,7 @@ Aquí hemos declarado la propiedad computada `publishedBooksMessage`. La funció
 
 Una propiedad computada rastrea automáticamente sus dependencias reactivas. Vue es consciente de que el cálculo de `publishedBooksMessage` depende de `author.books`, por lo que actualizará cualquier enlace que dependa de `publishedBooksMessage` cuando cambie `author.books`.
 
-Véase también: [Escritura de computed()](/guide/typescript/composition-api#typing-computed) <sup class="vt-badge ts" />
+Véase también [Escritura de computed()](/guide/typescript/composition-api#typing-computed) <sup class="vt-badge ts" />
 
 </div>
 

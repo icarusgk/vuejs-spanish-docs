@@ -35,7 +35,7 @@ Crea una instancia de la aplicación.
   const app = createApp(App)
   ```
 
-- **Ver también:** [Guía - Creando una Aplicación Vue](/guide/essentials/application)
+- **Ver también** [Guía - Creando una Aplicación Vue](/guide/essentials/application)
 
 ## createSSRApp() {#createssrapp}
 
@@ -119,7 +119,7 @@ Registra un componente global si se le pasa tanto un nombre como la definición 
   const MyComponent = app.component('my-component')
   ```
 
-- **Ver también:** [Registro de Componentes](/guide/components/registration)
+- **Ver también** [Registro de Componentes](/guide/components/registration)
 
 ## app.directive() {#app-directive}
 
@@ -157,7 +157,7 @@ Registra una directiva personalizada global si se le pasa tanto un nombre y la d
   const myDirective = app.directive('my-directive')
   ```
 
-- **Ver también:** [Directivas Personalizadas](/guide/reusability/custom-directives)
+- **Ver también** [Directivas Personalizadas](/guide/reusability/custom-directives)
 
 ## app.use() {#app-use}
 
@@ -192,7 +192,7 @@ Instala un [plugin](/guide/reusability/plugins).
   app.use(MyPlugin)
   ```
 
-- **Ver también:** [Plugins](/guide/reusability/plugins)
+- **Ver también** [Plugins](/guide/reusability/plugins)
 
 ## app.mixin() {#app-mixin}
 
@@ -266,7 +266,7 @@ Provee un valor que puede ser inyectado en todos sus componentes hijos dentro de
 
   </div>
 
-- **Ver también:**
+- **Ver también**
   - [Provide / Inject](/guide/components/provide-inject)
   - [Provide de Nivel de Aplicación](/guide/components/provide-inject#app-level-provide)
   - [app.runWithContext()](#app-runwithcontext)
@@ -325,7 +325,7 @@ Proporciona la versión de Vue con la que se creó la aplicación. Esto es útil
   }
   ```
 
-- **Ver también:** [API Global - Versión](/api/general#version)
+- **Ver también** [API Global - Versión](/api/general#version)
 
 ## app.config {#app-config}
 
@@ -417,9 +417,9 @@ Asigna un manejador personalizado para advertencias de vue en tiempo de ejecuci�
 
 Asigna este valor a `true` para activar el seguimiento del inicio del componente, compilación, renderizado y seguimiento de la performance en el panel rentimiento/tiempo de las herramientas del desarrollador en el navegador. Solo funciona en el modo desarrollo y en navegadores que soporten la API de [performance.mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark).
 
-- **Tipo**: `boolean`
+- **Tipo:** `boolean`
 
-- **Ver también:** [Guía - Guía de Optimización del Rendimiento](/guide/best-practices/performance)
+- **Ver también** [Guía - Guía de Optimización del Rendimiento](/guide/best-practices/performance)
 
 ## app.config.compilerOptions {#app-config-compileroptions}
 
@@ -437,7 +437,7 @@ Esta opción de configuración solo es respetada cuando se usa la compilación c
 
 Especifica un método de comprobación para reconocer elementos nativos personalizados.
 
-- **Type:** `(tag: string) => boolean`
+- **Tipo:** `(tag: string) => boolean`
 
 - **Detalles**
 
@@ -454,13 +454,13 @@ Especifica un método de comprobación para reconocer elementos nativos personal
   }
   ```
 
-- **Ver también:** [Vue y Componentes Web](/guide/extras/web-components)
+- **Ver también** [Vue y Componentes Web](/guide/extras/web-components)
 
 ### app.config.compilerOptions.whitespace {#app-config-compileroptions-whitespace}
 
 Ajusta el comportamiento del manejo de los espacios en blanco de la plantilla.
 
-- **Type:** `'condense' | 'preserve'`
+- **Tipo:** `'condense' | 'preserve'`
 
 - **Default:** `'condense'`
 
@@ -484,7 +484,7 @@ Ajusta el comportamiento del manejo de los espacios en blanco de la plantilla.
 
 Ajusta los delimitadores utilizados para la interpolación del texto dentro de la plantilla.
 
-- **Type:** `[string, string]`
+- **Tipo:** `[string, string]`
 
 - **Default:** `{{ "['\u007b\u007b', '\u007d\u007d']" }}`
 
@@ -503,7 +503,7 @@ Ajusta los delimitadores utilizados para la interpolación del texto dentro de l
 
 Ajusta el tratamiento de los comentarios HTML en las plantillas.
 
-- **Type:** `boolean`
+- **Tipo:** `boolean`
 
 - **Default:** `false`
 
@@ -600,4 +600,4 @@ Un objeto para definir las estrategias de mergeo para componentes personalizados
   // logs 'Hola, Vue'
   ```
 
-- **Ver también:** [Instancia del componente - `$options`](/api/component-instance#options)
+- **Ver también** [Instancia del componente - `$options`](/api/component-instance#options)

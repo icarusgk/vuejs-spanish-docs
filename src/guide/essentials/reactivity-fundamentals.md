@@ -87,7 +87,7 @@ const count = ref(0)
 console.log(count) // { value : 0 }
 console.log(count.value) // 0
 
-count.value++ 
+count.value++
 console.log(count.value) // 1
 ```
 
@@ -115,7 +115,7 @@ export default {
 <div>{{ count }}</div>
 ```
 
-Nota que ***no*** necesitamos agregar `.value` al usar la ref en la plantilla. Por conveniencia, las refs son desenvueltos automáticamente al ser usadas dentro de plantillas (con algunas [advertencias](#caveat-when-unwrapping-in-templates)).
+Nota que **_no_** necesitamos agregar `.value` al usar la ref en la plantilla. Por conveniencia, las refs son desenvueltos automáticamente al ser usadas dentro de plantillas (con algunas [advertencias](#caveat-when-unwrapping-in-templates)).
 
 También puedes mutar una ref directamente en manejadores de eventos:
 
@@ -156,7 +156,7 @@ Los métodos expuestos pueden después ser usados como manejadores de eventos:
 </button>
 ```
 
-Acá hay un ejemplo en [CodePen](https://codepen.io/vuejs-examples/pen/WNYbaqo), sin usar herramientas de compilación. 
+Acá hay un ejemplo en [CodePen](https://codepen.io/vuejs-examples/pen/WNYbaqo), sin usar herramientas de compilación.
 
 ### `<script setup>` \*\* {#script-setup}
 
@@ -215,9 +215,10 @@ const myRef = {
 }
 ```
 
-Otra buena característica de las refs es que a diferencia de variables simples, puedes pasar las refs a funciones reteniendo el acceso a su último valor y la conexión de reactividad. Esto es particularmente útil al refactorizar lógica compleja en código reutilizable. 
+Otra buena característica de las refs es que a diferencia de variables simples, puedes pasar las refs a funciones reteniendo el acceso a su último valor y la conexión de reactividad. Esto es particularmente útil al refactorizar lógica compleja en código reutilizable.
 
 El sistema de reactividad es discutido en más detalle en la sección [Reactividad en Profundidad](/guide/extras/reactivity-in-depth).
+
 </div>
 
 <div class="options-api">
@@ -306,10 +307,10 @@ Las refs pueden tener cualquier tipo de valor, incluyendo objetos profundamente 
 Una ref hará que su valor sea profundamente reactivo. Esto significa que puedes esperar que se detecten cambios aún cuando mutas objetos o arrays anidados.
 
 ```js
-import { ref } from 'vue'
+import { ref } from 'vue'
 
 const obj = ref({
-  nested: { count : 0 },
+  nested: { count: 0 },
   arr: ['foo', 'bar']
 })
 
@@ -324,7 +325,7 @@ Valores no primitivos son convertidos en proxies reactivos mediante [`reactive()
 
 También es posible no optar por reactividad profunda con [refs superficiales](/api/reactivity-advanced#shallowref). Para refs superficiales, sólo se registra el acceso a .value para la reactividad. Las refs superficiales pueden ser usadas para optimizar rendimiento al evitar los costos de observación de objetos grandes, o en casos donde el estado interno es manejado por una librería externa.
 
-Véase también:
+Véase también
 
 - [Reducción de la Sobrecarga de Reactividad en Estructuras Inmutables de Gran Tamaño](/guide/best-practices/performance#reduce-reactivity-overhead-for-large-immutable-structures)
 - [Integración con los Sistemas de Estado Externos](/guide/extras/reactivity-in-depth#integration-with-external-state-systems)
@@ -377,7 +378,7 @@ export default {
 Existe otra forma de declarar estado reactivo, con la API `reactive()`. A diferencia de una ref, que envuelve el valor interno en un objeto especial, `reactive()` hace reactivo al objeto mismo:
 
 ```js
-import { reactive } from 'vue'
+import { reactive } from 'vue'
 
 const state = reactive({ count: 0 })
 ```

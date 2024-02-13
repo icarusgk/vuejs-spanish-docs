@@ -103,12 +103,12 @@ Controla si el comportamiento por defecto de los atributos de los componentes de
   ```
 
   Desde la versión 3.3 puedes usar también `defineOptions` directamente en `<script setup>`:
-  
+
   ```vue
   <script setup>
   defineProps(['label', 'value'])
   defineEmits(['input'])
-  defineOptions({ inheritAttrs: false})
+  defineOptions({ inheritAttrs: false })
   </script>
 
   <template>
@@ -117,15 +117,15 @@ Controla si el comportamiento por defecto de los atributos de los componentes de
       <input
         v-bind="$attrs"
         v-bind:value="value"
-        v-on:input="$emit('input', $event.target.value)" 
+        v-on:input="$emit('input', $event.target.value)"
       />
     </label>
   </template>
   ```
-  
+
   </div>
 
-- **Ver también:** [Attributos Fallthrough](/guide/components/attrs)
+- **Ver también** [Attributos Fallthrough](/guide/components/attrs)
 
 ## components {#components}
 
@@ -155,7 +155,7 @@ Un objeto que registra los componentes que se pondrán a disposición de la inst
   }
   ```
 
-- **Ver también:** [Registro de Componentes](/guide/components/registration)
+- **Ver también** [Registro de Componentes](/guide/components/registration)
 
 ## directives {#directives}
 
@@ -190,4 +190,4 @@ Un objeto que registra las directivas que se pondrán a disposición de la insta
 
   Un hash de directivas que se pondrán a disposición de la instancia del componente.
 
-- **Ver también:** [Directivas personalizadas](/guide/reusability/custom-directives)
+- **Ver también** [Directivas personalizadas](/guide/reusability/custom-directives)

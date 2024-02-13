@@ -228,7 +228,7 @@ Se llama cuando una dependencia reactiva ha sido rastreada por el efecto de rend
   }
   ```
 
-- **Ver también:** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
+- **Ver también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
 
 ## renderTriggered <sup class="vt-badge dev-only" /> {#rendertriggered}
 
@@ -252,7 +252,7 @@ Se llama cuando una dependencia reactiva hace que el efecto de renderización de
   }
   ```
 
-- **Ver también:** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
+- **Ver también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
 
 ## activated {#activated}
 
@@ -268,7 +268,7 @@ Se llama después de que la instancia del componente se inserta en el DOM como p
   }
   ```
 
-- **Ver también:** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
+- **Ver también** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
 
 ## deactivated {#deactivated}
 
@@ -284,7 +284,7 @@ Se llama después de que la instancia del componente se elimina del DOM como par
   }
   ```
 
-- **Ver también:** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
+- **Ver también** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
 
 ## serverPrefetch <sup class="vt-badge" data-text="SSR only" /> {#serverprefetch}
 
@@ -329,4 +329,4 @@ Función asíncrona a resolverse antes de que la instancia del componente se ren
   }
   ```
 
-- **Ver también:** [Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)
+- **Ver también** [Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)
