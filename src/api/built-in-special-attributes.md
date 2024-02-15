@@ -35,7 +35,7 @@ El atributo especial `key` es usado primeramente por el algoritmo de DOM virtual
 
   Cuando `text` cambia, el elemento `<span>` será reemplazado en lugar de ser parchado, de modo que se activará la transición.
 
-- **Ver también** [Guía - Renderizado de Listas - Manteniendo el estado con `key`](/guide/essentials/list#maintaining-state-with-key)
+- **Véase también** [Guía - Renderizado de Listas - Manteniendo el estado con `key`](/guide/essentials/list#maintaining-state-with-key)
 
 ## ref {#ref}
 
@@ -80,7 +80,7 @@ Evoca a una [ref de la plantilla](/guide/essentials/template-refs).
 
   `this.$refs` es un objeto no reactivo, por lo que no debes intentar usarlo en la plantilla para hacer data-binding.
 
-- **Ver también** [Refs de la Plantilla](/guide/essentials/template-refs)
+- **Véase también** [Refs de la Plantilla](/guide/essentials/template-refs)
 
 ## is {#is}
 
@@ -100,7 +100,7 @@ Usado para vincular [componentes dinámicos](/guide/essentials/component-basics#
   </table>
   ```
 
-- **Ver también**
+- **Véase también**
 
   - [Elementos Especiales Integrados - `<component>`](/api/built-in-special-elements#component)
   - [Componentes Dinámicos](/guide/essentials/component-basics#dynamic-components)

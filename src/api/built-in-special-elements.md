@@ -108,7 +108,7 @@ Un "meta componente" para renderizar componentes dinámicos o elementos HTML.
 
   En la práctica, este es un caso poco probable ya que los componentes de formluario nativos de HTML por lo general se usan dentro de componentes en una aplicación real. De ser necesario el uso de un elemento nativo puedes desglosar el `v-model` en un atributo y un evento de forma manual.
 
-- **Ver también** [Componentes Dinámicos](/guide/essentials/component-basics#dynamic-components)
+- **Véase también** [Componentes Dinámicos](/guide/essentials/component-basics#dynamic-components)
 
 ## `<slot>` {#slot}
 
@@ -138,7 +138,7 @@ Denotes slot content outlets in templates.
 
   Los elementos `<slot>` son compilados a Javascript en las plantillas de Vue, por eso no deben ser confundidos con [el elemento `<slot>` nativo](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot).
 
-- **Ver también** [Componentes - Slots](/guide/components/slots)
+- **Véase también** [Componentes - Slots](/guide/components/slots)
 
 ## `<template>` {#template}
 
@@ -158,7 +158,7 @@ Una `<template>` con `v-for` también puede tener un [atributo `key`](/api/built
 
 Los componentes de un solo archivo utilizan una [etiqueta `<template>` de nivel superior](/api/sfc-spec#language-blocks) para envolver toda la plantilla. Este uso es independiente del uso de `<template>` descrito anteriormente. Esa etiqueta de nivel superior no forma parte de la template como tal y no admite la sintaxis de la template, como son las directivas.
 
-- **Ver también**
+- **Véase también**
   - [Guía - `v-if` en `<template>`](/guide/essentials/conditional#v-if-on-template)
   - [Guía - `v-for` en `<template>`](/guide/essentials/list#v-for-on-template)
   - [Guía - Slots con nombre](/guide/components/slots#name-slots)

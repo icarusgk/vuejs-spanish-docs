@@ -35,7 +35,7 @@ Crea una instancia de la aplicación.
   const app = createApp(App)
   ```
 
-- **Ver también** [Guía - Creando una Aplicación Vue](/guide/essentials/application)
+- **Véase también** [Guía - Creando una Aplicación Vue](/guide/essentials/application)
 
 ## createSSRApp() {#createssrapp}
 
@@ -119,7 +119,7 @@ Registra un componente global si se le pasa tanto un nombre como la definición 
   const MyComponent = app.component('my-component')
   ```
 
-- **Ver también** [Registro de Componentes](/guide/components/registration)
+- **Véase también** [Registro de Componentes](/guide/components/registration)
 
 ## app.directive() {#app-directive}
 
@@ -157,7 +157,7 @@ Registra una directiva personalizada global si se le pasa tanto un nombre y la d
   const myDirective = app.directive('my-directive')
   ```
 
-- **Ver también** [Directivas Personalizadas](/guide/reusability/custom-directives)
+- **Véase también** [Directivas Personalizadas](/guide/reusability/custom-directives)
 
 ## app.use() {#app-use}
 
@@ -192,7 +192,7 @@ Instala un [plugin](/guide/reusability/plugins).
   app.use(MyPlugin)
   ```
 
-- **Ver también** [Plugins](/guide/reusability/plugins)
+- **Véase también** [Plugins](/guide/reusability/plugins)
 
 ## app.mixin() {#app-mixin}
 
@@ -266,7 +266,7 @@ Provee un valor que puede ser inyectado en todos sus componentes hijos dentro de
 
   </div>
 
-- **Ver también**
+- **Véase también**
   - [Provide / Inject](/guide/components/provide-inject)
   - [Provide de Nivel de Aplicación](/guide/components/provide-inject#app-level-provide)
   - [app.runWithContext()](#app-runwithcontext)
@@ -325,7 +325,7 @@ Proporciona la versión de Vue con la que se creó la aplicación. Esto es útil
   }
   ```
 
-- **Ver también** [API Global - Versión](/api/general#version)
+- **Véase también** [API Global - Versión](/api/general#version)
 
 ## app.config {#app-config}
 
@@ -419,7 +419,7 @@ Asigna este valor a `true` para activar el seguimiento del inicio del componente
 
 - **Tipo:** `boolean`
 
-- **Ver también** [Guía - Guía de Optimización del Rendimiento](/guide/best-practices/performance)
+- **Véase también** [Guía - Guía de Optimización del Rendimiento](/guide/best-practices/performance)
 
 ## app.config.compilerOptions {#app-config-compileroptions}
 
@@ -428,7 +428,7 @@ Configurar las opciones del compilador en tiempo de ejecución. Las opciones est
 ::: warning Importante
 Esta opción de configuración solo es respetada cuando se usa la compilación completa (es decir, la compilación de `vue.js` que puede compilar plantillas en el navegador). Si estás usando la construcción en tiempo de ejecución con una configuración de construcción, las opciones del compilador deben ser pasadas a `@vue/compiler-dom` a través de las configuraciones de la herramienta de construcción.
 
-- Para `vue-loader`: [Pasarlo a través de la opción `compilerOptions`](https://vue-loader.vuejs.org/options.html#compileroptions). Ver también [cómo configurarlo en `vue-cli`](https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-loader).
+- Para `vue-loader`: [Pasarlo a través de la opción `compilerOptions`](https://vue-loader.vuejs.org/options.html#compileroptions). Véase también [cómo configurarlo en `vue-cli`](https://cli.vuejs.org/guide/webpack.html#modifying-options-of-a-loader).
 
 - Para `vite`: [paralo a través de la opción `@vitejs/plugin-vue`](https://github.com/vitejs/vite/tree/main/packages/plugin-vue#options).
   :::
@@ -454,7 +454,7 @@ Especifica un método de comprobación para reconocer elementos nativos personal
   }
   ```
 
-- **Ver también** [Vue y Componentes Web](/guide/extras/web-components)
+- **Véase también** [Vue y Componentes Web](/guide/extras/web-components)
 
 ### app.config.compilerOptions.whitespace {#app-config-compileroptions-whitespace}
 
@@ -600,4 +600,4 @@ Un objeto para definir las estrategias de mergeo para componentes personalizados
   // logs 'Hola, Vue'
   ```
 
-- **Ver también** [Instancia del componente - `$options`](/api/component-instance#options)
+- **Véase también** [Instancia del componente - `$options`](/api/component-instance#options)

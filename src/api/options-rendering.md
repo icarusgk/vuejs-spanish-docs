@@ -57,7 +57,7 @@ Una función que devuelve mediante programación el árbol DOM virtual del compo
 
   Las plantillas precompiladas, por ejemplo las de los componentes de un solo archivo, se compilan en la opción `render` en el momento de la compilación. Si tanto `render` como `template` están presentes en un componente, `render` tendrá mayor prioridad.
 
-- **Ver también**
+- **Véase también**
   - [Mecanismo de Renderizado](/guide/extras/rendering-mechanism)
   - [Funciones de Renderizado y JSX](/guide/extras/render-function)
 
@@ -82,7 +82,7 @@ Configurar las opciones del compilador en tiempo de ejecución para la plantilla
 
   Esta opción de configuración sólo se respeta cuando se utiliza la compilación completa (es decir, el `vue.js` independiente que puede compilar plantillas en el navegador). Éste soporta las mismas opciones que aquellas en el nivel de la aplicación [app.config.compilerOptions](/api/application#app-config-compileroptions), y tiene mayor prioridad para el componente actual.
 
-- **Ver también** [app.config.compilerOptions](/api/application#app-config-compileroptions)
+- **Véase también** [app.config.compilerOptions](/api/application#app-config-compileroptions)
 
 ## slots<sup class="vt-badge ts"/> {#slots}
 

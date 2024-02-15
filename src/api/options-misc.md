@@ -125,7 +125,7 @@ Controla si el comportamiento por defecto de los atributos de los componentes de
 
   </div>
 
-- **Ver también** [Attributos Fallthrough](/guide/components/attrs)
+- **Véase también** [Attributos Fallthrough](/guide/components/attrs)
 
 ## components {#components}
 
@@ -155,7 +155,7 @@ Un objeto que registra los componentes que se pondrán a disposición de la inst
   }
   ```
 
-- **Ver también** [Registro de Componentes](/guide/components/registration)
+- **Véase también** [Registro de Componentes](/guide/components/registration)
 
 ## directives {#directives}
 
@@ -190,4 +190,4 @@ Un objeto que registra las directivas que se pondrán a disposición de la insta
 
   Un hash de directivas que se pondrán a disposición de la instancia del componente.
 
-- **Ver también** [Directivas personalizadas](/guide/reusability/custom-directives)
+- **Véase también** [Directivas personalizadas](/guide/reusability/custom-directives)

@@ -45,7 +45,7 @@ Una función que devuelve el estado reactivo inicial para la instancia del compo
   data: (vm) => ({ a: vm.myProp })
   ```
 
-- **Ver también** [Reactividad en profundidad](/guide/extras/reactivity-in-depth)
+- **Véase también** [Reactividad en profundidad](/guide/extras/reactivity-in-depth)
 
 ## props {#props}
 
@@ -125,7 +125,7 @@ Declarar las propiedades de un componente.
   }
   ```
 
-- **Ver también** [Propiedades](/guide/components/props)
+- **Véase también** [Propiedades](/guide/components/props)
 
 ## computed {#computed}
 
@@ -205,7 +205,7 @@ Declara las propiedades computadas que se expondrán en la instancia del compone
   }
   ```
 
-- **Ver también** [Computed Properties](/guide/essentials/computed)
+- **Véase también** [Computed Properties](/guide/essentials/computed)
 
 ## methods {#methods}
 
@@ -246,7 +246,7 @@ Declara los métodos que se mezclan en la instancia del componente.
   }
   ```
 
-- **Ver también** [Manejo de Eventos](/guide/essentials/event-handling)
+- **Véase también** [Manejo de Eventos](/guide/essentials/event-handling)
 
 ## watch {#watch}
 
@@ -362,7 +362,7 @@ Declara funciones de vigilancia que se invocan cuando cambian los datos.
   }
   ```
 
-- **Ver también** [Watchers](/guide/essentials/watchers)
+- **Véase también** [Watchers](/guide/essentials/watchers)
 
 ## emits {#emits}
 
@@ -427,7 +427,7 @@ Declara los eventos personalizados emitidos por el componente.
   }
   ```
 
-- **Ver también**
+- **Véase también**
   - [Attributos Fallthrough](/guide/components/attrs)
   - [Escritura de Emits del Componente](/guide/typescript/options-api#typing-component-emits) <sup class="vt-badge ts" />
 

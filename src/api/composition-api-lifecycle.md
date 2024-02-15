@@ -241,7 +241,7 @@ Registra un hook de depuración que será llamado cuando una dependencia reactiv
   }
   ```
 
-- **Ver también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
+- **Véase también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
 
 ## onRenderTriggered() <sup class="vt-badge dev-only" /> {#onrendertriggered}
 
@@ -267,7 +267,7 @@ Registra un hook de depuración que será llamado cuando una dependencia reactiv
   }
   ```
 
-- **Ver también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
+- **Véase también** [Reactividad en Profundidad](/guide/extras/reactivity-in-depth)
 
 ## onActivated() {#onactivated}
 
@@ -281,7 +281,7 @@ Registra un callback que será llamado luego de que la instancia del componente 
   function onActivated(callback: () => void): void
   ```
 
-- **Ver también** [Guide - Lifecycle of Cached Instance](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
+- **Véase también** [Guide - Lifecycle of Cached Instance](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
 
 ## onDeactivated() {#ondeactivated}
 
@@ -295,7 +295,7 @@ Registra un callback que será llamado luego de que la instancia del componente 
   function onDeactivated(callback: () => void): void
   ```
 
-- **Ver también** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
+- **Véase también** [Guía - Ciclo de Vida de la Instancia en Caché ](/guide/built-ins/keep-alive#lifecycle-of-cached-instance)
 
 ## onServerPrefetch() <sup class="vt-badge" data-text="SSR only" /> {#onserverprefetch}
 
@@ -338,4 +338,4 @@ Registra una función asíncrona que será resuelta antes de que la instancia de
   </script>
   ```
 
-- **Ver también** [Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)
+- **Véase también** [Renderizado del Lado del Servidor (SSR)](/guide/scaling-up/ssr)

@@ -52,7 +52,7 @@ Proporcionar valores que puedan ser inyectados por los componentes descendientes
 
   Tenga en cuenta que en el ejemplo anterior, el `msg` proporcionado NO será reactivo. Consulte [Trabajando con Reactividad](/guide/components/provide-inject#working-with-reactivity) para más detalles.
 
-- **Ver también** [Provide / Inject](/guide/components/provide-inject)
+- **Véase también** [Provide / Inject](/guide/components/provide-inject)
 
 ## inject {#inject}
 
@@ -167,7 +167,7 @@ Declara propiedades para inyectar en el componente actual localizándolas desde 
   }
   ```
 
-- **Ver también** [Provide / Inject](/guide/components/provide-inject)
+- **Véase también** [Provide / Inject](/guide/components/provide-inject)
 
 ## mixins {#mixins}
 

@@ -18,7 +18,7 @@ Actualiza el texto de un elemento.
   <span>{{msg}}</span>
   ```
 
-- **Ver también** [Sintaxis de la Plantilla - interpolación de Texto](/guide/essentials/template-syntax#text-interpolation)
+- **Véase también** [Sintaxis de la Plantilla - interpolación de Texto](/guide/essentials/template-syntax#text-interpolation)
 
 ## v-html {#v-html}
 
@@ -42,7 +42,7 @@ Actualiza la propiedad [innerHTML](https://developer.mozilla.org/en-US/docs/Web/
   <div v-html="html"></div>
   ```
 
-- **Ver también** [Sintáxis de la Plantilla - HTML Puro](/guide/essentials/template-syntax#raw-html)
+- **Véase también** [Sintáxis de la Plantilla - HTML Puro](/guide/essentials/template-syntax#raw-html)
 
 ## v-show {#v-show}
 
@@ -54,7 +54,7 @@ Cambia la visibilidad de un elemento basado en la veracidad del valor de la expr
 
   `v-show` trabaja seteando la propiedad CSS `display` a través de estilos en línea, y tratará de respetar el valor inicial de `display` cuando el elemento está visible. También activa las transiciones cuando cambia su estado.
 
-- **Ver también** [Renderizado Condicional - v-show](/guide/essentials/conditional#v-show)
+- **Véase también** [Renderizado Condicional - v-show](/guide/essentials/conditional#v-show)
 
 ## v-if {#v-if}
 
@@ -72,7 +72,7 @@ Renderiza condicionalmente un elemento o un fragmento de plantilla basado en la 
 
   Cuando se utiliza conjuntamente, `v-if` tiene mayor prioridad que `v-for`. No recomendamos utilizar estas dos directivas juntas en un mismo elemento; ver la guía de [renderizado de listas](/guide/essentials/list#v-for-with-v-if) para más detalles.
 
-- **Ver también** [Renderizado Condicional - v-if](/guide/essentials/conditional#v-if)
+- **Véase también** [Renderizado Condicional - v-if](/guide/essentials/conditional#v-if)
 
 ## v-else {#v-else}
 
@@ -97,7 +97,7 @@ Denota el "bloque else" para `v-if` o para un encadenamiento `v-if` / `v-else-if
   </div>
   ```
 
-- **Ver también** [Renderizado Condicional - v-else](/guide/essentials/conditional#v-else)
+- **Véase también** [Renderizado Condicional - v-else](/guide/essentials/conditional#v-else)
 
 ## v-else-if {#v-else-if}
 
@@ -128,7 +128,7 @@ Denota el "bloque else if" para `v-if`. Se puede encadenar.
   </div>
   ```
 
-- **Ver también** [Renderizado Condicional - v-else-if](/guide/essentials/conditional#v-else-if)
+- **Véase también** [Renderizado Condicional - v-else-if](/guide/essentials/conditional#v-else-if)
 
 ## v-for {#v-for}
 
@@ -164,7 +164,7 @@ Renderiza el elemento o bloque de plantilla varias veces en función de los dato
 
   `v-for` puede trabajar también con valores que implementan el [Protocolo Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol), incluyendo los objetos nativos `Map` y `Set`.
 
-- **Ver también**
+- **Véase también**
   - [Renderizado de listas](/guide/essentials/list)
 
 ## v-on {#v-on}
@@ -249,7 +249,7 @@ Adjunta un escuchador de eventos al elemento.
   <MyComponent @my-event="handleThis(123, $event)" />
   ```
 
-- **Ver también**
+- **Véase también**
   - [Manejando Eventos](/guide/essentials/event-handling)
   - [Componentes - Escuchando los Eventos](/guide/essentials/component-basics#listening-to-events)
 
@@ -336,7 +336,7 @@ Vincula dinámicamente uno o más atributos, o una prop de un componente a una e
 
   No se necesita `.camel` si estás usando plantillas escritas en un string, o si precompilas la plantilla en la compilación.
 
-- **Ver también**
+- **Véase también**
   - [Vinculación de Clases y Estilos](/guide/essentials/class-and-style)
   - [Componentes - Detalles del Pase del Prop](/guide/components/props#prop-passing-details)
 
@@ -359,7 +359,7 @@ Crear un enlace bidireccional en un elemento de entrada del formulario o un comp
   - [`.number`](/guide/essentials/forms#number) - convertir una cadena de entrada válida en números
   - [`.trim`](/guide/essentials/forms#trim) - quita los espacios en blanco al comienzo y al final del valor ingresado
 
-- **Ver también**
+- **Véase también**
 
   - [Vinculación de Entradas de Formularios](/guide/essentials/forms)
   - [Eventos de los Componentes - Uso con `v-model`](/guide/components/v-model)
@@ -412,7 +412,7 @@ Denota slots con nombre o slots asignados que esperan recibir props.
   </Mouse>
   ```
 
-- **Ver también**
+- **Véase también**
   - [Componentes - Slots](/guide/components/slots)
 
 ## v-pre {#v-pre}
@@ -459,7 +459,7 @@ Renderiza el elemento y el componente una sola vez, y omite futuras actualizacio
 
   Desde la versión 3.2, también puedes memorizar parte de la plantilla con condiciones de invalidación utilizando [`v-memo`](#v-memo).
 
-- **Ver también**
+- **Véase también**
   - [Sintaxis de la Plantilla - interpolaciones](/guide/essentials/template-syntax#text-interpolation)
   - [v-memo](#v-memo)
 
@@ -500,7 +500,7 @@ Renderiza el elemento y el componente una sola vez, y omite futuras actualizacio
 
   También se puede utilizar `v-memo` en los componentes para evitar manualmente las actualizaciones no deseadas en ciertos casos extremos en los que la comprobación de la actualización del componente hijo ha sido desoptimizada. Pero, de nuevo, es responsabilidad del desarrollador especificar las matrices de dependencia correctas para evitar omitir las actualizaciones necesarias.
 
-- **Ver también**
+- **Véase también**
   - [v-once](#v-once)
 
 ## v-cloak {#v-cloak}

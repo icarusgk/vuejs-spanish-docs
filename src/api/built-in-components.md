@@ -126,7 +126,7 @@ Proporciona efectos de transición animados a un **solo** elemento o componente.
   </Transition>
   ```
 
-- **Ver también** [Transition](/guide/built-ins/transition)
+- **Véase también** [Transition](/guide/built-ins/transition)
 
 ## `<TransitionGroup>` {#transitiongroup}
 
@@ -172,7 +172,7 @@ Proporciona efectos de transición para **múltiples** elementos o componentes e
   </TransitionGroup>
   ```
 
-- **Ver también** [Guía - TransitionGroup](/guide/built-ins/transition-group)
+- **Véase también** [Guía - TransitionGroup](/guide/built-ins/transition-group)
 
 ## `<KeepAlive>` {#keepalive}
 
@@ -265,7 +265,7 @@ Almacena los componentes que alternan dinámicamente en su interior.
   </KeepAlive>
   ```
 
-- **Ver también** [Guía - KeepAlive](/guide/built-ins/keep-alive)
+- **Véase también** [Guía - KeepAlive](/guide/built-ins/keep-alive)
 
 ## `<Teleport>` {#teleport}
 
@@ -307,7 +307,7 @@ Renderiza su contenido en otra parte del DOM.
   </teleport>
   ```
 
-- **Ver también** [Guía - Teleport](/guide/built-ins/teleport)
+- **Véase también** [Guía - Teleport](/guide/built-ins/teleport)
 
 ## `<Suspense>` <sup class="vt-badge experimental" /> {#suspense}
 
@@ -333,4 +333,4 @@ Se utiliza para orquestar dependencias asíncronas anidadas en un árbol de comp
 
   Si encuentra dependencias asíncronas ([Componentes Asincrónicos](/guide/components/async) y componentes con [`async setup()`](/guide/built-ins/suspense#async-setup)) mientras se muestra el slot por defecto, esperará hasta que todas ellas se resuelvan antes de mostrar el slot por defecto.
 
-- **Ver también** [Guía - Suspense](/guide/built-ins/suspense)
+- **Véase también** [Guía - Suspense](/guide/built-ins/suspense)
