@@ -589,13 +589,29 @@ El componente se puede utilizar así:
 <MyComponent />
 ```
 
-Cuando se declara una prop para permitir múltiples tipos, por ejemplo
+Cuando se declara una prop para permitir múltiples tipos, las reglas de conversión para `Boolean` también se aplicarán. Sin embargo, existe un límite cuando se permiten tanto `String` como `Boolean`: la regla de conversión de Boolean sólo se aplica si Boolean aparece antes de String:
 
 <div class="composition-api">
 
 ```js
+// disabled se convertirá a true
 defineProps({
   disabled: [Boolean, Number]
+})
+
+// disabled se convertirá a true
+defineProps({
+  disabled: [Boolean, String]
+})
+
+// disabled se convertirá a true
+defineProps({
+  disabled: [Number, Boolean]
+})
+
+// disabled se interpretará como una cadena de texto vacía (disabled="")
+defineProps({
+  disabled: [String, Boolean]
 })
 ```
 
@@ -603,13 +619,33 @@ defineProps({
 <div class="options-api">
 
 ```js
+// disabled se convertirá a true
 export default {
   props: {
     disabled: [Boolean, Number]
   }
 }
+
+// disabled se convertirá a true
+export default {
+  props: {
+    disabled: [Boolean, String]
+  }
+}
+
+// disabled se convertirá a true
+export default {
+  props: {
+    disabled: [Number, Boolean]
+  }
+}
+
+// disabled se interpretará como una cadena de texto vacía (disabled="")
+export default {
+  props: {
+    disabled: [String, Boolean]
+  }
+}
 ```
 
 </div>
-
-Si el array de tipos incluye `Boolean`, entonces se aplicarán las reglas de conversión para `Boolean`, a menos que `String` aparezca antes en el array.
