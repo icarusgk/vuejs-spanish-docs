@@ -60,7 +60,7 @@ Registra un callback que será llamado luego de que el componente ha actualizado
 
   El hook de actualización de un componente padre es llamado después del de sus componentes hijos.
 
-  Este hook es llamado después de cualquier actualización del DOM del componente, que puede ser causada por diferentes cambios de estado. Si necesitas acceder al DOM actualizado después de un cambio de estado específico, utiliza [nextTick()](/api/general#nexttick) en su lugar.
+  Este hook es llamado después de cualquier actualización del DOM del componente, que puede ser causada por diferentes cambios de estado, porque múltiples cambios de estado pueden ser agrupados en un solo ciclo de renderizado por razones de rendimiento. Si necesitas acceder al DOM actualizado después de un cambio de estado específico, utiliza [nextTick()](/api/general#nexttick) en su lugar.
 
   **Este hook no es llamado durante el renderizado del lado del servidor.**
 
