@@ -86,7 +86,7 @@ Consulta las [preguntas frecuentes sobre la Composition API](/guide/extras/compo
 
 ## Elementos personalizados {#custom-element}
 
-Un _elemento personalizado_ es una característica del estándar [Web Components](#web-components), que está implementado en navegadores web modernos. Se refiere a la capacidad de utilizar un elemento HTML personalizado en tu marcado HTML para incluir un componente web en ese punto de la página.
+Un _elemento personalizado_ es una característica del estándar [Web Components](#web-component), que está implementado en navegadores web modernos. Se refiere a la capacidad de utilizar un elemento HTML personalizado en tu marcado HTML para incluir un componente web en ese punto de la página.
 
 Vue tiene soporte incorporado para representar elementos personalizados y permite su uso directo en las plantillas de componentes de Vue. No se debe confundir los elementos personalizados con la capacidad de incluir componentes Vue como etiquetas dentro de la plantilla de otro componente Vue.
 
@@ -280,7 +280,7 @@ El término se deriva de 'efecto secundario'. Llamar a la función de efecto es 
 
 Para más detalles, consulta:
 
-- [Guía - Reactividad en Profundidad](https://vuejs.org/guide/extras/reactivity-in-depth.html)
+- [Guía - Reactividad en Profundidad](/guide/extras/reactivity-in-depth.html)
 
 ## Reactividad {#reactivity}
 
@@ -340,11 +340,11 @@ Cuando cambia el estado reactivo, Vue no activa inmediatamente las actualizacion
 
 [Los watchers](/guide/essentials/watchers.html) también se agrupan mediante la cola del planificador. Los watchers con `flush: 'pre'` (el valor predeterminado) se ejecutarán antes del renderizado del componente, mientras que aquellos con `flush: 'post'` se ejecutarán después del renderizado del componente.
 
-Los trabajos en la cola del planificador también se utilizan para realizar varias otras tareas internas, como activar algunos [hooks de ciclo de vida](#lifecycle-hooks) y actualizar [referencias de plantillas](#template-refs).
+Los trabajos en la cola del planificador también se utilizan para realizar varias otras tareas internas, como activar algunos [hooks de ciclo de vida](#lifecycle-hooks) y actualizar [referencias de plantillas](#template-ref).
 
 ## Slot con ámbito {#scoped-slot}
 
-El término _slot con ámbito_ se utiliza para referirse a un [slot](#slot) que recibe [props](#props).
+El término _slot con ámbito_ se utiliza para referirse a un [slot](#slot) que recibe [props](#prop).
 
 Históricamente, Vue hacía una distinción mucho mayor entre slots con ámbito y sin ámbito. En cierto modo, se podrían considerar como dos características separadas, unificadas detrás de una sintaxis de plantilla común.
 
