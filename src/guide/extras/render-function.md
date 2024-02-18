@@ -731,3 +731,78 @@ MyComponent.emits = ['click']
 Si no se especifica la opción `props`, el objeto `props` pasado a la función contendrá todos los atributos, igual que `attrs`. Los nombres de las props no se normalizarán a camelCase a menos que se especifique la opción `props`.
 
 Los componentes funcionales pueden ser registrados y consumidos como los componentes normales. Si pasas una función como primer argumento a `h()`, será tratada como un componente funcional.
+
+### Tipado de componentes funcionales <sup class="vt-badge ts" /> {#typing-functional-components}
+
+Los componentes funcionales pueden ser tipados en base a si son nombrados o anónimos. Volar también admite la comprobación de tipos de componentes funcionales correctamente tipados al consumirlos en plantillas SFC.
+
+**Componente Funcional Nombrado**
+
+```tsx
+import type { SetupContext } from 'vue'
+type FComponentProps = {
+  message: string
+}
+
+type Events = {
+  sendMessage(message: string): void
+}
+
+function FComponent(
+  props: FComponentProps,
+  context: SetupContext<Events>
+) {
+  return (
+    <button onClick={() => context.emit('sendMessage', props.message)}>
+        {props.message} {' '}
+    </button>
+  )
+}
+
+FComponent.props = {
+  message: {
+    type: String,
+    required: true
+  }
+}
+
+FComponent.emits = {
+  sendMessage: (value: unknown) => typeof value === 'string'
+}
+```
+
+**Componente funcional anónimo**
+
+```tsx
+import type { FunctionalComponent } from 'vue'
+
+type FComponentProps = {
+  message: string
+}
+
+type Events = {
+  sendMessage(message: string): void
+}
+
+const FComponent: FunctionalComponent<FComponentProps, Events> = (
+  props,
+  context
+) => {
+  return (
+    <button onClick={() => context.emit('sendMessage', props.message)}>
+        {props.message} {' '}
+    </button>
+  )
+}
+
+FComponent.props = {
+  message: {
+    type: String,
+    required: true
+  }
+}
+
+FComponent.emits = {
+  sendMessage: (value) => typeof value === 'string'
+}
+```
