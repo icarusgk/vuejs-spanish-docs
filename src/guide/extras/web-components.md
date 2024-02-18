@@ -226,6 +226,29 @@ export function register() {
 
 Si tienes muchos componentes, también puedes aprovechar las características de las herramientas de construcción como [glob import](https://vitejs.dev/guide/features.html#glob-import) de Vite o [`require.context`](https://webpack.js.org/guides/dependency-management/#requirecontext) de webpack para cargar todos los componentes de un directorio.
 
+### Componentes Web y Typescript {#web-components-and-typescript}
+
+Si estás desarrollando una aplicación o una librería, puede que quieras [comprobar el tipado](/guide/scaling-up/tooling.html#typescript) de tus componentes Vue, incluyendo aquellos que están definidos como elementos personalizados.
+
+Los elementos personalizados se registran globalmente usando APIs nativas, así que por defecto no tendrán inferencia de tipo cuando se usen en plantillas Vue. Para proporcionar soporte de tipado a los componentes Vue registrados como elementos personalizados, podemos registrar el tipado de componentes globales utilizando la interfaz [`GlobalComponents`](https://github.com/vuejs/language-tools/blob/master/packages/vscode-vue/README.md#usage) en las plantillas Vue y/o en [JSX](https://www.typescriptlang.org/docs/handbook/jsx.html#intrinsic-elements):
+
+```typescript
+import { defineCustomElement } from 'vue'
+
+// vue SFC
+import CounterSFC from './src/components/counter.ce.vue'
+
+// convertir el componente en componente web
+export const Counter = defineCustomElement(CounterSFC)
+
+// registrar el tipado global
+declarar módulo 'vue' {
+  exportar interfaz GlobalComponents {
+    'Counter': typeof Counter,
+  }
+}
+```
+
 ## Componentes Web vs. Componentes de Vue {#web-components-vs-vue-components}
 
 Algunos desarrolladores creen que hay que evitar los modelos de componentes propietarios del framework, y que el uso exclusivo de elementos personalizados hace que una aplicación sea "a prueba de futuro". Aquí intentaremos explicar por qué creemos que esta es una visión demasiado simplista del problema.
