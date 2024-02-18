@@ -80,6 +80,7 @@ La extensión de herramientas de desarrollo del navegador (Devtools) de Vue le p
 - [Documentación](https://devtools.vuejs.org/)
 - [Extensión para Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 - [Plugin para Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+- [Extensión para Edge](https://microsoftedge.microsoft.com/addons/detail/vuejs-devtools/olofadcdnkkjdfgjcmjaadnlehnnihnl)
 - [Aplicación independiente de Electron](https://devtools.vuejs.org/guide/installation.html#standalone)
 
 ## TypeScript {#typescript}
