@@ -220,7 +220,7 @@ const props = defineProps(['title'])
 console.log(props.title)
 ```
 
-Mira también: [Escritura de las Props de Componentes](/guide/typescript/composition-api#typing-component-props) <sup class="vt-badge ts" />
+Véase también: [Escritura de las Props de Componentes](/guide/typescript/composition-api#typing-component-props) <sup class="vt-badge ts" />
 
 Si no está usando `<script setup>`, las props deben ser declaradas usando la opción `props`, y el objeto props será pasado a `setup()` como primer argumento:
 
@@ -431,7 +431,7 @@ const emit = defineEmits(['enlarge-text'])
 emit('enlarge-text')
 ```
 
-Mira también: [Escritura de Emits del Componente](/guide/typescript/composition-api#typing-component-emits) <sup class="vt-badge ts" />
+Véase también: [Escritura de Emits del Componente](/guide/typescript/composition-api#typing-component-emits) <sup class="vt-badge ts" />
 
 Si no estás usando `<script setup>`, puedes declarar eventos emitidos usando la opción `emits`. Puedes acceder a la función `emit` como una propiedad del contexto de configuración (pasada a `setup()` como segundo argumento):
 

@@ -219,7 +219,7 @@ export default {
 }
 ```
 
-Mira también: [Escritura de Emits del Componente](/guide/typescript/options-api#typing-component-emits) <sup class="vt-badge ts" />
+Véase también: [Escritura de Emits del Componente](/guide/typescript/options-api#typing-component-emits) <sup class="vt-badge ts" />
 
 </div>
 

@@ -96,7 +96,7 @@ Esto no sólo documenta tu componente, sino que también advertirá a otros desa
 
 <div class="options-api">
 
-Mira también: [Escritura de las Props de Componentes](/guide/typescript/options-api#typing-component-props) <sup class="vt-badge ts" />
+Véase también: [Escritura de las Props de Componentes](/guide/typescript/options-api#typing-component-props) <sup class="vt-badge ts" />
 
 </div>
 

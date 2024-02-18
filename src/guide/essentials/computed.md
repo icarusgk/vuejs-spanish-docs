@@ -97,7 +97,7 @@ Intenta cambiar el valor del array `books` en la aplicación `data` y verás có
 
 Puedes enlazar datos a las propiedades computadas en las plantillas como si se tratara de una propiedad normal. Vue es consciente de que `this.publishedBooksMessage` depende de `this.author.books`, por lo que actualizará cualquier enlace que dependa de `this.publishedBooksMessage` cuando cambie `this.author.books`.
 
-Mira también: [Escritura de Propiedades Computadas](/guide/typescript/options-api#typing-computed-properties) <sup class="vt-badge ts" />
+Véase también: [Escritura de Propiedades Computadas](/guide/typescript/options-api#typing-computed-properties) <sup class="vt-badge ts" />
 
 </div>
 

@@ -229,7 +229,7 @@ declare module 'vue' {
 }
 ```
 
-Mira también:
+Véase también:
 
 - [Pruebas unitarias de TypeScript para extensiones de tipos de componentes](https://github.com/vuejs/core/blob/main/packages/dts-test/componentTypeExtensions.test-d.tsx)
 
@@ -289,6 +289,6 @@ Ahora la opción `beforeRouteEnter` estará correctamente tipada. Ten en cuenta 
 
 La colocación de este aumento está sujeta a las [mismas restricciones](#ubicacion-del-aumento-de-tipo) que los aumentos de propiedades globales.
 
-Mira también:
+Véase también:
 
 - [Pruebas unitarias de TypeScript para extensiones de tipos de componentes](https://github.com/vuejs/core/blob/main/packages/dts-test/componentTypeExtensions.test-d.tsx)

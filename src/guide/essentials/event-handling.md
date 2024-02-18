@@ -120,12 +120,12 @@ Un manejador de método recibe automáticamente el objeto Evento nativo del DOM 
 
 <div class="composition-api">
 
-Mira también: [Manejadores de Eventos de Escritura](/guide/typescript/composition-api#typing-event-handlers) <sup class="vt-badge ts" />
+Véase también: [Manejadores de Eventos de Escritura](/guide/typescript/composition-api#typing-event-handlers) <sup class="vt-badge ts" />
 
 </div>
 <div class="options-api">
 
-Mira también: [Manejadores de Eventos de Escritura](/guide/typescript/options-api#typing-event-handlers) <sup class="vt-badge ts" />
+Véase también: [Manejadores de Eventos de Escritura](/guide/typescript/options-api#typing-event-handlers) <sup class="vt-badge ts" />
 
 </div>
 
