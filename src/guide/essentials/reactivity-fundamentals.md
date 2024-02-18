@@ -343,9 +343,9 @@ Para esperar a que se complete la actualización del DOM después de un cambio d
 ```js
 import { nextTick } from 'vue'
 
-function increment() {
+async function increment() {
   count.value++
-  nextTick(() => {
+  await nextTick(() => {
     // acceder al DOM actualizado
   })
 }
@@ -359,9 +359,9 @@ import { nextTick } from 'vue'
 
 export default {
   methods: {
-    increment() {
+    async increment() {
       this.count++
-      nextTick(() => {
+      await nextTick(() => {
         // acceder al DOM actualizado
       })
     }
