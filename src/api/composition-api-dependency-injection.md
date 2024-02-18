@@ -1,60 +1,60 @@
-# Composition API: <br>Dependency Injection {#composition-api-dependency-injection}
+# Composition API: <br>Inyección de Dependencias {#composition-api-dependency-injection}
 
 ## provide() {#provide}
 
-Provides a value that can be injected by descendent components.
+Proporciona un valor que puede ser inyectado por componentes descendientes.
 
-- **Type**
+- **Tipo**
 
   ```ts
   function provide<T>(key: InjectionKey<T> | string, value: T): void
   ```
 
-- **Details**
+- **Detalles**
 
-  `provide()` takes two arguments: the key, which can be a string or a symbol, and the value to be injected.
+  `provide()` toma dos argumentos: la key, que puede ser una cadena de texto o un symbol, y el valor a inyectar.
 
-  When using TypeScript, the key can be a symbol casted as `InjectionKey` - a Vue provided utility type that extends `Symbol`, which can be used to sync the value type between `provide()` and `inject()`.
+  Cuando se utiliza TypeScript, la clave puede ser un symbol convertido como `InjectionKey` - un tipo de utilidad proporcionado por Vue que extiende `Symbol`, que se puede utilizar para sincronizar el tipo de valor entre `provide()` e `inject()`.
 
-  Similar to lifecycle hook registration APIs, `provide()` must be called synchronously during a component's `setup()` phase.
+  Al igual que las APIs de registro de los hooks de ciclo de vida, `provide()` debe ser llamado de forma sincrónica durante la fase `setup()` de un componente.
 
-- **Example**
+- **Ejemplo**
 
   ```vue
   <script setup>
   import { ref, provide } from 'vue'
   import { fooSymbol } from './injectionSymbols'
 
-  // provide static value
+  // proporcionar un valor estático
   provide('foo', 'bar')
 
-  // provide reactive value
+  // proporcionar un valor reactivo
   const count = ref(0)
   provide('count', count)
 
-  // provide with Symbol keys
+  // proporcionar con llaves Symbol
   provide(fooSymbol, count)
   </script>
   ```
 
-- **See also**:
-  - [Guide - Provide / Inject](/guide/components/provide-inject)
-  - [Guide - Typing Provide / Inject](/guide/typescript/composition-api#typing-provide-inject)
+- **Véase también**:
+  - [Guía - Provide / Inject](/guide/components/provide-inject)
+  - [Guía - Escritura de Provide / Inject](/guide/typescript/composition-api#typing-provide-inject)
 
 ## inject() {#inject}
 
-Injects a value provided by an ancestor component or the application (via `app.provide()`).
+Inyecta un valor proporcionado por un componente antepasado o por la aplicación (a través de `app.provide()`).
 
-- **Type**
+- **Tipo**
 
   ```ts
-  // without default value
+  // sin valor predeterminado
   function inject<T>(key: InjectionKey<T> | string): T | undefined
 
-  // with default value
+  // con valor predeterminado
   function inject<T>(key: InjectionKey<T> | string, defaultValue: T): T
 
-  // with factory
+  // con fábrica
   function inject<T>(
     key: InjectionKey<T> | string,
     defaultValue: () => T,
@@ -62,45 +62,47 @@ Injects a value provided by an ancestor component or the application (via `app.p
   ): T
   ```
 
-- **Details**
+- **Detalles**
 
-  The first argument is the injection key. Vue will walk up the parent chain to locate a provided value with a matching key. If multiple components in the parent chain provides the same key, the one closest to the injecting component will "shadow" those higher up the chain. If no value with matching key was found, `inject()` returns `undefined` unless a default value is provided.
+  El primer argumento es la key de inyección. Vue recorrerá la estructura padre para ubicar un valor proporcionado con una key coincidente. Si varios componentes de la estructura padre proporcionan la misma key, el más cercano al componente que inyecta reemplazará a los que están más arriba en la cadena. Si no se encuentra un valor con una clave coincidente, `inject()` devuelve `undefined` a menos que se proporcione un valor predeterminado.
 
-  The second argument is optional and is the default value to be used when no matching value was found. It can also be a factory function to return values that are expensive to create. If the default value is a function, then `false` must be passed as the third argument to indicate that the function should be used as the value instead of the factory.
+  El segundo argumento es opcional y es el valor predeterminado que se utilizará cuando no se encuentre ningún valor que corresponda.
 
-  Similar to lifecycle hook registration APIs, `inject()` must be called synchronously during a component's `setup()` phase.
+  El segundo argumento también puede ser una función de fábrica que devuelva valores que son costosos de crear. En este caso, se debe pasar `true` como tercer argumento para indicar que se debe utilizar la función como fábrica en lugar del propio valor.
 
-  When using TypeScript, the key can be of type of `InjectionKey` - a Vue-provided utility type that extends `Symbol`, which can be used to sync the value type between `provide()` and `inject()`.
+  Al igual que las APIs de registro de los hooks de ciclo de vida, `inject()` debe ser llamado de forma sincrónica durante la fase `setup()` de un componente.
 
-- **Example**
+  Cuando se utiliza TypeScript, la clave puede ser de tipo `InjectionKey` - un tipo de utilidad proporcionado por Vue que extiende `Symbol`, que se puede utilizar para sincronizar el tipo de valor entre `provide()` e `inject()`.
 
-  Assuming a parent component has provided values as shown in the previous `provide()` example:
+- **Ejemplo**
+
+  Asumiendo que un componente padre ha proporcionado valores como se muestra en el ejemplo anterior de `provide()`:
 
   ```vue
   <script setup>
   import { inject } from 'vue'
   import { fooSymbol } from './injectionSymbols'
 
-  // inject static value with default
+  // inyectar valor estático con valor predeterminado
   const foo = inject('foo')
 
-  // inject reactive value
+  // inyectar valor reactivo
   const count = inject('count')
 
-  // inject with Symbol keys
+  // inyectar con llaves Symbol
   const foo2 = inject(fooSymbol)
 
-  // inject with default value
+  // inyectar con valor predeterminado
   const bar = inject('foo', 'default value')
 
-  // inject with default value factory
+  // inyectar fábrica como valor predeterminado
   const baz = inject('foo', () => new Map())
 
-  // inject with function default value, by passing the 3rd argument
+  // inyectar con el valor predeterminado de la función, pasando el 3er argumento
   const fn = inject('function', () => {}, false)
   </script>
   ```
 
-- **See also**:
-  - [Guide - Provide / Inject](/guide/components/provide-inject)
-  - [Guide - Typing Provide / Inject](/guide/typescript/composition-api#typing-provide-inject)
+- **Véase también**:
+  - [Guía - Provide / Inject](/guide/components/provide-inject)
+  - [Guía - Escritura de Provide / Inject](/guide/typescript/composition-api#typing-provide-inject)

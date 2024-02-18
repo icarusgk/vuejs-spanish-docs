@@ -381,7 +381,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
           link: '/api/composition-api-lifecycle'
         },
         {
-          text: 'Inyección de Dependencia',
+          text: 'Inyección de Dependencias',
           link: '/api/composition-api-dependency-injection'
         }
       ]
