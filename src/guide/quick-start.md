@@ -319,7 +319,7 @@ export default {
 
 Si abres el `index.html` de arriba directamente en tu navegador, verás que arroja un error porque los módulos ES no pueden trabajar sobre el protocolo `file://`, que es el protocolo que utiliza el navegador cuando abre un archivo local.
 
-Por razones de seguridad, los módulos ES sólo pueden funcionar sobre el protocolo `http://`, que es el que utilizan los navegadores cuando abren páginas en la web. Para que los módulos ES funcionen en nuestra máquina local, necesitamos servir el `index.html` sobre el protocolo `http://`, con un servidor HTTP local.
+Por razones de seguridad, los módulos ES sólo pueden funcionar sobre el protocolo `http://` que utilizan los navegadores cuando abren páginas en la web. Para que los módulos ES funcionen en nuestra máquina local, necesitamos servir el `index.html` sobre el protocolo `http://`, con un servidor HTTP local.
 
 Para iniciar un servidor HTTP local, primero instala [Node.js](https://nodejs.org/es/) y luego ejecuta `npx serve` desde la línea de comandos en el mismo directorio donde está tu archivo HTML. También puedes utilizar cualquier otro servidor HTTP que pueda servir archivos estáticos con los tipos MIME correctos.
 
