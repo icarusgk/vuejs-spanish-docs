@@ -24,7 +24,7 @@ En esta sección presentaremos cómo crear una [Aplicación de una Sola Página 
 
 Asegúrate de tener instalada una versión actualizada de [Node.js](https://nodejs.org/) y que tu directorio de trabajo actual sea donde quieras crear un proyecto. Ejecuta el siguiente comando en tu línea de comandos (sin el signo `>`):
 
-<div class="language-sh"><pre><code><span class="line"><span style="color:var(--vt-c-green);">&gt;</span> <span style="color:#A6ACCD;">npm init vue@latest</span></span></code></pre></div>
+<div class="language-sh"><pre><code><span class="line"><span style="color:var(--vt-c-green);">&gt;</span> <span style="color:#A6ACCD;">npm create vue@latest</span></span></code></pre></div>
 
 Este comando instalará y ejecutará [create-vue](https://github.com/vuejs/create-vue), la herramienta oficial de estructuración de proyectos de Vue. Se te presentarán solicitudes para varias características opcionales como TypeScript y soporte de pruebas:
 
