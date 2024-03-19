@@ -242,7 +242,7 @@ Para resolver manualmente una directiva registrada por su nombre.
 
 - **Detalles**
 
-  **Nota: no necesitas esto si puedes importar el componente directamente.**
+  **Nota: no necesitas esto si puedes importar la directiva directamente.**
 
   `resolveDirective()` debe llamarse dentro de <span class="composition-api"> `setup()` o</span> la función de renderizado para resolver desde el contexto correcto del componente.
 
