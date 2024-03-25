@@ -106,7 +106,7 @@ La Options API te permite "pensar menos" cuando escribes código de componentes,
 
 ### ¿La Composition API cubre todos los casos de uso? {#does-composition-api-cover-all-use-cases}
 
-Sí, en términos de lógica de estado. Cuando se utiliza la Composition API, sólo hay unas pocas opciones que pueden seguir siendo necesarias: `props`, `emits`, `name`, y `inheritAttrs`.
+Sí, en términos de lógica de estado. Cuando se utiliza la Composition API, sólo hay unas pocas opciones que pueden seguir siendo necesarias: `props`, `emits`, `name`, e `inheritAttrs`.
 
 :::tip
 
