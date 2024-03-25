@@ -428,7 +428,7 @@ Declara los eventos personalizados emitidos por el componente.
   ```
 
 - **Véase también**
-  - [Attributos Fallthrough](/guide/components/attrs)
+  - [Atributos Fallthrough](/guide/components/attrs)
   - [Escritura de Emits del Componente](/guide/typescript/options-api#typing-component-emits) <sup class="vt-badge ts" />
 
 ## expose {#expose}
