@@ -47,7 +47,7 @@ Evoca a una [ref de la plantilla](/guide/essentials/template-refs).
 
   `ref` es usado para registrar una referencia a un elemento o a un componente hijo.
 
-  En la Options API, la referencia será registrada bajo el objeto `this.$refs` del componente0:
+  En la Options API, la referencia será registrada bajo el objeto `this.$refs` del componente:
 
   ```vue-html
   <!-- almacenado como this.$refs.p -->
