@@ -12,7 +12,7 @@ Proporciona un valor que puede ser inyectado por componentes descendientes.
 
 - **Detalles**
 
-  `provide()` toma dos argumentos: la key, que puede ser una cadena de texto o un symbol, y el valor a inyectar.
+  `provide()` toma dos argumentos: la clave, que puede ser una cadena de texto o un symbol, y el valor a inyectar.
 
   Cuando se utiliza TypeScript, la clave puede ser un symbol convertido como `InjectionKey` - un tipo de utilidad proporcionado por Vue que extiende `Symbol`, que se puede utilizar para sincronizar el tipo de valor entre `provide()` e `inject()`.
 
@@ -32,7 +32,7 @@ Proporciona un valor que puede ser inyectado por componentes descendientes.
   const count = ref(0)
   provide('count', count)
 
-  // proporcionar con llaves Symbol
+  // proporcionar con claves Symbol
   provide(fooSymbol, count)
   </script>
   ```
@@ -43,7 +43,7 @@ Proporciona un valor que puede ser inyectado por componentes descendientes.
 
 ## inject() {#inject}
 
-Inyecta un valor proporcionado por un componente antepasado o por la aplicación (a través de `app.provide()`).
+Inyecta un valor proporcionado por un componente de nivel superior o por la aplicación (a través de `app.provide()`).
 
 - **Tipo**
 
@@ -64,7 +64,7 @@ Inyecta un valor proporcionado por un componente antepasado o por la aplicación
 
 - **Detalles**
 
-  El primer argumento es la key de inyección. Vue recorrerá la estructura padre para ubicar un valor proporcionado con una key coincidente. Si varios componentes de la estructura padre proporcionan la misma key, el más cercano al componente que inyecta reemplazará a los que están más arriba en la cadena. Si no se encuentra un valor con una clave coincidente, `inject()` devuelve `undefined` a menos que se proporcione un valor predeterminado.
+  El primer argumento es la clave de inyección. Vue recorrerá la estructura padre para ubicar un valor proporcionado con una clave coincidente. Si varios componentes de la estructura padre proporcionan la misma clave, el más cercano al componente que inyecta reemplazará a los que están más arriba en la cadena. Si no se encuentra un valor con una clave coincidente, `inject()` devuelve `undefined` a menos que se proporcione un valor predeterminado.
 
   El segundo argumento es opcional y es el valor predeterminado que se utilizará cuando no se encuentre ningún valor que corresponda.
 
@@ -89,7 +89,7 @@ Inyecta un valor proporcionado por un componente antepasado o por la aplicación
   // inyectar valor reactivo
   const count = inject('count')
 
-  // inyectar con llaves Symbol
+  // inyectar con claves Symbol
   const foo2 = inject(fooSymbol)
 
   // inyectar con valor predeterminado
