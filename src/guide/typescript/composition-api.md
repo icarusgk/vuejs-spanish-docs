@@ -155,8 +155,8 @@ const emit = defineEmits<{
 
 El argumento de tipo puede ser uno de los siguientes:
 
-1. Un tipo de función invocable, pero escrito como un tipo literal con [Call Signatures](https://www.typescriptlang.org/docs/handbook/2/functions.html#call-signatures). Se utilizará como tipo de la función `emit` devuelta.
-2. Un tipo literal donde las keys son los nombres de los eventos, y los valores son tipos de arreglos / tuplas que representan los parámetros adicionales aceptados para el evento. En el ejemplo anterior se utilizan tuplas con nombre, de modo que cada argumento puede tener un nombre explícito.
+1. Un tipo de función invocable, pero escrito como un tipo literal con [Firmas de Función](https://www.typescriptlang.org/docs/handbook/2/functions.html#call-signatures). Se utilizará como tipo de la función `emit` devuelta.
+2. Un tipo literal donde las claves son los nombres de los eventos, y los valores son tipos de arreglos / tuplas que representan los parámetros adicionales aceptados para el evento. En el ejemplo anterior se utilizan tuplas con nombre, de modo que cada argumento puede tener un nombre explícito.
 
 Como podemos ver, la declaración de tipo nos da un control mucho más preciso sobre las restricciones de tipo de los eventos emitidos.
 
