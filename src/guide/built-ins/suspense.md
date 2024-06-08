@@ -133,7 +133,7 @@ El siguiente ejemplo muestra cómo anidar estos componentes para que todos se co
 
 Vue Router tiene soporte incorporado para [componentes de carga perezosa](https://router.vuejs.org/guide/advanced/lazy-loading.html) usando importaciones dinámicas. Estos son distintos de los componentes asíncronos y por el momento no activarán a `<Suspense>`. Sin embargo, aún pueden tener componentes asíncronos como descendientes y éstos pueden activar `<Suspense>` de la forma habitual.
 
-## Suspense anidados
+## Suspense anidados {#nested-suspense}
 
 Cuando tenemos mútiples componentes asíncronos (común para rutas anidadas o basadas en el diseño) como por ejemplo:
 
