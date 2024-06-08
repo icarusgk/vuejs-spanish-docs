@@ -132,3 +132,36 @@ El siguiente ejemplo muestra cómo anidar estos componentes para que todos se co
 ```
 
 Vue Router tiene soporte incorporado para [componentes de carga perezosa](https://router.vuejs.org/guide/advanced/lazy-loading.html) usando importaciones dinámicas. Estos son distintos de los componentes asíncronos y por el momento no activarán a `<Suspense>`. Sin embargo, aún pueden tener componentes asíncronos como descendientes y éstos pueden activar `<Suspense>` de la forma habitual.
+
+## Suspense anidados
+
+Cuando tenemos mútiples componentes asíncronos (común para rutas anidadas o basadas en el diseño) como por ejemplo:
+
+```vue-html
+<Suspense>
+  <component :is="DynamicAsyncOuter">
+    <component :is="DynamicAsyncInner" />
+  </component>
+</Suspense>
+```
+
+`<Suspense>` crea un límite que resolverá todos los componentes asíncronos hacia abajo en el árbol. Sin embargo, cuando cambiamos `DynamicAsyncOuter`, `<Suspense>` lo esperará correctamente, pero cuando cambiamos `DynamicAsyncInner`,
+el `DynamicAsyncInner` anidado renderizará un nodo vacío hasta que haya sido resuelto (en lugar del nodo anterior o del slot fallback).
+
+Para resolver esto, podríamos usar un Suspense anidado para manejar el cambio en el componente anidado, por ejemplo:
+
+```vue-html
+<Suspense>
+  <component :is="DynamicAsyncOuter">
+    <Suspense suspensible> <!-- esto -->
+      <component :is="DynamicAsyncInner" />
+    </Suspense>
+  </component>
+</Suspense>
+```
+
+Si no se usa la propiedad `suspensible`, el `<Suspense>` interno será tratado como un componente asíncrono por el `<Suspense>` padre.
+Esto significa que tendrá su propio slot fallback y que si ambos componentes `Dynamic` cambian al mismo tiempo,
+podría haber nodos vacíos y múltiples ciclos de parches mientras el `<Suspense>` hijo esté cargando su propio árbol de dependencias,
+lo que podría no ser deseable. Cuando está activa, todo el manejo de dependencias asíncronas le es dado al `<Suspense>` padre (incluyendo los eventos emitidos)
+y el `<Suspense>` interno sirve únicamente como otro límite para la resolución de dependencias y la aplicación de parches.
