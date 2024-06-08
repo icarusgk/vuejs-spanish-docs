@@ -53,6 +53,7 @@
   {
     "name": "Monterail",
     "logo": "monterail.png",
+    "hero": "monterail-hero.png",
     "flipLogo": true,
     "intro": "Monterail es una empresa de desarrollo de software de servicio completo de Polonia. Desde 2010, hemos estado construyendo software innovador para start-ups, PYMES y empresas de diversas industrias a nivel mundial. Nuestros expertos en Vue, utilizando tecnologías y frameworks de probada eficacia, han realizado más de 30 proyectos basados en Vue.",
     "description": [
