@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@vue/repl": "^3.0.0",
-    "@vue/theme": "^2.2.5",
+    "@vue/theme": "^2.2.12",
     "dynamics.js": "^1.1.5",
     "gsap": "^3.9.0",
     "vitepress": "1.0.0-rc.33",
@@ -22,6 +22,7 @@
     "@types/node": "^20.10.1",
     "terser": "^5.14.2"
   },
+  "packageManager": "pnpm@9.1.2",
   "pnpm": {
     "overrides": {
       "@vitejs/plugin-vue": "5.0.0-beta.1"
