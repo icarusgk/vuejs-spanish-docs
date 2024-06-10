@@ -116,16 +116,16 @@ Los usuarios pueden navegar por una aplicación a través de los títulos. Tener
 
 Los [puntos de referencia](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) proporcionan acceso programático a las secciones de una aplicación. Los usuarios que dependen de la tecnología de asistencia pueden navegar a cada sección de la aplicación y saltarse el contenido. Puedes usar los [roles ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) para ayudarte a conseguirlo.
 
-| HTML            | Rol ARIA             | Objetivos del punto de referencia                                                                                                    |
-| --------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| header          | role="banner"        | Encabezado principal: título de la página                                                                                            |
-| nav             | role="navigation"    | Colección de enlaces para navegar por el documento o por los documentos relacionados                                                 |
-| main            | role="main"          | El contenido principal o central del documento.                                                                                      |
-| footer          | role="contentinfo"   | Información sobre el documento principal: notas a pie de página/derechos de autor/enlaces a la declaración de privacidad             |
-| aside           | role="complementary" | Apoya el contenido principal, pero está separado y es significativo en su propio contenido                                           |
-| search          | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
-| form            | role="form"          | Colección de elementos asociados al formulario                                                                                       |
-| section         | role="region"        | Contenido que es relevante y al que los usuarios probablemente querrán navegar. Se debe proporcionar una etiqueta para este elemento |
+| HTML    | Rol ARIA             | Objetivos del punto de referencia                                                                                                    |
+| ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| header  | role="banner"        | Encabezado principal: título de la página                                                                                            |
+| nav     | role="navigation"    | Colección de enlaces para navegar por el documento o por los documentos relacionados                                                 |
+| main    | role="main"          | El contenido principal o central del documento.                                                                                      |
+| footer  | role="contentinfo"   | Información sobre el documento principal: notas a pie de página/derechos de autor/enlaces a la declaración de privacidad             |
+| aside   | role="complementary" | Apoya el contenido principal, pero está separado y es significativo en su propio contenido                                           |
+| search  | role="search"        | Esta sección contiene la funcionalidad de búsqueda de la aplicación                                                                  |
+| form    | role="form"          | Colección de elementos asociados al formulario                                                                                       |
+| section | role="region"        | Contenido que es relevante y al que los usuarios probablemente querrán navegar. Se debe proporcionar una etiqueta para este elemento |
 
 :::tip Tip:
 Se recomienda utilizar elementos HTML de referencia con atributos de roles de referencia redundantes para maximizar la compatibilidad con [navegadores antiguos que no admiten elementos semánticos de HTML5](https://caniuse.com/#feat=html5semantic).
@@ -154,8 +154,6 @@ Las etiquetas generalmente se colocan en la parte superior o a la izquierda de l
 </form>
 ```
 
-<!-- <common-codepen-snippet title="Simple Form" slug="dyNzzWZ" :height="368" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
-
 Observa cómo puedes incluir `autocomplete='on'` en el elemento del formulario y se aplicará a todas las entradas de texto en tu formulario. También puedes establecer diferentes [valores para el atributo de autocompletar](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) por cada entrada de texto.
 
 ### Etiquetas {#labels}
@@ -166,8 +164,6 @@ Proporciona etiquetas para describir el propósito de todos los controles del fo
 <label for="name">Nombre: </label>
 <input type="text" name="name" id="name" v-model="name" />
 ```
-
-<!-- <common-codepen-snippet title="Form Label" slug="XWpaaaj" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
 Si inspeccionas este elemento en tus herramientas de desarrollo de Chrome y abres la pestaña Accesibilidad dentro de la pestaña Elementos, verás cómo la entrada de texto obtiene su nombre de la etiqueta:
 
@@ -201,8 +197,6 @@ También puedes dar a la entrada un nombre accesible con [`aria-label`](https://
 />
 ```
 
-<!-- <common-codepen-snippet title="Form ARIA label" slug="NWdvvYQ" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
-
 No dudes en inspeccionar este elemento en Chrome DevTools para ver cómo ha cambiado el nombre accesible:
 
 ![Las herramientas de desarrollo de Chrome muestran el nombre accesible de aria-label](./images/AccessibleARIAlabelDevTools.png)
@@ -233,8 +227,6 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
 </form>
 ```
 
-<!-- <common-codepen-snippet title="Form ARIA labelledby" slug="MWJvvBe" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
-
 ![Las herramientas de desarrollo de Chrome muestran el nombre accesible de aria-labelledby](./images/AccessibleARIAlabelledbyDevTools.png)
 
 #### `aria-describedby` {#aria-describedby}
@@ -264,8 +256,6 @@ Usar [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibil
   <button type="submit">Enviar</button>
 </form>
 ```
-
-<!-- <common-codepen-snippet title="Form ARIA describedby" slug="gOgxxQE" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
 Puedes ver la descripción inspeccionando en Chrome DevTools:
 
@@ -351,8 +341,6 @@ También puedes adjuntar las instrucciones a la entrada con [`aria-describedby`]
 </fieldset>
 ```
 
-<!-- <common-codepen-snippet title="Form Instructions" slug="WNREEqv" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
-
 ### Ocultar Contenidos {#hiding-content}
 
 Por lo general, no se recomienda ocultar visualmente las etiquetas, incluso si la entrada tiene un nombre accesible. Sin embargo, si la funcionalidad de la entrada se puede entender con el contenido adyacente, entonces podemos ocultar la etiqueta visual.
@@ -385,8 +373,6 @@ Podemos usar CSS para ocultar visualmente los elementos, pero mantenerlos dispon
 }
 ```
 
-<!-- <common-codepen-snippet title="Form Search" slug="QWdMqWy" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
-
 #### `aria-hidden="true"` {#aria-hidden-true}
 
 Agregar `aria-hidden="true"` ocultará el elemento de la tecnología de asistencia pero lo dejará visualmente disponible para otros usuarios. No lo utilices en elementos enfocables, sólo en contenidos decorativos, duplicados o fuera de pantalla.
@@ -411,8 +397,6 @@ Cuando se utilizan botones dentro de un formulario, se debe establecer el tipo p
   <input type="submit" value="Enviar" />
 </form>
 ```
-
-<!-- <common-codepen-snippet title="Form Buttons" slug="JjEyrYZ" :height="467" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
 ### Imágenes Funcionales {#functional-images}
 
@@ -445,8 +429,6 @@ Cuando se utilizan botones dentro de un formulario, se debe establecer el tipo p
   </button>
 </form>
 ```
-
-<!-- <common-codepen-snippet title="Functional Images" slug="jOyLGqM" :height="265" tab="js,result" theme="light" :preview="false" :editable="false" /> -->
 
 ## Estándares {#standards}
 
