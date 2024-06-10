@@ -290,7 +290,7 @@ En un contexto de Vue, la reactividad se utiliza para describir una colección d
 
 Hay varias formas diferentes en que se podría implementar un sistema de reactividad. Por ejemplo, podría hacerse mediante el análisis estático del código para determinar sus dependencias. Sin embargo, Vue no emplea ese tipo de sistema de reactividad.
 
-En cambio, el sistema de reactividad de Vue realiza un seguimiento del acceso a las propiedades en tiempo de ejecución. Esto se hace utilizando envolturas Proxy y funciones getter/setter para las propiedades.
+En cambio, el sistema de reactividad de Vue realiza un seguimiento del acceso a las propiedades en tiempo de ejecución. Esto se hace utilizando envolturas Proxy y funciones [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set#description)/[setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set#description) para las propiedades.
 
 Para más detalles, consulta:
 
