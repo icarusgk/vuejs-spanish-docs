@@ -45,7 +45,10 @@ const nav: ThemeConfig['nav'] = [
         items: [
           { text: 'Socios', link: '/partners/' },
           { text: 'Temas', link: '/ecosystem/themes' },
-          { text: 'Componentes de IU', link: 'https://ui-libs.vercel.app' },
+          {
+            text: 'Componentes de IU',
+            link: 'https://ui-libs.vercel.app'
+          },
           {
             text: 'Certificación',
             link: 'https://certification.vuejs.org/?ref=vuejs-nav'
@@ -685,6 +688,11 @@ export default defineConfigWithTheme<ThemeConfig>({
         link: 'https://it.vuejs.org',
         text: 'Italiano',
         repo: 'https://github.com/vuejs-translations/docs-it'
+      },
+      {
+        link: 'https://fa.vuejs.org',
+        text: 'فارسی',
+        repo: 'https://github.com/vuejs-translations/docs-fa'
       },
       {
         link: '/translations/',
