@@ -21,7 +21,7 @@ import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
 :::tip Prerequisitos
 
 - Familiaridad con la línea de comandos
-- Instalar [Node.js](https://nodejs.org/) versión 18.0 o superior
+- Instalar [Node.js](https://nodejs.org/) versión 18.3 o superior
   :::
 
 En esta sección presentaremos cómo crear una [Aplicación de una Sola Página (SPA)](/guide/extras/ways-of-using-vue#single-page-application-spa) de Vue en tu máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev) y nos permitirá utilizar los [Componentes de un Solo Archivo (SFCs)](/guide/scaling-up/sfc) de Vue.
@@ -31,30 +31,30 @@ Asegúrate de tener instalada una versión actualizada de [Node.js](https://node
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm create vue@latest
-  ```
+```sh
+$ npm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm create vue@latest
-  ```
+```sh
+$ pnpm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn create vue@latest
-  ```
+```sh
+$ yarn create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun create vue@latest
-  ```
+```sh
+$ bun create vue@latest
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -79,38 +79,38 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ cd <your-project-name>
-  $ npm install
-  $ npm run dev
-  ```
+```sh
+$ cd <your-project-name>
+$ npm install
+$ npm run dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ cd <your-project-name>
-  $ pnpm install
-  $ pnpm run dev
-  ```
+```sh
+$ cd <your-project-name>
+$ pnpm install
+$ pnpm run dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ cd <your-project-name>
-  $ yarn
-  $ yarn dev
-  ```
+```sh
+$ cd <your-project-name>
+$ yarn
+$ yarn dev
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ cd <your-project-name>
-  $ bun install
-  $ bun run dev
-  ```
+```sh
+$ cd <your-project-name>
+$ bun install
+$ bun run dev
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -127,30 +127,30 @@ Cuando estés listo para enviar tu aplicación a producción, ejecuta lo siguien
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm run build
-  ```
+```sh
+$ npm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm run build
-  ```
+```sh
+$ pnpm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn build
-  ```
+```sh
+$ yarn build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun run build
-  ```
+```sh
+$ bun run build
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
