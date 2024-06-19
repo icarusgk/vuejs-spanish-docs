@@ -9,7 +9,7 @@ import {
 } from './components/preferences'
 import SponsorsAside from './components/SponsorsAside.vue'
 import VueSchoolLink from './components/VueSchoolLink.vue'
-import Banner from './components/Banner.vue'
+// import Banner from './components/Banner.vue'
 import VueMasteryBanner from './components/VueMasteryBanner.vue'
 // import TextAd from './components/TextAd.vue'
 

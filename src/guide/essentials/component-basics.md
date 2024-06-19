@@ -467,6 +467,7 @@ Algo malo ha ocurrido.
 Esto puede lograrse utilizando el elemento personalizado `<slot>` de Vue:
 
 ```vue{4}
+<!-- AlertBox.vue -->
 <template>
   <div class="alert-box">
     <strong>Esto es un error para fines de demostración</strong>
