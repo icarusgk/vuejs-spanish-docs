@@ -11,7 +11,11 @@ pnpm i
 pnpm run dev
 ```
 
-Este proyecto requiere que Node.js sea `v14.0.0` o superior, porque usamos nuevas características de JavaScript en nuestro código, como el encadenamiento opcional.
+Este proyecto requiere que Node.js sea `v18` o superior. Y se recomienda activar corepack:
+
+```bash
+corepack enable
+```
 
 ## Trabajando en el contenido
 
