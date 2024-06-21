@@ -45,7 +45,10 @@ const nav: ThemeConfig['nav'] = [
         items: [
           { text: 'Socios', link: '/partners/' },
           { text: 'Temas', link: '/ecosystem/themes' },
-          { text: 'Componentes de IU', link: 'https://ui-libs.vercel.app' },
+          {
+            text: 'Componentes de IU',
+            link: 'https://ui-libs.vercel.app'
+          },
           {
             text: 'Certificación',
             link: 'https://certification.vuejs.org/?ref=vuejs-nav'
@@ -729,6 +732,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   markdown: {
     config(md) {
+      // @ts-expect-error - broken type output in vitepress
       md.use(headerPlugin)
       // .use(textAdPlugin)
     }
