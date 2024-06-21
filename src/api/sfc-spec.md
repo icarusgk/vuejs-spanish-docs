@@ -66,7 +66,7 @@ Se pueden incluir bloques personalizados adicionales en un archivo `*.vue` para 
 
 - [Gridsome: `<page-query>`](https://gridsome.org/docs/querying-data/)
 - [vite-plugin-vue-gql: `<gql>`](https://github.com/wheatjs/vite-plugin-vue-gql)
-- [vue-i18n: `<i18n>`](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block)
+- [vue-i18n: `<i18n>`](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n#i18n-custom-block)
 
 El manejo de los bloques personalizados dependerá de las herramientas: si deseas crear tus propias integraciones de bloques personalizados, consulta [la sección de herramientas de integraciones de bloques personalizados](/guide/scaling-up/tooling#sfc-custom-block-integrations) para obtener más detalles.
 

@@ -2,7 +2,7 @@
 // a file ending with data.(j|t)s will be evaluated in Node.js
 import fs from 'fs'
 import path from 'path'
-import type { MultiSidebarConfig } from '@vue/theme/src/vitepress/config'
+import type { MultiSidebarConfig } from '@vue/theme/src/vitepress/config.ts'
 import { sidebar } from '../../.vitepress/config'
 
 interface APIHeader {
@@ -62,17 +62,16 @@ function parsePageHeaders(link: string) {
   if (h2s) {
     const anchorRE = /\{#([^}]+)\}/
     headers = h2s.map((h) => {
-        const text = h
-          .slice(2)
-          .replace(/<sup class=.*/, '')
-          .replace(/\\</g, '<')
-          .replace(/`([^`]+)`/g, '$1')
-          .replace(anchorRE, '') // hidden anchor tag
-          .trim()
-        const anchor = h.match(/\{#([a-zA-Z0-9-]+)\}/)?.[1] ?? text
-        return { text, anchor }
-      }
-    )
+      const text = h
+        .slice(2)
+        .replace(/<sup class=.*/, '')
+        .replace(/\\</g, '<')
+        .replace(/`([^`]+)`/g, '$1')
+        .replace(anchorRE, '') // hidden anchor tag
+        .trim()
+      const anchor = h.match(/\{#([a-zA-Z0-9-]+)\}/)?.[1] ?? text
+      return { text, anchor }
+    })
   }
   headersCache.set(fullPath, {
     timestamp,

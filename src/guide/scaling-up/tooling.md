@@ -159,7 +159,7 @@ El cargador oficial que proporciona soporte a los SFC de Vue en webpack. Si est√
 
 - [Zona de Pr√°ctica en VueUse](https://play.vueuse.org)
 - [Vue + Vite en Repl.it](https://replit.com/@templates/VueJS-with-Vite)
-- [Vue en CodeSandbox](https://codesandbox.io/s/vue-3)
+- [Vue en CodeSandbox](https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/vue-vite)
 - [Vue en Codepen](https://codepen.io/pen/editor/vue)
 - [Vue en Components.studio](https://components.studio/create/vue3)
 - [Vue en WebComponents.dev](https://webcomponents.dev/create/cevue)
