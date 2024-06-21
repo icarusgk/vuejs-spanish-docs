@@ -15,6 +15,7 @@ aside: false
 - [Português / Portugués](https://pt.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-pt)]
 - [বাংলা / Bengalí](https://bn.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-bn)]
 - [Italiano / Italian](https://it.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-it)]
+- [繁體中文 / Chino Tradicional](https://zh-hk.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-zh-hk)]
 
 ## Idiomas en Curso {#work-in-progress-languages}
 
