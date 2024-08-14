@@ -448,7 +448,7 @@ Cuando se utilizan transiciones sólo JavaScript, suele ser una buena idea añad
 
 Con `:css="false"`, también somos totalmente responsables de controlar cuándo termina la transición. En este caso, los callbacks `done` son necesarios para los hooks `@enter` y `@leave`. De lo contrario, los hooks serán llamados de forma sincrónica y la transición terminará inmediatamente.
 
-Aquí hay una demostración que utiliza la [librería GreenSock](https://greensock.com/) para realizar las animaciones. Por supuesto, puedes usar cualquier otra librería de animación que quieras, por ejemplo [Anime.js](https://animejs.com/) o [Motion One](https://motion.dev/).
+Aquí hay una demostración que utiliza la [librería GSAP](https://gsap.com/) para realizar las animaciones. Por supuesto, puedes usar cualquier otra librería de animación que quieras, por ejemplo [Anime.js](https://animejs.com/) o [Motion One](https://motion.dev/).
 
 <JsHooks />
 

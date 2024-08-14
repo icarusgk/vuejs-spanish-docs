@@ -147,7 +147,7 @@ A los hooks de directivas se les pasan estos argumentos
   - `dir`: el objeto de definición de la directiva.
 
 - `vnode`: el VNode subyacente que representa el elemento vinculado.
-- `prevNode`: el VNode que representa el elemento vinculado del renderizado anterior. Sólo está disponible en los hooks `beforeUpdate` y `updated`.
+- `prevVnode`: el VNode que representa el elemento vinculado del renderizado anterior. Sólo está disponible en los hooks `beforeUpdate` y `updated`.
 
 Como ejemplo, considera el siguiente uso de la directiva:
 
