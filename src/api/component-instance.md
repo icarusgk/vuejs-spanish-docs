@@ -212,7 +212,7 @@ API para crear watchers.
 
 - **Detalles**
 
-  El primer argumento es el nombre de la propiedad a observar. Puede ser el nombre (string) de una propiedad del componente, una simple cadena delimitada por puntos, o una función getter.
+  El primer argumento es el nombre de la propiedad a observar. Puede ser el nombre (string) de una propiedad del componente, una simple cadena delimitada por puntos, o una [función getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description)..
 
   El segundo argumento es la función de callback. El callback recibe el nuevo calor y el valor anterior de la propiedad observada.
 
