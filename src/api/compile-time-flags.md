@@ -26,7 +26,7 @@ Consulta las [Guías de configuración](#configuration-guides) sobre cómo confi
 
   Habilita/deshabilita el soporte de herramientas de desarrollo (devtools) en compilaciones de producción. Esto resultará en más código incluido en el paquete, por lo que se recomienda habilitarlo solo con fines de depuración.
 
-## `__VUE_PROD_HYDRATION_MISMATCH_DETAILS__` <sup class="vt-badge" data-text="3.4+" /> {#VUE_PROD_HYDRATATION_MISMATCH_DETAILS}
+## `__VUE_PROD_HYDRATION_MISMATCH_DETAILS__` <sup class="vt-badge" data-text="3.4+" /> {#VUE_PROD_HYDRATION_MISMATCH_DETAILS}
 
 - **Por defecto:** `false`
 

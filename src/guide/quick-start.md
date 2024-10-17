@@ -117,7 +117,7 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
 
 Ahora deberías tener tu primer proyecto Vue funcionando. Ten en cuenta que los componentes de ejemplo del proyecto generado están escritos utilizando la [Composition API](/guide/introduction#composition-api) y `<script setup>`, en lugar de la [Options API](/guide/introduction#options-api). He aquí algunos consejos adicionales:
 
-- La configuración de IDE recomendada es [Visual Studio Code](https://code.visualstudio.com/) + la [extensión Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar). Si utilizas otros editores, consulta la sección [Soporte para IDE](/guide/scaling-up/tooling#ide-support).
+- La configuración de IDE recomendada es [Visual Studio Code](https://code.visualstudio.com/) + la extensión [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar). Si utilizas otros editores, consulta la sección [Soporte para IDE](/guide/scaling-up/tooling#ide-support).
 - En la [Guía de Herramientas](/guide/scaling-up/tooling) se discuten más detalles sobre las herramientas, incluyendo la integración con frameworks backend.
 - Para obtener más información sobre la herramienta de compilación subyacente Vite, consulta la [documentación de Vite](https://vitejs.dev).
 - Si decides utilizar TypeScript, consulta la guía [Usando Vue con TypeScript](typescript/overview.html).

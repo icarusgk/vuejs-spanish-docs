@@ -90,7 +90,7 @@ const nav: ThemeConfig['nav'] = [
         items: [
           {
             text: 'Chat de Discord',
-            link: 'https://discord.com/invite/HBherRA'
+            link: 'https://discord.com/invite/vue'
           },
           {
             text: 'Conversaciones en GitHub',

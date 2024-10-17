@@ -86,10 +86,10 @@ Si estás buscando una alternativa más liviana para el uso sin pasos de compila
 
 ## Soporte para IDE {#ide-support}
 
-- La configuración recomendada del IDE es [VSCode](https://code.visualstudio.com/) + la extensión [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar). La extensión proporciona resaltado de sintaxis, soporte para TypeScript, intellisense para expresiones de plantillas y props de componentes.
+- La configuración recomendada del IDE es [VSCode](https://code.visualstudio.com/) + la extensión [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar). La extensión proporciona resaltado de sintaxis, soporte para TypeScript, intellisense para expresiones de plantillas y props de componentes.
 
   :::tip
-  Volar sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrate de desactivarlo en los proyectos de Vue 3.
+  Vue - Official sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrate de desactivarlo en los proyectos de Vue 3.
   :::
 
 - [WebStorm](https://www.jetbrains.com/webstorm/) también proporciona un gran soporte integrado para los SFC de Vue.
@@ -120,7 +120,7 @@ La extensión de herramientas de desarrollo del navegador (Devtools) de Vue le p
 
 Artículo principal: [Usando Vue con TypeScript](/guide/typescript/overview).
 
-- [Volar](https://github.com/johnsoncodehk/volar) proporciona comprobación de tipos para SFC usando bloques `<script lang="ts">`, incluyendo expresiones de plantilla y validación de props entre componentes.
+- [Vue - Official extension](https://github.com/vuejs/language-tools) proporciona comprobación de tipos para SFC usando bloques `<script lang="ts">`, incluyendo expresiones de plantilla y validación de props entre componentes.
 
 - Utiliza [`vue-tsc`](https://github.com/vuejs/language-tools/tree/master/packages/tsc) para realizar la misma comprobación de tipos desde la línea de comandos, o para generar archivos `d.ts` para SFC.
 
@@ -150,7 +150,7 @@ Los usuarios que anteriormente usaban Vue CLI pueden estar acostumbrados a tener
 
 ## Formateo (Formatting) {#formatting}
 
-- La extensión [Volar](https://github.com/johnsoncodehk/volar) de VSCode permite formatear los SFC de Vue de forma inmediata.
+- La extensión [Vue - Official](https://github.com/vuejs/language-tools) de VSCode permite formatear los SFC de Vue de forma inmediata.
 
 - Alternativamente, [Prettier](https://prettier.io/) proporciona soporte de formato integrado para SFC de Vue.
 

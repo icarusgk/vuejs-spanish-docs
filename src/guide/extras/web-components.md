@@ -226,7 +226,7 @@ export function register() {
 
 Si tienes muchos componentes, también puedes aprovechar las características de las herramientas de construcción como [glob import](https://vitejs.dev/guide/features.html#glob-import) de Vite o [`require.context`](https://webpack.js.org/guides/dependency-management/#requirecontext) de webpack para cargar todos los componentes de un directorio.
 
-### Componentes Web y Typescript {#web-components-and-typescript}
+### Componentes Web y TypeScript {#web-components-and-typescript}
 
 Si estás desarrollando una aplicación o una librería, puede que quieras [comprobar el tipado](/guide/scaling-up/tooling.html#typescript) de tus componentes Vue, incluyendo aquellos que están definidos como elementos personalizados.
 

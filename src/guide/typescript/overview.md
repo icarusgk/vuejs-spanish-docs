@@ -26,7 +26,7 @@ Con una configuración basada en Vite, el servidor de desarrollo y el bundler s�
 
 - Se recomienda encarecidamente [Visual Studio Code](https://code.visualstudio.com/) (VSCode) por su gran compatibilidad con TypeScript.
 
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) es la extensión oficial de VSCode que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
+- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (anteriormente Volar) es la extensión oficial de VSCode que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
 
 ::: tip
 Volar sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrese de desactivarlo en los proyectos de Vue 3.
