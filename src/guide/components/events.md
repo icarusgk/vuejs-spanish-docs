@@ -182,7 +182,7 @@ La opción `emits` y el macro `defineEmits()` también admiten una sintaxis de o
 <div class="composition-api">
 
 ```vue
-<script setup>
+<script setup lang="ts">
 const emit = defineEmits({
   submit(payload: { email: string; password: string }) {
     // devuelve `true` o `false` para indicar

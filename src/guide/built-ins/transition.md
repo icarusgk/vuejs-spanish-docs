@@ -363,6 +363,7 @@ function onEnter(el, done) {
 
 // llamado cuando la transición de entrada ha terminado.
 function onAfterEnter(el) {}
+
 // llamado cuando la transición de entrada es cancelada antes de completarse.
 function onEnterCancelled(el) {}
 

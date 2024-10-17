@@ -26,13 +26,11 @@ Con una configuración basada en Vite, el servidor de desarrollo y el bundler s�
 
 - Se recomienda encarecidamente [Visual Studio Code](https://code.visualstudio.com/) (VSCode) por su gran compatibilidad con TypeScript.
 
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) es la extensión oficial de VSCode que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
+- [Vue - Oficial](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Antes Volar) es la extensión oficial de VSCode que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
 
 ::: tip
-Volar sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrese de desactivarlo en los proyectos de Vue 3.
+La extensión Vue - Oficial sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrese de desactivarlo en los proyectos de Vue 3.
 :::
-
-- [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) también es necesario para obtener soporte de tipo para las importaciones `*.vue` en los archivos TS.
 
 - [WebStorm](https://www.jetbrains.com/webstorm/) también proporciona soporte inmediato para TypeScript y Vue. Otros IDEs de JetBrains también los soportan, ya sea de forma inmediata o a través de [un plugin gratuito](https://plugins.jetbrains.com/plugin/9442-vue-js). A partir de la versión 2023.2, WebStorm y el plugin de Vue vienen con soporte integrado para el servidor de lenguaje de Vue. Puedes configurar el servicio de Vue para que utilice la integración Volar en todas las versiones de TypeScript, en Ajustes > Lenguajes y Frameworks > TypeScript > Vue. Por defecto, Volar se utilizará para las versiones de TypeScript 5.0 y superiores.
 
@@ -54,24 +52,6 @@ Véase también:
 
 - [Documentación oficial sobre las opciones del compilador de TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [Advertencias sobre la compilación de TypeScript en esbuild](https://esbuild.github.io/content-types/#typescript-caveats)
-
-### Modo Takeover de Volar {#volar-takeover-mode}
-
-> Esta sección sólo se aplica a VSCode + Volar.
-
-Para conseguir que los SFCs de Vue y TypeScript funcionen juntos, Volar crea una instancia independiente del servicio de lenguaje TS modificada con soporte específico para Vue, y la utiliza en los SFCs de Vue. Al mismo tiempo, los archivos TS planos siguen siendo manejados por el servicio de lenguaje TS incorporado de VSCode, por lo que necesitamos [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) para soportar las importaciones de SFC de Vue en los archivos TS. Esta configuración por defecto funciona, pero para cada proyecto estamos ejecutando dos instancias del servicio de lenguaje TS: una de Volar, otra del servicio incorporado de VSCode. Esto es un poco ineficiente y puede conducir a problemas de rendimiento en proyectos grandes.
-
-Volar proporciona una función llamada "Modo Takeover" para mejorar el rendimiento. En el modo Takeover, Volar proporciona soporte para archivos Vue y TS utilizando una única instancia de servicio de lenguaje TS.
-
-Para habilitar el modo Takeover, debes desactivar el servicio de lenguaje TS incorporado en VSCode **sólo en el espacio de trabajo de tu proyecto** siguiendo estos pasos:
-
-1. En el espacio de trabajo de tu proyecto, abre la paleta de comandos con `Ctrl + Shift + P` (macOS: `Cmd + Shift + P`).
-2. Escribe `built` y selecciona "Extensiones: Mostrar Extensiones Integradas".
-3. Escribe `typescript` en el cuadro de búsqueda de extensiones (no elimines el prefijo `@builtin`).
-4. Haz clic en el pequeño icono del engranaje de "Características del Lenguaje TypeScript y JavaScript", y selecciona "Desactivar (espacio de trabajo)".
-5. Vuelve a cargar el espacio de trabajo. El modo takeover se habilitará cuando abras un archivo Vue o TS.
-
-<img src="./images/takeover-mode.png" width="590" height="426" style="margin:0px auto;border-radius:8px">
 
 ### Nota sobre Vue CLI y `ts-loader` {#note-on-vue-cli-and-ts-loader}
 
