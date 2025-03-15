@@ -778,7 +778,7 @@ Los componentes funcionales pueden ser registrados y consumidos como los compone
 
 ### Tipado de componentes funcionales <sup class="vt-badge ts" /> {#typing-functional-components}
 
-Los componentes funcionales pueden ser tipados en base a si son nombrados o anónimos. Volar también admite la comprobación de tipos de componentes funcionales correctamente tipados al consumirlos en plantillas SFC.
+Los componentes funcionales pueden ser tipados en base a si son nombrados o anónimos. [Vue - Official extension](https://github.com/vuejs/language-tools) también admite la comprobación de tipos de componentes funcionales correctamente tipados al consumirlos en plantillas SFC.
 
 **Componente Funcional Nombrado**
 

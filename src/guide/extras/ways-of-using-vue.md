@@ -53,8 +53,8 @@ El equipo de Vue también mantiene un generador de sitios estáticos llamado [Vi
 
 Aunque Vue está diseñado principalmente para la construcción de aplicaciones web, no se limita en absoluto al navegador. Puedes:
 
-- Construir aplicaciones de escritorio con [Electron](https://www.electronjs.org/) o [Tauri](https://tauri.app)
+- Construir aplicaciones de escritorio con [Electron](https://www.electronjs.org/)
 - Construir aplicaciones móviles con [Ionic Vue](https://ionicframework.com/docs/vue/overview)
-- Construir aplicaciones de escritorio y móviles desde el mismo código base con [Quasar](https://quasar.dev/)
+- Construir aplicaciones de escritorio y móviles desde el mismo código base con [Quasar](https://quasar.dev/) o [Tauri](https://tauri.app)
 - Crea experiencias 3D con WebGL usando [TresJS](https://tresjs.org/)
 - Utiliza la [Custom Renderer API](/api/custom-renderer) de Vue para crear renderizadores personalizados, como los de [el terminal](https://github.com/vue-terminal/vue-termui).

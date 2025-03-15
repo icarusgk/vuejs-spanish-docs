@@ -27,7 +27,7 @@ Los proyectos creados a través de `create-vue` (basado en Vite) o Vue CLI (basa
 Si utilizas una configuración personalizada, asegúrate de que:
 
 1. `vue` resuelve a `vue.runtime.esm-bundler.js`.
-2. Los [indicadores de características en tiempo de compilación](https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags) están configurados correctamente.
+2. Los [indicadores de características en tiempo de compilación](/api/compile-time-flags) están configurados correctamente.
 3. <code>process.env<wbr>.NODE_ENV</code> se reemplaza con `"production"` durante la compilación.
 
 Referencias adicionales:

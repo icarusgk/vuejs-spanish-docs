@@ -114,7 +114,7 @@ Desde la versión 3.3 puedes usar directamente `defineOptions` en `<script setup
 
 :::
 
-Si tienes la intención de utilizar exclusivamente la Composition API (junto con las opciones mencionadas anteriormente), puedes reducir algunos kbs de tu paquete de producción mediante una [bandera de compilación](https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags) que elimina el código relacionado con la Options API de Vue. Ten en cuenta que esto también afecta a los componentes de Vue en tus dependencias.
+Si tienes la intención de utilizar exclusivamente la Composition API (junto con las opciones mencionadas anteriormente), puedes reducir algunos kbs de tu paquete de producción mediante una [bandera de compilación](/api/compile-time-flags) que elimina el código relacionado con la Options API de Vue. Ten en cuenta que esto también afecta a los componentes de Vue en tus dependencias.
 
 ### ¿Puedo utilizar ambas APIs en el mismo componente? {#can-i-use-both-apis-in-the-same-component}
 

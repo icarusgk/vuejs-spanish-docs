@@ -102,7 +102,7 @@ Al comunicarse con las transiciones de JavaScript mediante atributos de datos, t
 </TransitionGroup>
 ```
 
-Luego, en los hooks de JavaScript, animamos el elemento con un retraso basado en el atributo data. Este ejemplo utiliza la [librería GreenSock](https://greensock.com/) para realizar la animación:
+Luego, en los hooks de JavaScript, animamos el elemento con un retraso basado en el atributo data. Este ejemplo utiliza la [librería GSAP](https://gsap.com/) para realizar la animación:
 
 ```js{5}
 function onEnter(el, done) {
