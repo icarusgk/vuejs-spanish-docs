@@ -1,5 +1,5 @@
 <form @submit.prevent="addTodo">
-  <input v-model="newTodo" />
+  <input v-model="newTodo" required placeholder="nueva tarea">
   <button>Añadir Tarea</button>
 </form>
 <ul>

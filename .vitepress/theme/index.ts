@@ -9,8 +9,8 @@ import {
 } from './components/preferences'
 import SponsorsAside from './components/SponsorsAside.vue'
 import VueSchoolLink from './components/VueSchoolLink.vue'
-import Banner from './components/Banner.vue'
-import VueMasteryBanner from './components/VueMasteryBanner.vue'
+// import Banner from './components/Banner.vue'
+
 // import TextAd from './components/TextAd.vue'
 
 export default Object.assign({}, VPTheme, {
@@ -18,7 +18,6 @@ export default Object.assign({}, VPTheme, {
     // @ts-ignore
     return h(VPTheme.Layout, null, {
       // banner: () => h(Banner),
-      banner: () => h(VueMasteryBanner),
       'sidebar-top': () => h(PreferenceSwitch),
       'aside-mid': () => h(SponsorsAside)
     })

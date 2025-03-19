@@ -64,6 +64,20 @@ Los atributos que comienzan con `:` pueden verse un poco diferentes del HTML nor
 
 > Para el resto de la guía, usaremos la sintaxis abreviada en los ejemplos de código, ya que es la más comúnmente usada por los desarrolladores de Vue.
 
+### Abreviatura de mismo nombre <sup class="vt-badge" data-text="3.4+" /> {#same-name-shorthand}
+
+Si el atributo tiene el mismo nombre que el valor de JavaScript que se está vinculando, la sintaxis se puede acortar aún más para omitir el valor del atributo:
+
+```vue-html
+<!-- igual que :id="id" -->
+<div :id></div>
+
+<!-- esto también funciona -->
+<div v-bind:id></div>
+```
+
+Esto es similar a la sintaxis de abreviatura de propiedad al declarar objetos en JavaScript. Ten en cuenta que esta es una función que está disponible solo en Vue 3.4 y versiones posteriores.
+
 ### Atributos Booleanos {#boolean-attributes}
 
 Los [atributos booleanos](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes) son atributos que pueden indicar valores verdadero/falso por su presencia en un elemento. Por ejemplo, [`disabled`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled) es uno de los atributos booleanos más comúnmente utilizados.

@@ -263,7 +263,7 @@ Ahora cuando ejecutes `fullName.value = 'John Doe'`, el setter será invocado y 
 
 ### Los getters deben estar libres de efectos secundarios {#getters-should-be-side-effect-free}
 
-Es importante recordar que las funciones getter computadas sólo deben realizar cálculos puros y estar libres de efectos secundarios. Por ejemplo, no hagas peticiones asíncronas ni mutes el DOM dentro de un getter computado. Piensa en una propiedad computada como una descripción declarativa de cómo derivar un valor basado en otros valores: su única responsabilidad debe ser calcular y devolver ese valor. Más adelante en la guía discutiremos cómo podemos realizar efectos secundarios en reacción a los cambios de estado con los [watchers](./watchers).
+Es importante recordar que las funciones getter computadas sólo deben realizar cálculos puros y estar libres de efectos secundarios. Por ejemplo, **¡no mutes otros estados, no hagas peticiones asíncronas ni mutes el DOM dentro de un getter computado!**. Piensa en una propiedad computada como una descripción declarativa de cómo derivar un valor basado en otros valores: su única responsabilidad debe ser calcular y devolver ese valor. Más adelante en la guía discutiremos cómo podemos realizar efectos secundarios en reacción a los cambios de estado con los [watchers](./watchers).
 
 ### Evitar la mutación del valor computado {#avoid-mutating-computed-value}
 

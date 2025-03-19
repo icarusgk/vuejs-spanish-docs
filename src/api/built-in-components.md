@@ -126,7 +126,7 @@ Proporciona efectos de transición animados a un **solo** elemento o componente.
   </Transition>
   ```
 
-- **Véase también** [Transition](/guide/built-ins/transition)
+- **Véase también** [Guía - Transition](/guide/built-ins/transition)
 
 ## `<TransitionGroup>` {#transitiongroup}
 

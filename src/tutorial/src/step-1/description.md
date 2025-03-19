@@ -21,6 +21,33 @@ Si eres un desarrollador experimentado que viene de Vue 2 u otros frameworks, ha
 
 - También puede cambiar entre el modo SFC o el modo HTML. En el primero se mostrarán ejemplos de código en formato <a target="_blank" href="/guide/introduction.html#componentes-de-un-solo-archivo-single-file-components">Componentes de un Solo Archivo</a> (SFC), que es el que la mayoría de los desarrolladores utilizan cuando usan Vue con un paso de compilación. El modo HTML muestra el uso sin un paso de construcción.
 
+<div class="html">
+
+:::tip
+Si vas a usar el modo HTML sin un paso de compilación en tus propias aplicaciones, asegúrate de cambiar las importaciones a:
+
+```js
+import { ... } from 'vue/dist/vue.esm-bundler.js'
+```
+
+dentro de tus scripts o configura tu herramienta de compilación para resolver vue en consecuencia. Ejemplo de configuración para [Vite](https://vitejs.dev/):
+
+```js
+// vite.config.js
+export default {
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js'
+    }
+  }
+}
+```
+
+Consulta la [sección correspondiente en la guía de herramientas](/guide/scaling-up/tooling.html#note-on-in-browser-template-compilation) para más información.
+:::
+
+</div>
+
 </details>
 
 ¿Listo? Haz clic en "Siguiente" para empezar.

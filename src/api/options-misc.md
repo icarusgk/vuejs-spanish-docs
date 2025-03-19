@@ -99,27 +99,6 @@ Controla si el comportamiento por defecto de los atributos de los componentes de
   </template>
   ```
 
-  Desde la versión 3.3 puedes usar también `defineOptions` directamente en `<script setup>`:
-
-  ```vue
-  <script setup>
-  defineProps(['label', 'value'])
-  defineEmits(['input'])
-  defineOptions({ inheritAttrs: false })
-  </script>
-
-  <template>
-    <label>
-      {{ label }}
-      <input
-        v-bind="$attrs"
-        v-bind:value="value"
-        v-on:input="$emit('input', $event.target.value)"
-      />
-    </label>
-  </template>
-  ```
-
   </div>
 
 - **Véase también** [Attributos Fallthrough](/guide/components/attrs)
@@ -184,7 +163,5 @@ Un objeto que registra las directivas que se pondrán a disposición de la insta
   ```vue-html
   <input v-focus>
   ```
-
-  Un hash de directivas que se pondrán a disposición de la instancia del componente.
 
 - **Véase también** [Directivas personalizadas](/guide/reusability/custom-directives)

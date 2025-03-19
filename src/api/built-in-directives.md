@@ -257,7 +257,9 @@ Adjunta un escuchador de eventos al elemento.
 
 Vincula dinámicamente uno o más atributos, o una prop de un componente a una expresión.
 
-- **Abreviatura:** `:` o `.` (cuando se usa el modificar `.prop`)
+- **Abreviatura:** 
+  - `:` o `.` (cuando se usa el modificar `.prop`)
+  - Omitir el valor (cuando el atributo y el valor vinculado tienen el mismo nombre) <sup class="vt-badge">3.4+</sup>
 
 - **Espera:** `any (con argumento) | Object (sin argumento)`
 
@@ -284,6 +286,9 @@ Vincula dinámicamente uno o más atributos, o una prop de un componente a una e
   ```vue-html
   <!-- vinculación de un atributo -->
   <img v-bind:src="imageSrc" />
+
+  <!-- abreviatura del mismo nombre (3.4+), se expande a :src="src" -->
+  <img :src />
 
   <!-- nombre de atributo dinámico -->
   <button v-bind:[key]="value"></button>

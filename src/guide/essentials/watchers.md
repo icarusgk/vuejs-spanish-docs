@@ -272,6 +272,41 @@ watch(
 
 </div>
 
+## Watchers "Únicos" <sup class="vt-badge" data-text="3.4+" /> {#once-watchers}
+
+El callback de un watcher se ejecutará cada vez que cambie la fuente observada. Si quieres que el callback se active sólo una vez cuando la fuente cambie, usa la opción `once: true`.
+
+<div class="options-api">
+  
+```js
+export default {
+  watch: {
+    source: {
+      handler(newValue, oldValue) {
+        // se ejecuta sólo una vez cuando `source` cambia
+      },
+      once: true
+    }
+  }
+}
+```
+
+</div>
+
+<div class="composition-api">
+
+```js
+watch(
+  source,
+  (newValue, oldValue) => {
+    // se ejecuta sólo una vez cuando `source` cambia
+  },
+  { once: true }
+)
+```
+
+</div>
+
 <div class="composition-api">
 
 ## `watchEffect()` \*\* {#watcheffect}
@@ -331,13 +366,17 @@ Tanto `watch` como `watchEffect` nos permiten producir efectos secundarios de fo
 
 Cuando mutas el estado reactivo, puede desencadenar tanto las actualizaciones de los componentes de Vue como los callbacks de los watchers creados por ti.
 
-De forma predeterminada, los callbacks del watcher creados por el usuario son llamados **antes** de las actualizaciones del componente Vue. Esto significa que si intentas acceder al DOM dentro de un callback de vigilancia, el DOM estará en el estado antes de que Vue haya aplicado cualquier actualización.
+Similar a las actualizaciones de componentes, los callbacks de los watchers creados por el usuario se agrupan para evitar invocaciones duplicadas. Por ejemplo, probablemente no queremos que un watcher se dispare mil veces si agregamos sincrónicamente mil elementos a un arreglo que está siendo observado
 
-Si quieres acceder al DOM en un callback de vigilancia **después** de que Vue lo haya actualizado, debes especificar la opción `flush: 'post'`:
+Por defecto, el callback de un watcher se llama *después* de las actualizaciones del componente padre (si las hay) y *antes* de que se actualice el DOM del componente que lo posee. Esto significa que, si intentas acceder al propio DOM del componente que lo posee en el callback del watcher, el DOM estará en un estado previo a la actualización.
+
+### Post Watchers {#post-watchers}
+
+Si deseas acceder al DOM del componente que lo posee en el callback de un watcher *después* de que Vue lo haya actualizado, necesitas especificar la opción `flush: 'post'`:
 
 <div class="options-api">
 
-```js
+```js{6}
 export default {
   // ...
   watch: {
@@ -353,7 +392,7 @@ export default {
 
 <div class="composition-api">
 
-```js
+```js{2,6}
 watch(source, callback, {
   flush: 'post'
 })
@@ -374,6 +413,53 @@ watchPostEffect(() => {
 ```
 
 </div>
+
+### Sincronización de Watchers {#sync-watchers}
+
+También es posible crear un watcher que se dispare de forma sincrónica, antes de cualquier actualización gestionada por Vue:
+
+<div class="options-api">
+
+```js{6}
+export default {
+  // ...
+  watch: {
+    key: {
+      handler() {},
+      flush: 'sync'
+    }
+  }
+}
+```
+
+</div>
+
+<div class="composition-api">
+
+```js{2,6}
+watch(source, callback, {
+  flush: 'sync'
+})
+watchEffect(callback, {
+  flush: 'sync'
+})
+```
+
+El `watchEffect()` sincrónico también tiene un alias conveniente, `watchSyncEffect()`:
+
+```js
+import { watchSyncEffect } from 'vue'
+
+watchSyncEffect(() => {
+  /* ejecutado sincrónicamente al cambiar los datos reactivos */
+})
+```
+
+</div>
+
+:::warning Use con Precaución
+Los watchers sincrónicos no tienen agrupación y se disparan cada vez que se detecta una mutación reactiva. Está bien usarlos para observar valores booleanos simples, pero evita usarlos en fuentes de datos que puedan ser mutadas sincrónicamente muchas veces, por ejemplo, arreglos.
+:::
 
 <div class="options-api">
 

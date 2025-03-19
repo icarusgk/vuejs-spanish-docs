@@ -405,8 +405,9 @@ defineProps({
     }
   },
   // Función de validación personalizada
+  // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
   propF: {
-    validator(value) {
+    validator(value, props) {
       // El valor debe coincidir con una de estas cadenas
       return ['éxito', 'advertencia', 'peligro'].includes(valor)
     }
@@ -459,8 +460,9 @@ export default {
       }
     },
     // Función de validación personalizada
+    // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
     propF: {
-      validator(value) {
+      validator(value, props) {
         // El valor debe coincidir con una de estas cadenas
         return ['éxito', 'advertencia', 'peligro'].includes(valor)
       }
@@ -517,6 +519,7 @@ El `tipo` puede ser uno de los siguientes constructores nativos:
 - `Date`
 - `Function`
 - `Symbol`
+- `Error`
 
 Además, `type` también puede ser una clase o función constructora personalizada y la declaración será realizada con una comprobación `instanceof`. Por ejemplo, dada la siguiente clase:
 

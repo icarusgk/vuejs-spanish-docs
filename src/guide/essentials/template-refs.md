@@ -12,7 +12,7 @@ Aunque el modelo de renderizado declarativo de Vue abstrae la mayor parte de las
 
 <div class="composition-api">
 
-Para obtener la referencia con la Composition API, necesitamos declarar una ref con el mismo nombre:
+Para obtener la referencia con la Composition API, necesitamos declarar una ref con un nombre que coincida con el valor del atributo ref en la plantilla.
 
 ```vue
 <script setup>
