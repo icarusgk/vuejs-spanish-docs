@@ -79,6 +79,8 @@ Para extraer props públicas, es decir, props que el padre puede pasar, utiliza 
 
 Extrae tipos de props de un objeto de opciones de props en tiempo de ejecución. Los tipos extraídos son de cara pública, es decir, las props que el padre tiene permitido pasar.
 
+- Solo compatible en 3.3+.
+
 - **Ejemplo**
 
   ```ts
