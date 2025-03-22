@@ -420,7 +420,7 @@ Por razones de seguridad, los módulos ES sólo pueden funcionar sobre el protoc
 
 Para iniciar un servidor HTTP local, primero instala [Node.js](https://nodejs.org/es/) y luego ejecuta `npx serve` desde la línea de comandos en el mismo directorio donde está tu archivo HTML. También puedes utilizar cualquier otro servidor HTTP que pueda servir archivos estáticos con los tipos MIME correctos.
 
-Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VSCode, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
+Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VS Code, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
 
 ## Siguientes pasos {#next-steps}
 
