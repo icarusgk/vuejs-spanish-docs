@@ -389,13 +389,18 @@ defineProps({
     type: String,
     required: true
   },
-  // Número con valor por defecto
+  // String requerido pero anulable
   propD: {
+    type: [String, null],
+    required: true
+  },
+  // Número con valor por defecto
+  propE: {
     type: Number,
     default: 100
   },
   // Objeto con valor por defecto
-  propE: {
+  propF: {
     type: Object,
     // Los valores por defecto de los objetos o arrays deben ser
     // devueltos desde una función de fábrica. La función recibe las
@@ -406,14 +411,14 @@ defineProps({
   },
   // Función de validación personalizada
   // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
-  propF: {
+  propG: {
     validator(value, props) {
       // El valor debe coincidir con una de estas cadenas
       return ['éxito', 'advertencia', 'peligro'].includes(valor)
     }
   },
   // Función con valor por defecto
-  propG: {
+  propH: {
     type: Function,
     // A diferencia de los objetos o arrays por defecto, esta no es una
     // función de fábrica; es una función que sirve como valor por defecto
@@ -444,13 +449,18 @@ export default {
       type: String,
       required: true
     },
-    // Número con valor por defecto
+    // String requerido pero anulable
     propD: {
+      type: [String, null],
+      required: true
+    },
+    // Número con valor por defecto
+    propE: {
       type: Number,
       default: 100
     },
     // Objeto con valor por defecto
-    propE: {
+    propF: {
       type: Object,
       // Los valores por defecto de los objetos o arrays deben ser
       // devueltos desde una función de fábrica. La función recibe las
@@ -461,14 +471,14 @@ export default {
     },
     // Función de validación personalizada
     // Todas las props completas pasadas como 2do argumento en la versión 3.4 o superior
-    propF: {
+    propG: {
       validator(value, props) {
         // El valor debe coincidir con una de estas cadenas
         return ['éxito', 'advertencia', 'peligro'].includes(valor)
       }
     },
     // Función con valor por defecto
-    propG: {
+    propH: {
       type: Function,
       // A diferencia de los objetos o arrays por defecto, esta no es una
       // función de fábrica; es una función que sirve como valor por defecto
@@ -556,6 +566,39 @@ export default {
 </div>
 
 Vue utilizará `instanceof Person` para validar si el valor de la prop `author` es efectivamente una instancia de la clase `Person`.
+
+## Tipo Anulable
+
+Si se requiere el tipo pero se puede anular, puede usar la sintaxis de la matriz que incluye `null`:
+
+<div class="composition-api">
+
+```js
+defineProps({
+  id: {
+    type: [String, null],
+    required: true
+  }
+})
+```
+
+</div>
+<div class="options-api">
+
+```js
+export default {
+  props: {
+    id: {
+      type: [String, null],
+      required: true
+    }
+  }
+}
+```
+
+</div>
+
+Tenga en cuenta que si el `type` es solo `null` sin usar la sintaxis de la matriz, permitirá cualquier tipo.
 
 ## Asignación de Booleanos {#boolean-casting}
 

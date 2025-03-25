@@ -296,7 +296,7 @@ A menudo es una buena idea enlazar con un objeto de estilo directamente para que
 ```js
 const styleObject = reactive({
   color: 'red',
-  fontSize: '13px'
+  fontSize: '30px'
 })
 ```
 

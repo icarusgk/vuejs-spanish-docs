@@ -1,5 +1,6 @@
 <h2>Entrada de Texto</h2>
-<input v-model="text"> {{ text }}
+<input v-model="text">
+<p>{{ text }}</p>
 
 <h2>Checkbox</h2>
 <input type="checkbox" id="checkbox" v-model="checked">
@@ -16,7 +17,7 @@
 <label for="john">John</label>
 <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
 <label for="mike">Mike</label>
-<p>Nombres chequeados: <pre>{{ checkedNames }}</pre></p>
+<p>Nombres chequeados: {{ checkedNames }}</p>
 
 <h2>Radio</h2>
 <input type="radio" id="one" value="Uno" v-model="picked">
@@ -24,8 +25,7 @@
 <br>
 <input type="radio" id="two" value="Dos" v-model="picked">
 <label for="two">Dos</label>
-<br>
-<span>Elegido: {{ picked }}</span>
+<p>Elegido: {{ picked }}</p>
 
 <h2>Select</h2>
 <select v-model="selected">
@@ -34,7 +34,7 @@
   <option>B</option>
   <option>C</option>
 </select>
-<span>Seleccionado: {{ selected }}</span>
+<p>Seleccionado: {{ selected }}</p>
 
 <h2>Multi Select</h2>
 <select v-model="multiSelected" multiple style="width:100px">
@@ -42,4 +42,4 @@
   <option>B</option>
   <option>C</option>
 </select>
-<span>Seleccionado: {{ multiSelected }}</span>
+<p>Seleccionado: {{ multiSelected }}</p>

@@ -183,9 +183,10 @@ La sintaxis funciona con [`<script setup>`](./sfc-script-setup) y admite expresi
 
 ```vue
 <script setup>
-const theme = {
+import { ref } from 'vue'
+const theme = ref({
   color: 'red'
-}
+})
 </script>
 
 <template>
