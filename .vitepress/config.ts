@@ -122,6 +122,7 @@ const nav: ThemeConfig['nav'] = [
         link: '/about/community-guide'
       },
       { text: 'Código de Conducta', link: '/about/coc' },
+      { text: 'Política de Privacidad', link: '/about/privacy' },
       {
         text: 'El Documental',
         link: 'https://www.youtube.com/watch?v=OrxmtDw4pVI'
