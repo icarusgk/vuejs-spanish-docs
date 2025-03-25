@@ -442,7 +442,7 @@ const post = await fetch(`/api/post/1`).then((r) => r.json())
 Además, la expresión esperada se compilará automáticamente en un formato que conserva el contexto de la instancia del componente actual después del `await`.
 
 :::warning Nota
-`async setup()` debe usarse en combinación con `Suspense`, que actualmente sigue siendo una característica experimental. Planeamos finalizarla y documentarla en una versión futura, pero si tienes curiosidad ahora, puedes consultar sus [pruebas](https://github.com/vuejs/core/blob/main/packages/runtime-core/__tests__/components/Suspense.spec.ts) para ver cómo funciona.
+`async setup()` debe usarse en combinación con [`Suspense`](/guide/built-ins/suspense.html), que actualmente sigue siendo una característica experimental. Planeamos finalizarla y documentarla en una versión futura, pero si tienes curiosidad ahora, puedes consultar sus [pruebas](https://github.com/vuejs/core/blob/main/packages/runtime-core/__tests__/components/Suspense.spec.ts) para ver cómo funciona.
 :::
 
 ### Genéricos <sup class="vt-badge ts" /> {#generics}
