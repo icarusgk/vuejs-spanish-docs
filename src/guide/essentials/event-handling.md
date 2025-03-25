@@ -116,7 +116,7 @@ methods: {
 
 </div>
 
-Un manejador de método recibe automáticamente el objeto Evento nativo del DOM que lo desencadena. En el ejemplo anterior, podemos acceder al elemento que envía el evento a través de `event.target.tagName`.
+Un manejador de método recibe automáticamente el objeto Evento nativo del DOM que lo desencadena. En el ejemplo anterior, podemos acceder al elemento que envía el evento a través de `event.target`.
 
 <div class="composition-api">
 
