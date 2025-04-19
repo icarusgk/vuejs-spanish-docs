@@ -120,7 +120,7 @@ Una etiqueta `<style module>` se compila como [módulos CSS](https://github.com/
 
 Las clases resultantes se codifican para evitar la colisión, logrando el mismo efecto de limitar el alcance del CSS al componente actual únicamente.
 
-Consulta la [especificación de Módulos CSS](https://github.com/css-modules/css-modules) para obtener más detalles, como las [excepciones globales](https://github.com/css-modules/css-modules#exceptions) y la [composición](https://github.com/css-modules/css-modules#composition).
+Consulta la [especificación de Módulos CSS](https://github.com/css-modules/css-modules) para obtener más detalles, como las [excepciones globales](https://github.com/css-modules/blob/master/docs/composition.md#exceptions) y la [composición](https://github.com/css-modules/blob/master/docs/composition.md#composition).
 
 ### Nombre de Inyección Personalizado {#custom-inject-name}
 
