@@ -25,7 +25,7 @@ footer: false
 
 ## ¿Qué es Vue? {#what-is-vue}
 
-Vue (pronunciado /vjuː/, como **view**) es un framework de JavaScript para crear interfaces de usuario. Está construido sobre los estándares de HTML, CSS y JavaScript, y proporciona un modelo de programación declarativo y basado en componentes que te ayuda a desarrollar interfaces de usuario de manera más eficiente, ya sean simples o complejas.
+Vue (pronunciado /vjuː/, como **view**) es un framework de JavaScript para crear interfaces de usuario. Está construido sobre los estándares de HTML, CSS y JavaScript, y proporciona un modelo de programación declarativo, basado en componentes que te ayuda a desarrollar interfaces de usuario de cualquier complejidad de manera más eficiente.
 
 Aquí tienes un pequeño ejemplo:
 
