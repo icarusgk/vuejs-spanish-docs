@@ -296,11 +296,11 @@ function BaseLayout(slots) {
 }
 ```
 
-## Slots condicionales 
+## Slots condicionales {#conditional-slots}
 
 A veces cuando quieras renderizar algo basado en si está presente o no un slot.
 
-Puedes usar la propiedad [$slots](https://vuejs.org/api/component-instance.html#slots) en combinación con un [v-if](https://vuejs.org/guide/essentials/conditional.html#v-if) para lograr esto.
+Puedes usar la propiedad [$slots](/api/component-instance.html#slots) en combinación con un [v-if](/guide/essentials/conditional.html#v-if) para lograr esto.
 
 En el siguiente ejemplo definimos el componente Card con dos slots condicionales: `header`y `footer`. Cuando header / footer esté presente los podemos envolver para dar estilos adicionales.
 
