@@ -35,7 +35,7 @@ Nuestro [Código de Conducta](/about/coc) es una guía para facilitar el enrique
 - [La Página Awesome Vue](https://github.com/vuejs/awesome-vue): Mira qué otros recursos increíbles han sido publicados por otras personas increíbles.
 - [El Explorador Vue Telescope](https://vuetelescope.com/explore): Explora sitios web creados con Vue, con información sobre qué frameworks/librerías utilizan.
 - [Hecho con Vue.js](https://madewithvuejs.com/): Portafolio de proyectos y bibliotecas hechos con Vue.
-- [El Subforo "Show and Tell"](https://forum.vuejs.org/c/show-and-tell): Otro gran lugar para ver lo que otros han construido con y para el creciente ecosistema de Vue.
+- [El Subforo "Show and Tell"](https://github.com/vuejs/core/discussions/categories/show-and-tell): Otro gran lugar para ver lo que otros han construido con y para el creciente ecosistema de Vue.
 
 ## Lo Que Puedes Hacer {#what-you-can-do}
 

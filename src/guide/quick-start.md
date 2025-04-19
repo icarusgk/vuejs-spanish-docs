@@ -21,7 +21,7 @@ import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
 :::tip Prerequisitos
 
 - Familiaridad con la línea de comandos
-- Instalar [Node.js](https://nodejs.org/) versión 18.0 o superior
+- Instalar [Node.js](https://nodejs.org/) versión 18.3 o superior
   :::
 
 En esta sección presentaremos cómo crear una [Aplicación de una Sola Página (SPA)](/guide/extras/ways-of-using-vue#single-page-application-spa) de Vue en tu máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev) y nos permitirá utilizar los [Componentes de un Solo Archivo (SFCs)](/guide/scaling-up/sfc) de Vue.
@@ -31,30 +31,30 @@ Asegúrate de tener instalada una versión actualizada de [Node.js](https://node
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm create vue@latest
-  ```
+```sh
+$ npm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm create vue@latest
-  ```
+```sh
+$ pnpm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn create vue@latest
-  ```
+```sh
+$ yarn create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun create vue@latest
-  ```
+```sh
+$ bun create vue@latest
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -80,8 +80,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ npm install
   $ npm run dev
   ```
@@ -89,8 +89,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ pnpm install
   $ pnpm run dev
   ```
@@ -98,8 +98,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ yarn
   $ yarn dev
   ```
@@ -107,8 +107,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ bun install
   $ bun run dev
   ```
@@ -128,30 +128,30 @@ Cuando estés listo para enviar tu aplicación a producción, ejecuta lo siguien
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm run build
-  ```
+```sh
+$ npm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm run build
-  ```
+```sh
+$ pnpm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn build
-  ```
+```sh
+$ yarn build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun run build
-  ```
+```sh
+$ bun run build
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -421,7 +421,7 @@ Por razones de seguridad, los módulos ES sólo pueden funcionar sobre el protoc
 
 Para iniciar un servidor HTTP local, primero instala [Node.js](https://nodejs.org/es/) y luego ejecuta `npx serve` desde la línea de comandos en el mismo directorio donde está tu archivo HTML. También puedes utilizar cualquier otro servidor HTTP que pueda servir archivos estáticos con los tipos MIME correctos.
 
-Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VSCode, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
+Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VS Code, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
 
 ## Siguientes pasos {#next-steps}
 

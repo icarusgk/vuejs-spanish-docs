@@ -24,12 +24,12 @@ Con una configuración basada en Vite, el servidor de desarrollo y el bundler s�
 
 ### Soporte de IDE {#ide-support}
 
-- Se recomienda encarecidamente [Visual Studio Code](https://code.visualstudio.com/) (VSCode) por su gran compatibilidad con TypeScript.
+- Se recomienda encarecidamente [Visual Studio Code](https://code.visualstudio.com/) (VS Code) por su gran compatibilidad con TypeScript.
 
-- [Vue - Oficial](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Antes Volar) es la extensión oficial de VSCode que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
+- [Vue - Oficial](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Antes Volar) es la extensión oficial de VS Code que proporciona soporte para TypeScript dentro de las SFC de Vue, junto con muchas otras grandes características.
 
 ::: tip
-La extensión Vue - Oficial sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrese de desactivarlo en los proyectos de Vue 3.
+La extensión Vue - Oficial sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VS Code para Vue 2. Si tiene Vetur instalado actualmente, asegúrese de desactivarlo en los proyectos de Vue 3.
 :::
 
 - [WebStorm](https://www.jetbrains.com/webstorm/) también proporciona soporte inmediato para TypeScript y Vue. Otros IDEs de JetBrains también los soportan, ya sea de forma inmediata o a través de [un plugin gratuito](https://plugins.jetbrains.com/plugin/9442-vue-js). A partir de la versión 2023.2, WebStorm y el plugin de Vue vienen con soporte integrado para el servidor de lenguaje de Vue. Puedes configurar el servicio de Vue para que utilice la integración Volar en todas las versiones de TypeScript, en Ajustes > Lenguajes y Frameworks > TypeScript > Vue. Por defecto, Volar se utilizará para las versiones de TypeScript 5.0 y superiores.

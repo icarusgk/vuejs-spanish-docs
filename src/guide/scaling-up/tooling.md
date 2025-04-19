@@ -86,10 +86,10 @@ Si estás buscando una alternativa más liviana para el uso sin pasos de compila
 
 ## Soporte para IDE {#ide-support}
 
-- La configuración recomendada del IDE es [VSCode](https://code.visualstudio.com/) + la extensión [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar). La extensión proporciona resaltado de sintaxis, soporte para TypeScript, intellisense para expresiones de plantillas y props de componentes.
+- La configuración recomendada del IDE es [VS Code](https://code.visualstudio.com/) + la extensión [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar). La extensión proporciona resaltado de sintaxis, soporte para TypeScript, intellisense para expresiones de plantillas y props de componentes.
 
   :::tip
-  Vue - Official sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VSCode para Vue 2. Si tiene Vetur instalado actualmente, asegúrate de desactivarlo en los proyectos de Vue 3.
+  Vue - Official sustituye a [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur), nuestra anterior extensión oficial de VS Code para Vue 2. Si tiene Vetur instalado actualmente, asegúrate de desactivarlo en los proyectos de Vue 3.
   :::
 
 - [WebStorm](https://www.jetbrains.com/webstorm/) también proporciona un gran soporte integrado para los SFC de Vue.
@@ -142,7 +142,7 @@ Los usuarios que anteriormente usaban Vue CLI pueden estar acostumbrados a tener
 
 1. `npm install -D eslint eslint-plugin-vue`, luego sigue la [guía de configuración](https://eslint.vuejs.org/user-guide/#usage) de `eslint-plugin-vue`.
 
-2. Configure las extensiones ESLint del IDE, por ejemplo [ESLint para VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), de modo que obtengas información de linter directamente en tu editor durante el desarrollo. Esto también evita el costo innecesario de linting al iniciar el servidor de desarrollo.
+2. Configure las extensiones ESLint del IDE, por ejemplo [ESLint para VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), de modo que obtengas información de linter directamente en tu editor durante el desarrollo. Esto también evita el costo innecesario de linting al iniciar el servidor de desarrollo.
 
 3. Ejecuta ESLint como parte del comando de compilación de producción, para obtener información completa del linter antes de enviarlo a producción.
 
@@ -150,7 +150,7 @@ Los usuarios que anteriormente usaban Vue CLI pueden estar acostumbrados a tener
 
 ## Formateo (Formatting) {#formatting}
 
-- La extensión [Vue - Official](https://github.com/vuejs/language-tools) de VSCode permite formatear los SFC de Vue de forma inmediata.
+- La extensión [Vue - Official](https://github.com/vuejs/language-tools) de VS Code permite formatear los SFC de Vue de forma inmediata.
 
 - Alternativamente, [Prettier](https://prettier.io/) proporciona soporte de formato integrado para SFC de Vue.
 
