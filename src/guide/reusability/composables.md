@@ -199,7 +199,7 @@ const { data, error } = useFetch(url)
 url.value = '/new-url'
 ```
 
-O, aceptar una función getter:
+O, aceptar una [función getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description):
 
 ```js
 // nuevo fetch cuando cambie props.id

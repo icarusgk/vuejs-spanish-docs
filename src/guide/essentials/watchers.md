@@ -13,7 +13,8 @@ export default {
   data() {
     return {
       question: '',
-      answer: 'Las preguntas suelen contener un signo de interrogación. ;-)',
+      answer:
+        'Las preguntas suelen contener un signo de interrogación. ;-)',
       loading: false
     }
   },
@@ -76,7 +77,9 @@ Con la Composition API, podemos usar la [función `watch`](/api/reactivity-core#
 import { ref, watch } from 'vue'
 
 const question = ref('')
-const answer = ref('Las preguntas suelen contener un signo de interrogación. ;-)')
+const answer = ref(
+  'Las preguntas suelen contener un signo de interrogación. ;-)'
+)
 const loading = ref(false)
 
 // watch funciona directamente sobre una ref
@@ -109,7 +112,7 @@ watch(question, async (newQuestion, oldQuestion) => {
 
 ### Observar Tipos de Fuentes {#watch-source-types}
 
-El primer argumento de `watch` pueden ser diferentes tipos de "fuentes" reactivas: puede ser una ref (incluyendo refs computadas), un objeto reactivo, una función getter, o un array de múltiples fuentes:
+El primer argumento de `watch` pueden ser diferentes tipos de "fuentes" reactivas: puede ser una ref (incluyendo refs computadas), un objeto reactivo, una [función getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description), o un array de múltiples fuentes:
 
 ```js
 const x = ref(0)

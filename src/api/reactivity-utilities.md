@@ -158,9 +158,12 @@ Se puede utilizar en [Composables](/guide/reusability/composables.html) para nor
   import type { MaybeRefOrGetter } from 'vue'
 
   function useFeature(id: MaybeRefOrGetter<number>) {
-    watch(() => toValue(id), id => {
-      // Reaccionar a cambios del id
-    })
+    watch(
+      () => toValue(id),
+      (id) => {
+        // Reaccionar a cambios del id
+      }
+    )
   }
 
   // este composable admite cualquiera de los siguientes:
@@ -237,7 +240,7 @@ Comprueba si un objeto es un proxy creado por [`reactive()`](./reactivity-core#r
 - **Tipo**
 
   ```ts
-  function isProxy(value: unknown): boolean
+  function isProxy(value: any): boolean
   ```
 
 ## isReactive() {#isreactive}

@@ -45,7 +45,7 @@ Toma un valor interno y devuelve un objeto ref reactivo y mutable, que tiene una
 
 ## computed() {#computed}
 
-Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectura para el valor devuelto por el getter. También puede tomar un objeto con funciones `get` y `set` para crear un objeto ref escribible.
+Toma una [función getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set#description) y devuelve un objeto [ref](#ref) reactivo de solo lectura para el valor devuelto por el getter. También puede tomar un objeto con funciones `get` y `set` para crear un objeto ref escribible.
 
 - **Tipo**
 
