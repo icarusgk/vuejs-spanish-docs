@@ -122,6 +122,7 @@ const nav: ThemeConfig['nav'] = [
         link: '/about/community-guide'
       },
       { text: 'Código de Conducta', link: '/about/coc' },
+      { text: 'Política de privacidad', link: '/about/privacy' },
       {
         text: 'El Documental',
         link: 'https://www.youtube.com/watch?v=OrxmtDw4pVI'
@@ -699,7 +700,7 @@ export default defineConfigWithTheme<ThemeConfig>({
         repo: 'https://github.com/vuejs-translations/docs-it'
       },
       {
-	link: 'https://ru.vuejs.org',
+        link: 'https://ru.vuejs.org',
         text: 'Русский',
         repo: 'https://github.com/translation-gang/docs-ru'
       },
