@@ -69,7 +69,7 @@ Cuando accedes a `this.someObject` después de asignarlo, el valor es un proxy r
 
 ## Declarando Estado Reactivo \*\* {#declaring-reactive-state-1}
 
-### `ref()` \*\* {#ref}
+### `ref()` \*\* {#ref}
 
 En la Composition API, la manera recomendada de declarar estado reactivo es usando la función [`ref()`](/api/reactivity-core#ref):
 
@@ -136,7 +136,7 @@ export default {
 
     function increment() {
       // .value es necesario en JavaScript
-      count.count++
+      count.value++
     }
 
     // no te olvides de exponer la función también.
