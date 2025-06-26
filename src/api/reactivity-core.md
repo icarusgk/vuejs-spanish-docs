@@ -272,6 +272,7 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   count.value++
   // -> logs 1
   ```
+
   Deteniendo el watcher:
 
   ```js
@@ -280,9 +281,10 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   // cuando el watcher ya no es necesario:
   stop()
   ```
+
   Pausar/reanudar el observador: <sup data-text="3.5+" class="vt-badge"/>
 
-    ```js
+  ```js
   const { stop, pause, resume } = watchEffect(() => {})
 
   // pausa temporal del watcher
@@ -295,7 +297,7 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   stop()
   ```
 
-  Limpieza de efectos secundarios: 
+  Limpieza de efectos secundarios:
 
   ```js
   watchEffect(async (onCleanup) => {
@@ -321,6 +323,7 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
     data.value = await response
   })
   ```
+
   Opciones:
 
   ```js
@@ -514,30 +517,28 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
   - [Guía - Watchers](/guide/essentials/watchers)
   - [Guía - Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging)
 
-
-
 ## onWatcherCleanup() <sup class="vt-badge" data-text="3.5+" /> {#onWatcherCleanup}
 
-  Registra una función de limpieza que se ejecutará cuando el observador actual esté a punto de volver a ejecutarse. Solo se puede llamar durante la ejecución síncrona de una `watchEffect` función de efecto o `watch` devolución de llamada (es decir, no se puede llamar después de una `await` instrucción en una función asíncrona).
+Registra una función de limpieza que se ejecutará cuando el observador actual esté a punto de volver a ejecutarse. Solo se puede llamar durante la ejecución síncrona de una `watchEffect` función de efecto o `watch` devolución de llamada (es decir, no se puede llamar después de una `await` instrucción en una función asíncrona).
 
-  - **Tipo**
+- **Tipo**
 
-  ```js
-  function onWatcherCleanup(
-    cleanupFn: () => void,
-    failSilently?: boolean
-  ): void
-  ```
+```js
+function onWatcherCleanup(
+  cleanupFn: () => void,
+  failSilently?: boolean
+): void
+```
 
-  - **Ejemplo**
+- **Ejemplo**
 
-  ```js
-  import { watch, onWatcherCleanup } from 'vue'
+```js
+import { watch, onWatcherCleanup } from 'vue'
 
-  watch(id, (newId) => {
-    const { response, cancel } = doAsyncWork(newId)
-    // `cancel` will be called if `id` changes, cancelling
-    // the previous request if it hasn't completed yet
-    onWatcherCleanup(cancel)
-  })
-  ```
+watch(id, (newId) => {
+  const { response, cancel } = doAsyncWork(newId)
+  // `cancel` will be called if `id` changes, cancelling
+  // the previous request if it hasn't completed yet
+  onWatcherCleanup(cancel)
+})
+```
