@@ -41,11 +41,11 @@ Toma un valor interno y devuelve un objeto ref reactivo y mutable, que tiene una
 
 - **Véase también**
   - [Guía - Fundamentos de Reactividad con `ref()`](/guide/essentials/reactivity-fundamentals#ref)
-  - [Guía - Escritura de `ref()`](/guide/typescript/composition-api#typing-ref)
+  - [Guía - Escritura con Tipado `ref()`](/guide/typescript/composition-api#typing-ref) <sup class="vt-badge ts"/>
 
 ## computed() {#computed}
 
-Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectura para el valor devuelto por el getter. También puede tomar un objeto con funciones `get` y `set` para crear un objeto ref escribible.
+Toma una [función getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) y devuelve un objeto [ref](#ref) reactivo de solo lectura para el valor devuelto por el getter. También puede tomar un objeto con funciones `get` y `set` para crear un objeto ref escribible.
 
 - **Tipo**
 
@@ -111,7 +111,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
 - **Véase también**
   - [Guía - Propiedades Computadas](/guide/essentials/computed)
   - [Guía - Depuración Computada](/guide/extras/reactivity-in-depth#computed-debugging)
-  - [Guía - Escritura de `computed()`](/guide/typescript/composition-api#typing-computed)
+  - [Guía - Escritura con Tipado `computed()`](/guide/typescript/composition-api#typing-computed) <sup class="vt-badge ts" data-text="TS" />
   - [Guía - Rendimiento - Estabilidad de las Propiedades Computadas](/guide/best-practices/performance#computed-stability) <sup class="vt-badge" data-text="3.4+" />
 
 ## reactive() {#reactive}
@@ -189,7 +189,7 @@ Devuelve un proxy reactivo del objeto.
 
 - **Véase también**
   - [Guía - Fundamentos de Reactividad](/guide/essentials/reactivity-fundamentals)
-  - [Guía - Escritura de `reactive()`](/guide/typescript/composition-api#typing-reactive)
+  - [Guía - Escritura con Tipado `reactive()`](/guide/typescript/composition-api#typing-reactive) <sup class="vt-badge ts" data-text="TS" />
 
 ## readonly() {#readonly}
 
@@ -273,6 +273,30 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   // -> logs 1
   ```
 
+  Deteniendo el watcher:
+
+  ```js
+  const stop = watchEffect(() => {})
+
+  // cuando el watcher ya no es necesario:
+  stop()
+  ```
+
+  Pausar/reanudar el observador: <sup data-text="3.5+" class="vt-badge"/>
+
+  ```js
+  const { stop, pause, resume } = watchEffect(() => {})
+
+  // pausa temporal del watcher
+  pause()
+
+  // reanudar
+  resume()
+
+  // detener
+  stop()
+  ```
+
   Limpieza de efectos secundarios:
 
   ```js
@@ -286,13 +310,18 @@ Ejecuta una función inmediatamente mientras realiza un seguimiento reactivo de 
   })
   ```
 
-  Deteniendo el watcher:
+  Limpieza de efectos secundarios: <sup data-text="3.5+" class="vt-badge"/>
 
   ```js
-  const stop = watchEffect(() => {})
+  import { onWatcherCleanup } from 'vue'
 
-  // cuando el watcher ya no es necesario:
-  stop()
+  watchEffect(async () => {
+    const { response, cancel } = doAsyncWork(newId)
+    // `cancel` will be called if `id` changes, cancelling
+    // the previous request if it hasn't completed yet
+    onWatcherCleanup(cancel)
+    data.value = await response
+  })
   ```
 
   Opciones:
@@ -487,3 +516,29 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
 
   - [Guía - Watchers](/guide/essentials/watchers)
   - [Guía - Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging)
+
+## onWatcherCleanup() <sup class="vt-badge" data-text="3.5+" /> {#onWatcherCleanup}
+
+Registra una función de limpieza que se ejecutará cuando el observador actual esté a punto de volver a ejecutarse. Solo se puede llamar durante la ejecución síncrona de una `watchEffect` función de efecto o `watch` devolución de llamada (es decir, no se puede llamar después de una `await` instrucción en una función asíncrona).
+
+- **Tipo**
+
+```js
+function onWatcherCleanup(
+  cleanupFn: () => void,
+  failSilently?: boolean
+): void
+```
+
+- **Ejemplo**
+
+```js
+import { watch, onWatcherCleanup } from 'vue'
+
+watch(id, (newId) => {
+  const { response, cancel } = doAsyncWork(newId)
+  // `cancel` will be called if `id` changes, cancelling
+  // the previous request if it hasn't completed yet
+  onWatcherCleanup(cancel)
+})
+```
