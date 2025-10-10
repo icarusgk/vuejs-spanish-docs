@@ -21,7 +21,7 @@ import { VTCodeGroup, VTCodeGroupTab } from '@vue/theme'
 :::tip Prerequisitos
 
 - Familiaridad con la línea de comandos
-- Instalar [Node.js](https://nodejs.org/) versión 18.0 o superior
+- Instalar [Node.js](https://nodejs.org/) versión 18.3 o superior
   :::
 
 En esta sección presentaremos cómo crear una [Aplicación de una Sola Página (SPA)](/guide/extras/ways-of-using-vue#single-page-application-spa) de Vue en tu máquina local. El proyecto creado utilizará una configuración de compilación basada en [Vite](https://vitejs.dev) y nos permitirá utilizar los [Componentes de un Solo Archivo (SFCs)](/guide/scaling-up/sfc) de Vue.
@@ -31,30 +31,30 @@ Asegúrate de tener instalada una versión actualizada de [Node.js](https://node
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm create vue@latest
-  ```
+```sh
+$ npm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm create vue@latest
-  ```
+```sh
+$ pnpm create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn create vue@latest
-  ```
+```sh
+$ yarn create vue@latest
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun create vue@latest
-  ```
+```sh
+$ bun create vue@latest
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -70,6 +70,7 @@ Este comando instalará y ejecutará [create-vue](https://github.com/vuejs/creat
 <span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add an End-to-End Testing Solution? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Cypress / Playwright</span></span>
 <span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add ESLint for code quality? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
 <span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Prettier for code formatting? <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
+<span style="color:var(--vt-c-green);">✔</span> <span style="color:#A6ACCD;">Add Vue DevTools 7 extension for debugging? (experimental) <span style="color:#888;">… <span style="color:#89DDFF;text-decoration:underline">No</span> / Yes</span></span>
 <span></span>
 <span style="color:#A6ACCD;">Scaffolding project in ./<span style="color:#89DDFF;">&lt;</span><span style="color:#888;">your-project-name</span><span style="color:#89DDFF;">&gt;</span>...</span>
 <span style="color:#A6ACCD;">Done.</span></code></pre></div>
@@ -79,8 +80,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ npm install
   $ npm run dev
   ```
@@ -88,8 +89,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ pnpm install
   $ pnpm run dev
   ```
@@ -97,8 +98,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ yarn
   $ yarn dev
   ```
@@ -106,8 +107,8 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ cd <your-project-name>
+  ```sh-vue
+  $ cd {{'<your-project-name>'}}
   $ bun install
   $ bun run dev
   ```
@@ -117,7 +118,7 @@ Si no estás seguro de alguna opción, simplemente elige `No` pulsando enter por
 
 Ahora deberías tener tu primer proyecto Vue funcionando. Ten en cuenta que los componentes de ejemplo del proyecto generado están escritos utilizando la [Composition API](/guide/introduction#composition-api) y `<script setup>`, en lugar de la [Options API](/guide/introduction#options-api). He aquí algunos consejos adicionales:
 
-- La configuración de IDE recomendada es [Visual Studio Code](https://code.visualstudio.com/) + la [extensión Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar). Si utilizas otros editores, consulta la sección [Soporte para IDE](/guide/scaling-up/tooling#ide-support).
+- La configuración de IDE recomendada es [Visual Studio Code](https://code.visualstudio.com/) + la extensión [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar). Si utilizas otros editores, consulta la sección [Soporte para IDE](/guide/scaling-up/tooling#ide-support).
 - En la [Guía de Herramientas](/guide/scaling-up/tooling) se discuten más detalles sobre las herramientas, incluyendo la integración con frameworks backend.
 - Para obtener más información sobre la herramienta de compilación subyacente Vite, consulta la [documentación de Vite](https://vitejs.dev).
 - Si decides utilizar TypeScript, consulta la guía [Usando Vue con TypeScript](typescript/overview.html).
@@ -127,30 +128,30 @@ Cuando estés listo para enviar tu aplicación a producción, ejecuta lo siguien
 <VTCodeGroup>
   <VTCodeGroupTab label="npm">
 
-  ```sh
-  $ npm run build
-  ```
+```sh
+$ npm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="pnpm">
 
-  ```sh
-  $ pnpm run build
-  ```
+```sh
+$ pnpm run build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="yarn">
 
-  ```sh
-  $ yarn build
-  ```
+```sh
+$ yarn build
+```
 
   </VTCodeGroupTab>
   <VTCodeGroupTab label="bun">
 
-  ```sh
-  $ bun run build
-  ```
+```sh
+$ bun run build
+```
 
   </VTCodeGroupTab>
 </VTCodeGroup>
@@ -365,6 +366,8 @@ Los mapas de importación es una función relativamente nueva de los navegadores
 
 :::warning Notas sobre el Uso en Producción
 Los ejemplos mostrados hasta ahora usan la versión de desarrollo de Vue. Si quieres usar Vue desde un CDN en producción, asegúrate de consultar la guía de [Implementación en Producción (Deployment)](/guide/best-practices/production-deployment#without-build-tools).
+
+Aunque es posible usar Vue sin un sistema de compilación, una alternativa a considerar es usar [`vuejs/petite-vue`](https://github.com/vuejs/petite-vue) que podría ser más adecuado para el contexto donde [`jquery/jquery`](https://github.com/jquery/jquery) (en el pasado) o [`alpinejs/alpine`](https://github.com/alpinejs/alpine) (en el presente) podrían ser usados en su lugar.
 :::
 
 ### Distribución de los Módulos {#splitting-up-the-modules}
@@ -418,7 +421,7 @@ Por razones de seguridad, los módulos ES sólo pueden funcionar sobre el protoc
 
 Para iniciar un servidor HTTP local, primero instala [Node.js](https://nodejs.org/es/) y luego ejecuta `npx serve` desde la línea de comandos en el mismo directorio donde está tu archivo HTML. También puedes utilizar cualquier otro servidor HTTP que pueda servir archivos estáticos con los tipos MIME correctos.
 
-Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VSCode, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
+Puede que hayas notado que la plantilla del componente importado está en línea como una cadena JavaScript. Si estás usando VS Code, puedes instalar la extensión [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) y prefijar las cadenas con un comentario `/*html*/` para obtener resaltado de la sintaxis para ellas.
 
 ## Siguientes pasos {#next-steps}
 

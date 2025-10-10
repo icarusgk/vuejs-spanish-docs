@@ -115,26 +115,6 @@
     "platinum": true
   },
   {
-    "name": "Tighten",
-    "logo": "tighten.svg",
-    "flipLogo": true,
-    "intro": "Tratar bien a las personas, resolver los problemas adecuados y crear un software espectacular: así es como funcionamos. Estamos muy centrados y tenemos una gran experiencia en la tecnología que impulsa los negocios modernos, incluyendo Vue.js. A través de nuestro método característico, nuestro equipo meticulosamente ensamblado ofrece un servicio inigualable, ayudándole a hacer más con su software, y a hacer lo correcto para su negocio.",
-    "description": [
-      "Un desarrollo con opinión empática y ejecutado por expertos. Eso es lo que ofrecemos.",
-      "En Tighten, nos preocupamos por los detalles para dar a su aplicación el ajuste y el acabado que los usuarios de hoy en día esperan, mientras que le proporcionamos la claridad y la confianza para seguir adelante.",
-      "Ya sea que busque simplemente mejorar una interfaz de usuario o construir una sofisticada aplicación basada en JavaScript, lo tenemos cubierto. Vue.js es un framework flexible y robusto, capaz de proporcionar una aplicación de una sola página compleja. Habitualmente lo combinamos con una API basada en Laravel.",
-      "Si está formando un equipo de desarrollo, sabe que requiere tiempo y diligencia, y esto podría ser el factor decisivo para su negocio. Las empresas recurren a Tighten en puntos de inflexión clave para impulsar su tecnología mientras reúnen el equipo <b>correcto</b> para su negocio."
-    ],
-    "region": ["Norte América", "Europa", "Latino América"],
-    "proficiencies": ["Vue", "Nuxt", "Laravel", "Inertia", "Tailwind"],
-    "website": {
-      "text": "tighten.com",
-      "url": "https://tighten.com/vue"
-    },
-    "contact": "hello@tighten.co",
-    "platinum": true
-  },
-  {
     "name": "Redberry",
     "logo": "redberry.png",
     "intro": "Somos una agencia de diseño de software, desarrollo y marketing de crecimiento de Tiflis, socio de Laravel y Vue, ganadora de más de 100 premios. En 8 años, hemos llevado más de 300 productos de cero a héroe usando Vue, Laravel, React y React Native para clientes que van desde startups e instituciones gubernamentales hasta agencias y empresas internacionales.",

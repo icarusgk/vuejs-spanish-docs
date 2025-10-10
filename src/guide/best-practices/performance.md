@@ -124,6 +124,51 @@ Ahora, para la mayoría de los componentes, la prop `active` seguirá siendo la 
 
 `v-memo` es una directiva integrada que se puede usar para omitir condicionalmente la actualización de grandes subárboles o listas `v-for`. Consulte la [referencia de su API](/api/built-in-directives#v-memo) para más detalles.
 
+### Estabilidad de las Propiedades Computadas <sup class="vt-badge" data-text="3.4+" />
+
+A partir de la versión 3.4, una propiedad computada solo activará efectos cuando su valor computado haya cambiado desde el valor anterior. Por ejemplo, la propiedad computada `isEven` a continuación solo activará efectos si el valor devuelto ha cambiado de `true` a `false`, o viceversa:
+
+```js
+const count = ref(0)
+const isEven = computed(() => count.value % 2 === 0)
+
+watchEffect(() => console.log(isEven.value)) // true
+
+// no activará nuevos registros porque el valor calculado sigue siendo `true`
+count.value = 2
+count.value = 4
+```
+
+Esto reduce las activaciones innecesarias de efectos, pero desafortunadamente no funciona si la computación crea un nuevo objeto en cada cálculo:
+
+```js
+const computedObj = computed(() => {
+  return {
+    isEven: count.value % 2 === 0
+  }
+})
+```
+
+Debido a que se crea un nuevo objeto cada vez, el nuevo valor es técnicamente siempre diferente del valor anterior. Incluso si la propiedad `isEven` permanece igual, Vue no podrá saberlo a menos que realice una comparación profunda del valor antiguo y el nuevo valor. Dicha comparación podría ser costosa y probablemente no valga la pena.
+
+En su lugar, podemos optimizar esto comparando manualmente el nuevo valor con el valor antiguo y devolviendo condicionalmente el valor antiguo si sabemos que nada ha cambiado:
+
+```js
+const computedObj = computed((oldValue) => {
+  const newValue = {
+    isEven: count.value % 2 === 0
+  }
+  if (oldValue && oldValue.isEven === newValue.isEven) {
+    return oldValue
+  }
+  return newValue
+})
+```
+
+[Ejemplo en la Zona de Práctica](https://play.vuejs.org/#eNqVVMtu2zAQ/JUFgSZK4UpuczMkow/40AJ9IC3aQ9mDIlG2EokUyKVt1PC/d0lKtoEminMQQC1nZ4c7S+7Yu66L11awGUtNoesOwQi03ZzLuu2URtiBFtUECtV2FkU5gU2OxWpRVaJA2EOlVQuXxHDJJZeFkgYJayVC5hKj6dUxLnzSjZXmV40rZfFrh3Vb/82xVrLH//5DCQNNKPkweNiNVFP+zBsrIJvDjksgGrRahjVAbRZrIWdBVLz2yBfwBrIsg6mD7LncPyryfIVnywupUmz68HOEEqqCI+XFBQzrOKR79MDdx66GCn1jhpQDZx8f0oZ+nBgdRVcH/aMuBt1xZ80qGvGvh/X6nlXwnGpPl6qsLLxTtitzFFTNl0oSN/79AKOCHHQuS5pw4XorbXsr9ImHZN7nHFdx1SilI78MeOJ7Ca+nbvgd+GgomQOv6CNjSQqXaRJuHd03+kHRdg3JoT+A3a7XsfcmpbcWkQS/LZq6uM84C8o5m4fFuOg0CemeOXXX2w2E6ylsgj2gTgeYio/f1l5UEqj+Z3yC7lGuNDlpApswNNTrql7Gd0ZJeqW8TZw5t+tGaMdDXnA2G4acs7xp1OaTj6G2YjLEi5Uo7h+I35mti3H2TQsj9Jp6etjDXC8Fhu3F9y9iS+vDZqtK2xB6ZPNGGNVYpzHA3ltZkuwTnFf70b+1tVz+MIstCmmGQzmh/p56PGf00H4YOfpR7nV8PTxubP8P2GAP9Q==)
+
+Ten en cuenta que siempre debes realizar el cálculo completo antes de comparar y devolver el valor antiguo, para que las mismas dependencias se puedan recopilar en cada ejecución.
+
 ## Optimizaciones Generales {#general-optimizations}
 
 > Los siguientes consejos afectan tanto a la carga de la página como al rendimiento de las actualizaciones.

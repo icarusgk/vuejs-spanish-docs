@@ -52,7 +52,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   ```ts
   // solo lectura
   function computed<T>(
-    getter: () => T,
+    getter: (oldValue: T | undefined) => T,
     // véase el enlace "Depuración de Computed" más abajo
     debuggerOptions?: DebuggerOptions
   ): Readonly<Ref<Readonly<T>>>
@@ -60,7 +60,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   // escribible
   function computed<T>(
     options: {
-      get: () => T
+      get: (oldValue: T | undefined) => T
       set: (value: T) => void
     },
     debuggerOptions?: DebuggerOptions
@@ -112,6 +112,7 @@ Toma una función getter y devuelve un objeto [ref](#ref) reactivo de solo lectu
   - [Guía - Propiedades Computadas](/guide/essentials/computed)
   - [Guía - Depuración Computada](/guide/extras/reactivity-in-depth#computed-debugging)
   - [Guía - Escritura de `computed()`](/guide/typescript/composition-api#typing-computed)
+  - [Guía - Rendimiento - Estabilidad de las Propiedades Computadas](/guide/best-practices/performance#computed-stability) <sup class="vt-badge" data-text="3.4+" />
 
 ## reactive() {#reactive}
 
@@ -360,6 +361,7 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
     flush?: 'pre' | 'post' | 'sync' // por defecto: 'pre'
     onTrack?: (event: DebuggerEvent) => void
     onTrigger?: (event: DebuggerEvent) => void
+    once?: boolean // por defecto: false (3.4+)
   }
   ```
 
@@ -386,6 +388,7 @@ Observa una o más fuentes de datos reactivas e invoca una función de devoluci�
   - **`deep`**: fuerza el recorrido profundo de la fuente si es un objeto, de modo que la devolución de llamada se dispare en mutaciones profundas. Vea [Watchers Profundos](/guide/essentials/watchers#deep-watchers).
   - **`flush`**: ajusta el tiempo de descarga de la devolución de llamada. Vea [Temporización del Flujo del Callback](/guide/essentials/watchers#callback-flush-timing) y [`watchEffect()`](/api/reactivity-core#watcheffect).
   - **`onTrack / onTrigger`**: depura las dependencias del watcher. Vea [Depuración del Watcher](/guide/extras/reactivity-in-depth#watcher-debugging).
+  - **`once`**: ejecuta la devolución de llamada solo una vez. El observador se detiene automáticamente después de la primera ejecución de la devolución de llamada. <sup class="vt-badge" data-text="3.4+" />
 
   Comparado con [`watchEffect()`](#watcheffect), `watch()` nos permite:
 

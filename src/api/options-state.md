@@ -68,7 +68,7 @@ Declarar las propiedades de un componente.
     type?: PropType<T>
     required?: boolean
     default?: T | ((rawProps: object) => T)
-    validator?: (value: unknown) => boolean
+    validator?: (value: unknown, rawProps: object) => boolean
   }
 
   type PropType<T> = { new (): T } | { new (): T }[]

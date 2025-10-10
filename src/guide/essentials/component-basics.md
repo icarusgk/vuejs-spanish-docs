@@ -298,7 +298,7 @@ Después queremos renderizar un componente para cada uno, usando `v-for`:
 
 </div>
 
-Observa cómo podemos usar `v-bind` para pasar props dinámicos. Esto resulta especialmente útil cuando no conoces el contenido exacto que vas a renderizar con antelación.
+Observa cómo podemos usar la [sintaxis `v-bind`](/api/built-in-directives#v-bind) (`:title="post.title"`) para pasar props dinámicos. Esto resulta especialmente útil cuando no conoces el contenido exacto que vas a renderizar con antelación.
 
 Eso es todo lo que necesitas saber sobre los props por ahora, pero una vez que hayas terminado de leer esta página y te sientas cómodo con su contenido, te recomendamos que vuelvas más tarde para leer la guía completa sobre [Props](/guide/components/props).
 

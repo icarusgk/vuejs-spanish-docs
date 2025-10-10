@@ -233,13 +233,22 @@ La definición de tipos de Vue también proporciona inferencia de tipos para el 
 
 ### Inferencia de tipos JSX  {#jsx-type-inference}
 
-Similar a la transformación, JSX de Vue también necesita diferentes definiciones de tipos. Actualmente, los tipos de Vue registran automáticamente los tipos JSX de Vue de forma global. Esto significa que TSX funcionará de forma automática cuando los tipos de Vue estén disponibles.
+Similar a la transformación, el JSX de Vue también necesita diferentes definiciones de tipos.
 
-Los tipos JSX globales pueden causar conflictos si se usan junto con otras bibliotecas que también necesitan la inferencia de tipos JSX, en particular React. A partir de la versión 3.3, Vue permite especificar el espacio de nombres JSX mediante la opción [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) de TypeScript. Planeamos eliminar el registro global por defecto del espacio de nombres JSX en 3.4.
+Desde la versión 3.4, Vue ya no registra implícitamente el espacio de nombres global `JSX`. Para instruir a TypeScript para que use las definiciones de tipo JSX de Vue, asegúrate de incluir lo siguiente en tu `tsconfig.json`:
 
-Para los usuarios de TSX, se les sugiere establecer [jsxImportSource](https://www.typescriptlang.org/tsconfig#jsxImportSource) a `'vue'` en `tsconfig.json` después de actualizar a 3.3, u optar por archivo con `/* @jsxImportSource vue */`. Esto les permitirá optar por el nuevo comportamiento ahora y actualizar sin problemas cuando la versión 3.4 sea lanzada.
+```json
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+    // ...
+  }
+}
+```
+También puedes optar por hacerlo por archivo agregando un comentario `/* @jsxImportSource vue */` en la parte superior del archivo.
 
-Si hay código que depende de la presencia del espacio de nombres global `JSX`, puedes conservar el comportamiento global exacto anterior a 3.4 haciendo referencia explícita a `vue/jsx`, que registra el espacio de nombres global `JSX`.
+Si hay código que depende de la presencia del espacio de nombres global `JSX`, puedes mantener el comportamiento global exacto anterior a la versión 3.4 importando o haciendo referencia explícitamente a `vue/jsx` en tu proyecto, lo cual registra el espacio de nombres global `JSX`.
 
 ## Recetas de Funciones de Renderizado {#render-function-recipes}
 
@@ -559,6 +568,41 @@ JSX equivalente:
 
 Pasar los slots como funciones permite que sean invocados de forma perezosa por el componente hijo. Esto lleva a que las dependencias del slot sean rastreadas por el hijo en lugar del padre, lo que resulta en actualizaciones más precisas y eficientes.
 
+### Slots con Scope {#scoped-slots}
+
+Para renderizar un slot con scope en el componente padre, se pasa un slot al hijo. Observa cómo el slot ahora tiene un parámetro `text`. El slot será llamado en el componente hijo y los datos del componente hijo serán pasados al componente padre.
+
+```js
+// componente padre
+export default {
+  setup() {
+    return () => h(MyComp, null, {
+      default: ({ text }) => h('p', text)
+    })
+  }
+}
+```
+
+Recuerda pasar `null` para que los slots no sean tratados como props.
+
+```js
+// componente hijo
+export default {
+  setup(props, { slots }) {
+    const text = ref('hi')
+    return () => h('div', null, slots.default({ text: text.value }))
+  }
+}
+```
+
+Equivalente en JSX:
+
+```jsx
+<MyComponent>{{
+  default: ({ text }) => <p>{ text }</p>
+}}</MyComponent>
+```
+
 ### Componentes Integrados {#built-in-components}
 
 [Los componentes integrados](/api/built-in-components) como `<KeepAlive>`, `<Transition>`, `<TransitionGroup>`, `<Teleport>` y `<Suspense>` deben ser importados para su uso en las funciones de renderizado:
@@ -734,7 +778,7 @@ Los componentes funcionales pueden ser registrados y consumidos como los compone
 
 ### Tipado de componentes funcionales <sup class="vt-badge ts" /> {#typing-functional-components}
 
-Los componentes funcionales pueden ser tipados en base a si son nombrados o anónimos. Volar también admite la comprobación de tipos de componentes funcionales correctamente tipados al consumirlos en plantillas SFC.
+Los componentes funcionales pueden ser tipados en base a si son nombrados o anónimos. [Vue - Official extension](https://github.com/vuejs/language-tools) también admite la comprobación de tipos de componentes funcionales correctamente tipados al consumirlos en plantillas SFC.
 
 **Componente Funcional Nombrado**
 

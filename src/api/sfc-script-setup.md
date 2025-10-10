@@ -227,6 +227,93 @@ const props = withDefaults(defineProps<Props>(), {
 
 Esto se compilará con las opciones equivalentes de props `default` en tiempo de ejecución. Además, el ayudante `withDefaults` proporciona comprobaciones de tipo para los valores por defecto, y garantiza que el tipo `props` devuelto tenga los indicadores opcionales eliminados para las propiedades que sí tienen valores por defecto declarados.
 
+## defineModel() <sup class="vt-badge" data-text="3.4+" /> {#definemodel}
+
+Esta macro se puede usar para declarar una propiedad de enlace bidireccional que puede ser consumida a través de `v-model` desde el componente padre. El ejemplo de su uso también se discute en la guía [Componente `v-model`](/guide/components/v-model).
+
+Detrás de escena, esta macro declara una propiedad model y un evento de actualización de valor correspondiente. Si el primer argumento es una cadena literal, se usará como el nombre de la prop; de lo contrario, el nombre de la prop será `"modelValue"` por defecto. En ambos casos, también se puede pasar un objeto adicional que puede incluir las opciones de la prop y las opciones de transformación del valor de la ref del model.
+
+```js
+// declara la prop "modelValue", consumida por el padre mediante v-model
+const model = defineModel()
+// O: declara la prop "modelValue" con opciones
+const model = defineModel({ type: String })
+
+// emite "update:modelValue" cuando se muta
+model.value = 'hello'
+
+// declara la prop "count", consumida por el padre mediante v-model:count
+const count = defineModel('count')
+// O: declara la prop "count" con opciones
+const count = defineModel('count', { type: Number, default: 0 })
+
+function inc() {
+  // emite "update:count" cuando se muta
+  count.value++
+}
+```
+
+:::warning
+Si tienes un valor `default` para la prop `defineModel` y no proporcionas ningún valor para esta prop desde el componente padre, puede causar una desincronización entre el componente padre y el componente hijo. En el ejemplo siguiente, el `myRef` del padre es indefinido, pero el `model` del hijo es 1:
+
+```js
+// componente hijo:
+const model = defineModel({ default: 1 })
+
+// componente padre:
+const myRef = ref()
+```
+
+```html
+<Child v-model="myRef"></Child>
+```
+
+:::
+
+### Modificadores y Transformadores {#modifiers-and-transformers}
+
+Para acceder a los modificadores usados con la directiva `v-model`, podemos desestructurar el valor de retorno de `defineModel()` de esta manera:
+
+```js
+const [modelValue, modelModifiers] = defineModel()
+
+// corresponde a v-model.trim
+if (modelModifiers.trim) {
+  // ...
+}
+```
+
+Cuando está presente un modificador, probablemente necesitemos transformar el valor al leerlo o sincronizarlo de vuelta con el padre. Podemos lograr esto utilizando las opciones de transformación `get` y `set`:
+
+```js
+const [modelValue, modelModifiers] = defineModel({
+  // get() omitido ya que no es necesario aquí
+  set(value) {
+    // si se utiliza el modificador .trim, devuelve el valor recortado
+    if (modelModifiers.trim) {
+      return value.trim()
+    }
+    // de lo contrario, devuelve el valor tal como está
+    return value
+  }
+})
+```
+
+### Uso con TypeScript <sup class="vt-badge ts" /> {#usage-with-typescript}
+
+Al igual que `defineProps` y `defineEmits`, `defineModel` también puede recibir argumentos de tipo para especificar los tipos del valor del modelo y los modificadores:
+
+```ts
+const modelValue = defineModel<string>()
+//    ^? Ref<string | undefined>
+// model por defecto con opciones, required elimina posibles valores indefinidos
+const modelValue = defineModel<string>({ required: true })
+//    ^? Ref<string>
+
+const [modelValue, modifiers] = defineModel<string, 'trim' | 'uppercase'>()
+//                 ^? Record<'trim' | 'uppercase', true | undefined>
+```
+
 ## defineExpose() {#defineexpose}
 
 Los componentes que utilizan `<script setup>` **están cerrados por defecto**, es decir, la instancia pública del componente, que se recupera a través de las refs de plantilla o de las cadenas `$parent`, **no** expondrá ninguno de los enlaces declarados dentro de `<script setup>`.
@@ -249,7 +336,7 @@ defineExpose({
 
 Cuando un padre obtiene una instancia de este componente a través de refs de plantilla, la instancia recuperada tendrá la forma `{ a: number, b: number }` (las refs se desenvuelven automáticamente como en las instancias normales).
 
-## defineOptions() {#defineoptions}
+## defineOptions() <sup class="vt-badge" data-text="3.3+" /> {#defineoptions}
 
 Esta macro puede usarse para declarar opciones de componentes directamente dentro de `<script setup>` sin tener que usar un bloque `<script>` separado:
 
@@ -389,5 +476,5 @@ defineProps<{
 
 ## Restricciones {#restrictions}
 
-* Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
-* `<script setup>` no soporta Plantilla de Componente Raíz en el DOM.([Discusión relacionada](https://github.com/vuejs/core/issues/8391))
+- Debido a la diferencia en la semántica de ejecución del módulo, el código dentro de `<script setup>` depende del contexto de un SFC. Cuando se mueve a archivos externos `.js` o `.ts`, puede generar confusión tanto para los desarrolladores como para las herramientas. Por lo tanto, **`<script setup>`** no se puede utilizar con el atributo `src`.
+- `<script setup>` no soporta Plantilla de Componente Raíz en el DOM.([Discusión relacionada](https://github.com/vuejs/core/issues/8391))

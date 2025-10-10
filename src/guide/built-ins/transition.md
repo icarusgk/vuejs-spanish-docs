@@ -363,6 +363,7 @@ function onEnter(el, done) {
 
 // llamado cuando la transición de entrada ha terminado.
 function onAfterEnter(el) {}
+
 // llamado cuando la transición de entrada es cancelada antes de completarse.
 function onEnterCancelled(el) {}
 
@@ -448,7 +449,7 @@ Cuando se utilizan transiciones sólo JavaScript, suele ser una buena idea añad
 
 Con `:css="false"`, también somos totalmente responsables de controlar cuándo termina la transición. En este caso, los callbacks `done` son necesarios para los hooks `@enter` y `@leave`. De lo contrario, los hooks serán llamados de forma sincrónica y la transición terminará inmediatamente.
 
-Aquí hay una demostración que utiliza la [librería GreenSock](https://greensock.com/) para realizar las animaciones. Por supuesto, puedes usar cualquier otra librería de animación que quieras, por ejemplo [Anime.js](https://animejs.com/) o [Motion One](https://motion.dev/).
+Aquí hay una demostración que utiliza la [librería GSAP](https://gsap.com/) para realizar las animaciones. Por supuesto, puedes usar cualquier otra librería de animación que quieras, por ejemplo [Anime.js](https://animejs.com/) o [Motion One](https://motion.dev/):
 
 <JsHooks />
 
@@ -580,6 +581,76 @@ Aquí está la demostración anterior con `mode="out-in"`:
 Esto puede ser útil cuando has definido transiciones / animaciones CSS utilizando las convenciones de clase de transition de Vue y quieres cambiar entre ellas.
 
 También puedes aplicar diferentes comportamientos en los hooks transition de JavaScript basados en el estado actual de tu componente. Finalmente, la última forma de crear transiciones dinámicas es a través de [componentes de transición reutilizables](#transiciones-reutilizables) que aceptan props para cambiar la naturaleza de la(s) transición(es) a utilizar. Puede sonar cursi, pero el único límite realmente es tu imaginación.
+
+## Transiciones con la Propiedad Key {#transitions-with-the-key-attribute}
+
+A veces necesitas forzar el re-render de un elemento del DOM para que se produzca una transición.
+
+Tomemos este componente contador como ejemplo:
+
+<div class="composition-api">
+
+```vue
+<script setup>
+import { ref } from 'vue';
+const count = ref(0);
+
+setInterval(() => count.value++, 1000);
+</script>
+
+<template>
+  <Transition>
+    <span :key="count">{{ count }}</span>
+  </Transition>
+</template>
+```
+
+</div>
+
+<div class="options-api">
+
+```vue
+<script>
+export default {
+  data() {
+    return {
+      count: 1,
+      interval: null
+    }
+  },
+  mounted() {
+    this.interval = setInterval(() => {
+      this.count++;
+    }, 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.interval)
+  }
+}
+</script>
+
+<template>
+  <Transition>
+    <span :key="count">{{ count }}</span>
+  </Transition>
+</template>
+```
+
+</div>
+
+Si hubiéramos excluido el atributo `key`, solo se actualizaría el nodo de texto y por lo tanto no ocurriría ninguna transición. Sin embargo, con el atributo `key` presente, Vue sabe que debe crear un nuevo elemento `span` cada vez que `count` cambia y por lo tanto el componente `Transition` tiene 2 elementos diferentes entre los cuales transicionar.
+
+<div class="composition-api">
+
+[Pruébalo en la Zona de Práctica](https://play.vuejs.org/#eNp9UsFu2zAM/RVCl6Zo4nhYd/GcAtvQQ3fYhq1HXTSFydTKkiDJbjLD/z5KMrKgLXoTHx/5+CiO7JNz1dAja1gbpFcuQsDYuxtuVOesjzCCxx1MsPO2gwuiXnzkhhtpTYggbW8ibBJlUV/mBJXfmYh+EHqxuITNDYzcQGFWBPZ4dUXEaQnv6jrXtOuiTJoUROycFhEpAmi3agCpRQgbzp68cA49ZyV174UJKiprckxIcMJA84hHImc9oo7jPOQ0kQ4RSvH6WXW7JiV6teszfQpDPGqEIK3DLSGpQbazsyaugvqLDVx77JIhbqp5wsxwtrRvPFI7NWDhEGtYYVrQSsgELzOiUQw4I2Vh8TRgA9YJqeIR6upDABQh9TpTAPE7WN3HlxLp084Foi3N54YN1KWEVpOMkkO2ZJHsmp3aVw/BGjqMXJE22jml0X93STRw1pReKSe0tk9fMxZ9nzwVXP5B+fgK/hAOCePsh8dAt4KcnXJR+D3S16X07a9veKD3KdnZba+J/UbyJ+Zl0IyF9rk3Wxr7jJenvcvnrcz+PtweItKuZ1Np0MScMp8zOvkvb1j/P+776jrX0UbZ9A+fYSTP)
+
+</div>
+
+<div class="options-api">
+
+[Pruébalo en la Zona de Práctica](https://play.vuejs.org/#eNp9U8tu2zAQ/JUFTwkSyw6aXlQ7QB85pIe2aHPUhZHWDhOKJMiVYtfwv3dJSpbbBgEMWJydndkdUXvx0bmi71CUYhlqrxzdVAa3znqCBtey0wT7ygA0kuTZeX4G8EidN+MJoLadoRKuLkdAGULfS12C6bSGDB/i3yFx2tiAzaRIjyoUYxesICDdDaczZq1uJrNETY4XFx8G5Uu4WiwW55PBA66txy8YyNvdZFNrlP4o/Jdpbq4M/5bzYxZ8IGydloR8Alg2qmcVGcKqEi9eOoe+EqnExXsvTVCkrBkQxoKTBspn3HFDmprp+32ODA4H9mLCKDD/R2E5Zz9+Ws5PpuBjoJ1GCLV12DASJdKGa2toFtRvLOHaY8vx8DrFMGdiOJvlS48sp3rMHGb1M4xRzGQdYU6REY6rxwHJGdJxwBKsk7WiHSyK9wFQhqh14gDyIVjd0f8Wa2/bUwOyWXwQLGGRWzicuChvKC4F8bpmrTbFU7CGL2zqiJm2Tmn03100DZUox5ddCam1ffmaMPJd3Cnj9SPWz6/gT2EbsUr88Bj4VmAljjWSfoP88mL59tc33PLzsdjaptPMfqP4E1MYPGOmfepMw2Of8NK0d238+JTZ3IfbLSFnPSwVB53udyX4q/38xurTuO+K6/Fqi8MffqhR/A==)
+
+</div>
 
 ---
 

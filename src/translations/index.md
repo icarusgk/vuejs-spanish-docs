@@ -14,11 +14,15 @@ aside: false
 - [한국어 / Coreano](https://ko.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-ko)]
 - [Português / Portugués](https://pt.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-pt)]
 - [বাংলা / Bengalí](https://bn.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-bn)]
-- [Italiano / Italian](https://it.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-it)]
+- [Italiano / Italiano](https://it.vuejs.org) [[fuente](https://github.com/vuejs-translations/docs-it)]
+- [Čeština / Checo](https://cs.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-cs)]
 
 ## Idiomas en Curso {#work-in-progress-languages}
 
-- [فارسی / Persian](https://fa.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-fa)]
+- [فارسی / Persa](https://fa.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-fa)]
+- [Русский / Ruso](https://ru.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-ru)]
+- [Čeština / Checo](https://cs.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-cs)]
+- [العربية / Árabe](https://ar.vuejs.org/) [[fuente](https://github.com/vuejs-translations/docs-ar)]
 - [Español / Español](https://vue3-spanish.netlify.app/) [[fuente](https://github.com/drfcozapata/docs/tree/spanish-translation)]
 
 ## Iniciar una nueva Traducción {#starting-a-new-translation}

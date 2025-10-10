@@ -189,7 +189,7 @@ Esto siempre aplicará `errorClass`, pero `activeClass` sólo se aplicará cuand
 Sin embargo, esto puede ser un poco pesado si tienes varias clases condicionales. Por eso también es posible utilizar la sintaxis de objetos dentro de la sintaxis de arrays:
 
 ```vue-html
-<div :class="[{ active: isActive }, errorClass]"></div>
+<div :class="[{ activeClass: isActive }, errorClass]"></div>
 ```
 
 ### Con Componentes {#with-components}

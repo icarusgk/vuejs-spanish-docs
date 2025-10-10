@@ -6,8 +6,7 @@ footer: false
 
 :::info ¡Estás leyendo la documentación de Vue 3!
 
-- El soporte de Vue 2 finalizará el 31 de diciembre de 2023. Más información sobre [Vue 2 LTS Extendida](https://v2.vuejs.org/lts/).
-- La documentación de Vue 2 se ha movido a [v2.vuejs.org](https://v2.vuejs.org/).
+- El soporte de Vue 2 finalizó el **31 de diciembre de 2023**. Más información sobre [Vue 2 EOL](https://v2.vuejs.org/eol/).
 - ¿Actualizando desde Vue 2? Consulta la [Guía de Migración](https://v3-migration.vuejs.org/).
   :::
 
@@ -26,7 +25,7 @@ footer: false
 
 ## ¿Qué es Vue? {#what-is-vue}
 
-Vue (pronunciado /vjuː/, como **view**) es un framework de JavaScript para crear interfaces de usuario. Está construido sobre los estándares de HTML, CSS y JavaScript, y proporciona un modelo de programación declarativo y basado en componentes que te ayuda a desarrollar interfaces de usuario de manera más eficiente, ya sean simples o complejas.
+Vue (pronunciado /vjuː/, como **view**) es un framework de JavaScript para crear interfaces de usuario. Está construido sobre los estándares de HTML, CSS y JavaScript, y proporciona un modelo de programación declarativo, basado en componentes que te ayuda a desarrollar interfaces de usuario de cualquier complejidad de manera más eficiente.
 
 Aquí tienes un pequeño ejemplo:
 

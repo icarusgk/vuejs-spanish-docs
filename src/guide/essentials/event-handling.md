@@ -258,7 +258,8 @@ Los modificadores `.capture`, `.once` y `.passive` reflejan las [opciones del m�
 
 ```vue-html
 <!-- utiliza el modo de captura al añadir el receptor de eventos -->
-<!-- es decir, un evento dirigido a un elemento interior es manejado aquí antes de ser manejado por ese elemento -->
+<!-- es decir, un evento dirigido a un elemento interior es manejado --> 
+<!-- aquí antes de ser manejado por ese elemento -->
 <div @click.capture="doThis">...</div>
 
 <!-- el evento clic se activará como máximo una vez -->
