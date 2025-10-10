@@ -318,6 +318,7 @@ Se utiliza para orquestar dependencias asíncronas anidadas en un árbol de comp
   ```ts
   interface SuspenseProps {
     timeout?: string | number
+    suspensible?: boolean
   }
   ```
 
@@ -332,5 +333,7 @@ Se utiliza para orquestar dependencias asíncronas anidadas en un árbol de comp
   `<Suspense>` acepta dos slots: el slot `#default` y el slot `#fallback`. Mostrará el contenido del slot fallback mientras renderiza el slot por defecto en la memoria.
 
   Si encuentra dependencias asíncronas ([Componentes Asincrónicos](/guide/components/async) y componentes con [`async setup()`](/guide/built-ins/suspense#async-setup)) mientras se muestra el slot por defecto, esperará hasta que todas ellas se resuelvan antes de mostrar el slot por defecto.
+
+  Al configurar Suspense como `suspensible`, todo el manejo de dependencias asíncronas será controlado por el componente Suspense padre. Ver [detalles de implementación](https://github.com/vuejs/core/pull/6736)
 
 - **Véase también** [Guía - Suspense](/guide/built-ins/suspense)
